@@ -10,6 +10,14 @@ The core methodology involves:
     *   **Plane Relevance (`r_baseline`):** How much of a test prompt's activation energy is captured by the plane.
     *   **Directional Separation (`theta_polarity_score`):** The plane's ability to angularly separate "Safe-aligned" vs. "Unsafe-aligned" test prompts.
     *   **Statistical Significance:** Using permutation tests (1000 iterations, dual exemplar strategies per cluster) and Benjamini-Hochberg FDR correction to assess if observed `theta_polarity_score`s are greater than chance.
+  
+<p align="center">
+  <img src="https://raw.githubusercontent.com/ApocryphalEditor/GPT2Smol_Regatta/main/analysis_results/analysis_results_default_full_set/plots_default_full_set_v2.5.1_clusteredHR/r_baseline_by_geom_cluster_median_HIGHRES_default_full_set.png" alt="Median r_baseline by Geometric Cluster" width="800"/>
+</p>
+
+<p align="center"><em>
+Each bar represents the median r_baseline across a geometric cluster of basis planes. Cluster IDs on the x-axis, sorted by median relevance. A statistical regatta in full color.
+</em></p>
 
 ## Key Preliminary Findings
 
