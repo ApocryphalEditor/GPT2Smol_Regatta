@@ -1,0 +1,1111 @@
+# 1a Target Semantic Words
+
+Safe_Word_L11_v1.npz
+Prompt A:Safe. 
+Prompt B:Unsafe. 
+
+Safe_Word_L11_v2.npz
+Prompt A:Safe
+Prompt B:Unsafe
+
+Safe_Word_L11_v3.npz
+Prompt A:safe
+Prompt B:unsafe
+
+Safe_Word_L11_v4.npz
+Prompt A:Harmless
+Prompt B:Harmful
+
+Safe_Word_L11_v5.npz
+Prompt A:Innocuous
+Prompt B:Dangerous
+
+# 1b Target Semantic Phrases
+
+Safe_Phrase_L11_v1.npz
+Prompt A:This is safe. 
+Prompt B:This is unsafe. 
+
+Safe_Phrase_L11_v2.npz
+Prompt A:this is safe
+Prompt B:this is unsafe
+
+Safe_Phrase_L11_v3.npz
+Prompt A:This is safe! 
+Prompt B:This is unsafe! 
+
+Safe_Phrase_L11_v4.npz
+Prompt A:This is harmless. 
+Prompt B:This is harmful. 
+
+Safe_Phrase_L11_v5.npz
+Prompt A:This is innocuous. 
+Prompt B:This is dangerous. 
+
+#1c Target Semantic Lists
+
+Safe_List_L11_v1.npz
+Prompt A:Safe. Harmless. Innocuous. 
+Prompt B:Unsafe. Harmful. Dangerous. 
+
+Safe_List_L11_v2.npz
+Prompt A:Safe, Harmless, Innocuous, 
+Prompt B:Unsafe, Harmful, Dangerous,
+
+Safe_List_L11_v3.npz
+Prompt A:safe harmless innocuous
+Prompt B:unsafe harmful dangerous 
+
+Safe_List_L11_v4.npz
+Prompt A:Safe. Harmless. Innocuous. Benign. Innocent. 
+Prompt B:Unsafe. Harmful. Dangerous. Malign. Damaging. Adverse. 
+
+Safe_List_L11_v5.npz
+Prompt A:safe harmless innocuous benign innocent 
+Prompt B:Unsafe harmful dangerous malign damaging adverse 
+
+# 2. Control: Semantically Disparate Bases
+
+Unrelated_AstroBake_L11_v1.npz
+Prompt A:Celestial bodies like stars and planets are studied in astronomy.
+Prompt B:Baking delicious cakes often requires flour, sugar, and eggs.
+
+Unrelated_MusicGeology_L11_v2.npz
+Prompt A:Musical instruments produce sound through vibration and resonance.
+Prompt B:Geology is the scientific study of the Earth's structure and rocks.
+
+Unrelated_HistoryBotany_L11_v3.npz
+Prompt A:Historical records provide insights into past human events and societies.
+Prompt B:Botany involves the detailed study of plant life and classification.
+
+Unrelated_OceanLit_L11_v4.npz
+Prompt A:The vast oceans cover most of our planet's surface.
+Prompt B:Classic literature often explores timeless human themes and narratives.
+
+Unrelated_PhysicsArt_L11_v5.npz
+Prompt A:Physics explains the fundamental constituents of the universe and their interactions.
+Prompt B:Artistic expression can take many forms, including painting and sculpture.
+
+# 3. Control: Arbitrary-but-Polar Bases
+
+CtrlPolar_HotCold_L11_v1.npz 
+Prompt A:The temperature is extremely hot, like a furnace.
+Prompt B:The environment is freezing cold, like an arctic winter.
+
+CtrlPolar_FastSlow_L11_v2.npz
+Prompt A:Progress is incredibly fast, swift, and rapid.
+Prompt B:Progress is exceptionally slow, gradual, and unhurried.
+
+CtrlPolar_BrightDark_L11_v3.npz
+Prompt A:The light is intensely bright, dazzling, and luminous.
+Prompt B:The surroundings are completely dark, shadowy, and dim.
+
+CtrlPolar_HappySad_L11_v4.npz
+Prompt A:A feeling of pure joy, elation, and happiness.
+Prompt B:An overwhelming sense of sorrow, grief, and sadness.
+
+CtrlPolar_SimpleComplex_L11_v5.npz
+Prompt A:The concept is very simple, basic, and easy to understand.
+Prompt B:The concept is extremely complex, intricate, and multifaceted.
+
+# Nonse Base Sets (1-20)
+# 1a: Typographic babble – Regular
+
+Cont_N_Typobabble_R_L11_v1.npz
+Prompt A:asdfjkl; qweruiop zxcvbnm
+Prompt B:mnbvcxz poiuytrew lkjhgfds
+
+Cont_N_Typobabble_R_L11_v2.npz
+Prompt A:qazwsxedc rfv tgb yhn ujm
+Prompt B:mjnu hygt bvr cde xsw zaq
+
+Cont_N_Typobabble_R_L11_v3.npz
+Prompt A:lkjhgf dsa poiuy trew qwe
+Prompt B:rewq yuip lkj mnb vfrtgb
+
+Cont_N_Typobabble_R_L11_v4.npz
+Prompt A:zxc vbn mko ijuh ytg rfe
+Prompt B:edc rfv tgb yhn ujm ik,ol
+
+Cont_N_Typobabble_R_L11_v5.npz
+Prompt A:plokmijn uhbgvfcdx szazsx
+Prompt B:qazxswedc rfvbgt yhnujm
+
+# 1b: Typographic Babble - SSP
+
+Cont_N_Typobabble_S_L11_v1.npz
+Prompt A:asqfylk; querviomp zxurbnam
+Prompt B:mnvucxy poyuirelw lkjghvfdz
+
+Cont_N_Typobabble_S_L11_v2.npz
+Prompt A:qazwqedxc rfvb tgq yhvn ujt
+Prompt B:mjbnu hytg bvrp cze xsew zaq
+
+Cont_N_Typobabble_S_L11_v3.npz
+Prompt A:lkjpghf dspa popiay trekw qwu
+Prompt B:reqw yupip lkh mzn bftgbvr
+
+Cont_N_Typobabble_S_L11_v4.npz
+Prompt A:zcax vbnm mkoo ijkhu ytug ref
+Prompt B:edcx rfvb tgbk yhnu ujmk ikol
+
+Cont_N_Typobabble_S_L11_v5.npz
+Prompt A:plkqmnin uhbggvcd szqzsxx
+Prompt B:qazxvwed rcvgbyt yhjnujm
+
+# 2a: Syntactically Coherent Gibberish – Regular
+
+Cont_N_Jabberw_R_L11_v1.npz
+Prompt A:glarble snorp wibble flumph quux
+Prompt B:zzyxx blorf crinkle sproing fnord
+
+Cont_N_Jabberw_R_L11_v2.npz
+Prompt A:drindle plash snorfle blicket troom
+Prompt B:sklimb vortle graxle phloon twib
+
+Cont_N_Jabberw_R_L11_v3.npz
+Prompt A:whindle crumply jibble froont nargle
+Prompt B:plornt zindle skramble blitch kranx
+
+Cont_N_Jabberw_R_L11_v4.npz
+Prompt A:the flarble blinks when plurgle snoots
+Prompt B:after the snibber flips, the drozzle gloops
+
+Cont_N_Jabberw_R_L11_v5.npz
+Prompt A:a flimby scraggled the prizzle stoon
+Prompt B:each twibber marned beneath the gloffle bend
+
+# 2b: Syntactically Coherent Gibberish – SSP
+
+Cont_N_Jabberw_S_L11_v1.npz
+Prompt A:flarnip drowzel criblet gnarp vlibber
+Prompt B:snorbled grintax plimfer jarnook vweep
+
+Cont_N_Jabberw_S_L11_v2.npz
+Prompt A:snorpt the quindle of drapple snoovled
+Prompt B:then glimsy thrabbled up the jenkle dreel
+
+Cont_N_Jabberw_S_L11_v3.npz
+Prompt A:when grolned, the mibber blinkled frudgy
+Prompt B:a twizzle with dramp flew across the blazzin heap
+
+Cont_N_Jabberw_S_L11_v4.npz
+Prompt A:harbled snibber jabrored through the flinkle spass
+Prompt B:now bloofen trails under the grivvet droam
+
+Cont_N_Jabberw_S_L11_v5.npz
+Prompt A:this crimble flanced beside the groffled perch
+Prompt B:until slibber caught its wheeble in a dreeban twist
+
+# 3a: Symbol Overload / Alphanumeric Randomness – Regular
+
+Cont_N_Overload_R_L11_v1.npz
+Prompt A:123 abc !@# def 456 ghi $%^
+Prompt B:jkl 789 mno *() pqr Stu :;
+
+Cont_N_Overload_R_L11_v2.npz
+Prompt A:001 qwe $#@ 999 xyz Lmn &*!
+Prompt B:Opq 654 tuv ^%$ Rst 321 +_=
+
+Cont_N_Overload_R_L11_v3.npz
+Prompt A:abc123 $$$ xyz789 &&& lmn456
+Prompt B:mno321 *** pqr654 !!! stu987
+
+Cont_N_Overload_R_L11_v4.npz
+Prompt A:9x9 z9z # q1q e2e !~!
+Prompt B:w3w r4r @@@ t5t y6y ###
+
+Cont_N_Overload_R_L11_v5.npz
+Prompt A:A1! B2@ C3# D4$ E5% F6^
+Prompt B:G7& H8* I9( J0) K!# L$%
+
+# 3b: Symbol Overload / Alphanumeric Randomness – SSP
+
+Cont_N_Overload_S_L11_v1.npz
+Prompt A:7wX !z9 @#L r2b &F3 $z^
+Prompt B:uJ4 *p! 6qM )x7 +V8 ~#n
+
+Cont_N_Overload_S_L11_v2.npz
+Prompt A:%%a 00x **9 [r2] !!m =b=
+Prompt B:[[g6]] ++Q <t5> ^^e ___Z
+
+Cont_N_Overload_S_L11_v3.npz
+Prompt A:z#1 d&9 k@7 q^5 r(3) x!0
+Prompt B:j~2 v@8 w*4 l#6 u$9 o&1
+
+Cont_N_Overload_S_L11_v4.npz
+Prompt A:1#Q 3$W 5%E 7^R 9&T !*Y
+Prompt B:2@U 4(I 6)O 8_P 0+A +{S}
+
+Cont_N_Overload_S_L11_v5.npz
+Prompt A:&_x -!= ^@z +/m =|q %^f
+Prompt B:><v $~k ![j] @n= #u/ *&d
+
+# 4a: Concept-List Randomness – Regular
+
+Cont_N_Conrandm_R_L11_v1.npz
+Prompt A:Red green blue yellow orange purple
+Prompt B:Up down left right forward backward
+
+Cont_N_Conrandm_R_L11_v2.npz
+Prompt A:Monday Tuesday Wednesday Thursday Friday Saturday
+Prompt B:January February March April May June
+
+Cont_N_Conrandm_R_L11_v3.npz
+Prompt A:Dog cat mouse rabbit horse cow
+Prompt B:Apple banana cherry grape melon peach
+
+Cont_N_Conrandm_R_L11_v4.npz
+Prompt A:Circle square triangle rectangle oval hexagon
+Prompt B:Car truck bike train plane boat
+
+Cont_N_Conrandm_R_L11_v5.npz
+Prompt A:Hot cold warm cool freezing boiling
+Prompt B:Tall short big small wide narrow
+
+# 4b: Concept-List Randomness – SSP
+
+Cont_N_Conrandm_S_L11_v1.npz
+Prompt A:Reddle greel bloo yallor orpang purfa
+Prompt B:Upple dorn leff roight forvark blanward
+
+Cont_N_Conrandm_S_L11_v2.npz
+Prompt A:Munday Tewsdee Wendashday Thoirsda Friduh Sartaday
+Prompt B:Jenwary Febrolay Murch Aypril Mee Joon
+
+Cont_N_Conrandm_S_L11_v3.npz
+Prompt A:Derg cot meese rubbit hoss krow
+Prompt B:Eppl bananu churry groip malun peetch
+
+Cont_N_Conrandm_S_L11_v4.npz
+Prompt A:Sercle squarn tryangle rektingle evall hexagron
+Prompt B:Kahr trucc bork treyn pleen bwoat
+
+Cont_N_Conrandm_S_L11_v5.npz
+Prompt A:Hott coled weerm coorl freezink boillung
+Prompt B:Teel shert bog smeel woyd naroo
+
+# 5a: Procedural Babble – Regular
+
+Cont_N_Procbab_R_L11_v1.npz
+Prompt A:Generate convert extract override align repeat
+Prompt B:Collapse entangle fold encode mutate compile
+
+Cont_N_Procbab_R_L11_v2.npz
+Prompt A:Initialize map validate merge split finalize
+Prompt B:Compress decrypt hash route buffer throttle
+
+Cont_N_Procbab_R_L11_v3.npz
+Prompt A:Activate synchronize queue deploy rollback reload
+Prompt B:Filter reshape emit resolve index shuffle
+
+Cont_N_Procbab_R_L11_v4.npz
+Prompt A:Connect bind listen respond handle dispatch
+Prompt B:Authorize reject encrypt log notify archive
+
+Cont_N_Procbab_R_L11_v5.npz
+Prompt A:Parse stream update refresh reset queue
+Prompt B:Trigger inject sample audit clean schedule
+
+# 5b: Procedural Babble – SSP
+
+Cont_N_Procbab_S_L11_v1.npz
+Prompt A:Genervate conburst exfract overjam aling repeek
+Prompt B:Colprax entamgle foad encork mutaff comporn
+
+Cont_N_Procbab_S_L11_v2.npz
+Prompt A:Inishiate mamp valigrate morge splent finilode
+Prompt B:Crompress decrupt husk routle bluffer thrimble
+
+Cont_N_Procbab_S_L11_v3.npz
+Prompt A:Avictate synchromize kloo deplye robflip reluund
+Prompt B:Fultor reshank emrit resolfe indeck shaffine
+
+Cont_N_Procbab_S_L11_v4.npz
+Prompt A:Cornect bint lissen resbong handel dispanch
+Prompt B:Outherize refect enclipt loggle notefy archibe
+
+Cont_N_Procbab_S_L11_v5.npz
+Prompt A:Parze strim updrate refrash resot kwee
+Prompt B:Trogger injict samfle odit cleen schedule
+
+# 6a: Single Language Pairs (Human)(SSP)
+
+Cont_N_SingLang_S_L11_v1.npz
+Prompt A:tres fjör wáng dağ شب
+Prompt B:नदी tokyo cielo fjell فوق
+
+Cont_N_SingLang_S_L11_v2.npz
+Prompt A:bonjour maison étoile mer nuage
+Prompt B:danke bitte wasser licht freund
+
+Cont_N_SingLang_S_L11_v3.npz
+Prompt A:casa perro cielo azul noche
+Prompt B:ragazzo libro finestra luna veloce
+
+Cont_N_SingLang_S_L11_v4.npz
+Prompt A:σπίτι δρόμος νερό ψωμί ουρανός
+Prompt B:дом книга город солнце зима
+
+Cont_N_SingLang_S_L11_v5.npz
+Prompt A:食べる 水 飛ぶ 雨 山
+Prompt B:학교 사랑 시간 나무 하늘
+
+# 6b: Mixed Language Pairs (Human)(SSP)
+
+Cont_N_SingLangMix_S_L11_v1.npz
+Prompt A:luna fjell شب tempo वॉटर
+Prompt B:étoile tokyo δρόμος snow ragazza
+
+Cont_N_SingLangMix_S_L11_v2.npz
+Prompt A:merci नदी fjör وقت book
+Prompt B:cielo danke 山 البحر خوان
+
+Cont_N_SingLangMix_S_L11_v3.npz
+Prompt A:perro صديق maison 時間 утро
+Prompt B:학교 ночь дом mer ragazza
+
+Cont_N_SingLangMix_S_L11_v4.npz
+Prompt A:jalan 책 fjör πόλη smile
+Prompt B:tokyo cielo bibliothèque وقت gato
+
+Cont_N_SingLangMix_S_L11_v5.npz
+Prompt A:食べる fenêtre árbol время libro
+Prompt B:azul amigo город mer grazie
+
+# 6c: Single Language Pairs (Non-Human)
+
+Cont_N_SingLangNonHum_S_L11_v1.npz
+Prompt A:SELECT * FROM data WHERE id=42
+Prompt B:if (x > y) { return z++; }
+
+Cont_N_SingLangNonHum_S_L11_v2.npz
+Prompt A:\frac{d}{dx}e^{x} = e^{x}
+Prompt B:\int_0^\infty f(x) dx = \pi
+
+Cont_N_SingLangNonHum_S_L11_v3.npz
+Prompt A:0x3F 0x7A 0x01 0xDEADBEEF
+Prompt B:0b10101010 0b11110000 0xF00D
+
+Cont_N_SingLangNonHum_S_L11_v4.npz
+Prompt A:PUSH AX MOV BX, CX JMP $+2
+Prompt B:.data .text .globl _start
+
+Cont_N_SingLangNonHum_S_L11_v5.npz
+Prompt A:🎼 C D E | F G A B :|
+Prompt B:X:1 T:Jig M:6/8 K:D
+
+# 6d: Mixed Language Pairs (Non-Human)
+
+Cont_N_SingLangNonHumMix_S_L11_v1.npz
+Prompt A:if x := λy. y * z → ∀x∈ℝ
+Prompt B:\sum_{i=0}^{n} \frac{a_i}{b_i} while true do
+
+Cont_N_SingLangNonHumMix_S_L11_v2.npz
+Prompt A:JMP $ \hspace{2pt} SELECT ⚙️🧠 FROM 🌐
+Prompt B:\lim_{x \to \infty} & .globl %eax = ☯️
+
+Cont_N_SingLangNonHumMix_S_L11_v3.npz
+Prompt A:0b1101 * PUSH "hello" 🎲🎯
+Prompt B:printf("%s", 🪐); \int t dt = 🧬
+
+Cont_N_SingLangNonHumMix_S_L11_v4.npz
+Prompt A:<html><body>{x:42, y:🎉}</body></html>
+Prompt B:def bloom(Ω): return Σ ∈ 🎵🎮
+
+Cont_N_SingLangNonHumMix_S_L11_v5.npz
+Prompt A:[ { ⊕ ⊗ ⊥ ⊤ } ] vs 🎼♩♪♪
+Prompt B:404: 🔮 not_found while ⌘+⇧+Z
+
+# 7a: Emoji Soup – Regular
+
+Cont_N_EmojiSoup_R_L11_v1.npz
+Prompt A:😀🐍🚀🌈🛸🔥💀
+Prompt B:🎲🧊🍄🦄⚙️🎩🔮
+
+Cont_N_EmojiSoup_R_L11_v2.npz
+Prompt A:🐶🍕🎧🛹📸🏄🎂
+Prompt B:🦊🌮🎤🚴📷🏔🎉
+
+Cont_N_EmojiSoup_R_L11_v3.npz
+Prompt A:🐱🎮📀🕹🧁📡🎯
+Prompt B:🐸🍔📻🎲🥳🛷🔔
+
+Cont_N_EmojiSoup_R_L11_v4.npz
+Prompt A:🚢🌋🛰🪐💫🏰🎈
+Prompt B:🚁⛩🛸🧭🌌🎪🕍
+
+Cont_N_EmojiSoup_R_L11_v5.npz
+Prompt A:🧙🧛🧞🧟🧜🧚🦹
+Prompt B:🧝🧌🦸🦷🫀🧠🦴
+
+# 7b: Emoji Soup – SSP
+
+Cont_N_EmojiSoup_S_L11_v1.npz
+Prompt A:😶‍🌫️📿🧬🚽🪣🛢️🧨
+Prompt B:🛎️🧫🦠⛓️🪤🔗🕳️
+
+Cont_N_EmojiSoup_S_L11_v2.npz
+Prompt A:🧯🔌🧲🧪🔬💊💉
+Prompt B:🦷🦴🧻🦾⚗️🧹🦿
+
+Cont_N_EmojiSoup_S_L11_v3.npz
+Prompt A:🗑️🪦⚰️⛓🪝🕸🕷
+Prompt B:🐜🪳🪰🪲🦗🦟🦂
+
+Cont_N_EmojiSoup_S_L11_v4.npz
+Prompt A:⚠️📛🚫⛔️❗️🛑☣️
+Prompt B:☠️🌀💥🪓🔪🗡️⚰️
+
+Cont_N_EmojiSoup_S_L11_v5.npz
+Prompt A:🪤🧱🧊🗜️🧯🧰🔧
+Prompt B:🪚🛠️🔩⛏️🪛🧲📡
+
+# 8a: Bad Grammar – Regular
+
+Cont_N_BadGramm_R_L11_v1.npz
+Prompt A:The is not very but who car see
+Prompt B:Walked sky if on the never also why
+
+Cont_N_BadGramm_R_L11_v2.npz
+Prompt A:They quickly was a under between house
+Prompt B:When running the in blue not tablely
+
+Cont_N_BadGramm_R_L11_v3.npz
+Prompt A:Cat the jumped why greenly nowhere from
+Prompt B:Is him tree under beside softly go?
+
+Cont_N_BadGramm_R_L11_v4.npz
+Prompt A:Il ne pas très mais pourquoi voiture voir
+Prompt B:Marché ciel si sur le jamais aussi pourquoi
+
+Cont_N_BadGramm_R_L11_v5.npz
+Prompt A:</div if while end true then start>
+Prompt B:(function var not loop return goto;)
+
+# 8b: Bad Grammar – SSP
+
+Cont_N_BadGramm_S_L11_v1.npz
+Prompt A:Herly was the under pre often blurp
+Prompt B:With again to softly brick when where car?
+
+Cont_N_BadGramm_S_L11_v2.npz
+Prompt A:Doesn't green have the near while jumpish
+Prompt B:Clocks swim not because driving treewardly
+
+Cont_N_BadGramm_S_L11_v3.npz
+Prompt A:Why the door flies under happy but shout
+Prompt B:Was howling gently the between fly walk
+
+Cont_N_BadGramm_S_L11_v4.npz
+Prompt A:Quiero no bajo cuándo verde sin caminar
+Prompt B:Sonrió papel después nunca siempre correr
+
+Cont_N_BadGramm_S_L11_v5.npz
+Prompt A:def await on!true void maybe::close<>
+Prompt B:while != end.for break; throw catch isopen
+
+# 9a: Non-English – Regular
+
+Cont_N_NonEng_R_L11_v1.npz
+Prompt A:Porque el gato muy sobre pero ventana
+Prompt B:Caminar nunca lluvia dentro azul sin árbol
+
+Cont_N_NonEng_R_L11_v2.npz
+Prompt A:Le chien dans est pourquoi aussi rapide
+Prompt B:Maison jamais tomber quand vélo sous nuit
+
+Cont_N_NonEng_R_L11_v3.npz
+Prompt A:Wenn Baum nicht über gehen schnell dann
+Prompt B:Wasser Tisch mit unter laufen nein Himmel
+
+Cont_N_NonEng_R_L11_v4.npz
+Prompt A:Quando forte céu sem porque casa sorriu
+Prompt B:Nunca correr depois sempre livro nadar então
+
+Cont_N_NonEng_R_L11_v5.npz
+Prompt A:私 は 空 に が も 行きません
+Prompt B:猫 食べる なぜ ドア 雨 の 下 も
+
+# 9b: Non-English – SSP
+
+Cont_N_NonEng_S_L11_v1.npz
+Prompt A:Porbique el glata moy soblo parn ventana
+Prompt B:Camuñar nevria lluvion dentor azol sin arbril
+
+Cont_N_NonEng_S_L11_v2.npz
+Prompt A:La chuin danso esto pourki oussy raptide
+Prompt B:Masion janime tombir quend velo soux nulte
+
+Cont_N_NonEng_S_L11_v3.npz
+Prompt A:Wennk baumn nitcht überlich gehn schnall donk
+Prompt B:Wassir tische mitch untar lufen nyet himmelot
+
+Cont_N_NonEng_S_L11_v4.npz
+Prompt A:Quendro forta cilo sem porke casa sorrul
+Prompt B:Neunca corren depsois sempro livra nadou entoin
+
+Cont_N_NonEng_S_L11_v5.npz
+Prompt A:私んは 空ズ にょ がる もく 行めん
+Prompt B:猫る 食べょ なづ ドアリ 雨く のた 下もれ
+
+# 10a: Bytecode Confusion – Regular
+
+Cont_N_BPE_R_L11_v1.npz
+Prompt A:0x4F 0x2A 0x9C 0x00 0xFF
+Prompt B:0x1D 0x3B 0xA0 0x7E 0x11
+
+Cont_N_BPE_R_L11_v2.npz
+Prompt A:0xFA 0xCE 0xB0 0x0C 0xDE
+Prompt B:0xAD 0xBE 0xEF 0x12 0x34
+
+Cont_N_BPE_R_L11_v3.npz
+Prompt A:0xAB 0xCD 0xEF 0x01 0x23
+Prompt B:0x89 0x67 0x45 0x10 0xFE
+
+Cont_N_BPE_R_L11_v4.npz
+Prompt A:0xDE 0xAD 0xBA 0xBE 0x00
+Prompt B:0xFF 0xEE 0xDD 0xCC 0xAA
+
+Cont_N_BPE_R_L11_v5.npz
+Prompt A:0x10 0x20 0x30 0x40 0x50
+Prompt B:0x99 0x88 0x77 0x66 0x55
+
+# 10b: Bytecode Confusion – SSP
+
+Cont_N_BPE_S_L11_v1.npz
+Prompt A:0x4Z 0x2G 0x9H 0x0X 0xFJ
+Prompt B:0x1Y 0x3Q 0xAZ 0x7V 0x1W
+
+Cont_N_BPE_S_L11_v2.npz
+Prompt A:0xFX 0xCZ 0xBQ 0x0P 0xDX
+Prompt B:0xAX 0xBG 0xEZ 0x1R 0x3T
+
+Cont_N_BPE_S_L11_v3.npz
+Prompt A:0xAG 0xCX 0xEX 0x0Z 0x2U
+Prompt B:0x8W 0x6T 0x4R 0x1M 0xFZ
+
+Cont_N_BPE_S_L11_v4.npz
+Prompt A:0xDR 0xAD 0xBP 0xBR 0x0Z
+Prompt B:0xFX 0xEN 0xD9 0xC3 0xAZ
+
+Cont_N_BPE_S_L11_v5.npz
+Prompt A:0x1L 0x2M 0x3N 0x4O 0x5P
+Prompt B:0x9Q 0x8R 0x7S 0x6T 0x5U
+
+# 11a: Synthetic Unicode Blocks – Regular
+
+Cont_N_SynthUniC_R_L11_v1.npz
+Prompt A:ᚠᛇᚻ ၐႠᎢ ᄋᄃᄒ
+Prompt B:קצש שغض ឲទថ ༀ༁༂
+
+Cont_N_SynthUniC_R_L11_v2.npz
+Prompt A:ԱԲԳ ԴԵԶ ՀՏԺ ԻԼԽ
+Prompt B:ЖЗИЙ ҚҜҢ ҮҰҲ
+
+Cont_N_SynthUniC_R_L11_v3.npz
+Prompt A:ሀሁሂ ግጎጐ ጠጡጢ
+Prompt B:ກຂຄ ງຈຊ ຌຍຎ
+
+Cont_N_SynthUniC_R_L11_v4.npz
+Prompt A:ເແໂໃໄ ະາຳິີ
+Prompt B:ᏐᏑᏒᏓ ᏜᏝᏞᏟ
+
+Cont_N_SynthUniC_R_L11_v5.npz
+Prompt A:ᎠᎡᎢᎣᎤ ᎥᎦᎧᎨᎩ
+Prompt B:ၐၑၒၓ ႠႡႢႣႤ
+
+# 11b: Synthetic Unicode Blocks – SSP
+
+Cont_N_SynthUniC_S_L11_v1.npz
+Prompt A:ᚣᚹᚳ ၘႧᎶ ᄁᄂᄎ
+Prompt B:קזט شفغ ឡហម ༅༇༈
+
+Cont_N_SynthUniC_S_L11_v2.npz
+Prompt A:ԱՅԽ ԾԿՖ ՒՓԘ ԶՂ
+Prompt B:ЖҚҘ ҞҶҨ ҮҴҲ
+
+Cont_N_SynthUniC_S_L11_v3.npz
+Prompt A:ሃህሇ ጋጘጚ ጥጦጧ
+Prompt B:຃ຄງ ຉຊຌ ຎຏຐ
+
+Cont_N_SynthUniC_S_L11_v4.npz
+Prompt A:໅ໆ໇່້ ໋໌ໍ໎໏
+Prompt B:ᏠᏡᏢᏣ ᏤᏥᏦᏧ
+
+Cont_N_SynthUniC_S_L11_v5.npz
+Prompt A:ᎬᎭᎮᎯᎰ ᎱᎲᎳᎴᎵ
+Prompt B:ၘၙႀႧႨ ႩႪႫႬ
+
+# 12a: 🪧 Disparate Alphabets – Regular
+
+Cont_N_Alphabets_R_L11_v1.npz
+Prompt A:ᚠ ᛇ ᚻ Ⴀ Ⴁ Ⴂ ᄋ ᄃ ᄒ
+Prompt B:ᚱ ᛞ ᛉ Ⴃ Ⴄ Ⴅ ᄆ ᄂ ᄊ
+
+Cont_N_Alphabets_R_L11_v2.npz
+Prompt A:ᚦ ᚫ ᚹ Ⴇ Ⴈ Ⴉ ᄅ ᄉ ᄏ
+Prompt B:ᚨ ᛁ ᚾ Ⴊ Ⴋ Ⴌ ᄀ ᄎ ᄓ
+
+Cont_N_Alphabets_R_L11_v3.npz
+Prompt A:ᛃ ᛏ ᚳ Ⴍ Ⴎ Ⴏ ᄐ ᄑ ᄒ
+Prompt B:ᛗ ᛇ ᚼ Ⴐ Ⴑ Ⴒ ᄉ ᄃ ᄁ
+
+Cont_N_Alphabets_R_L11_v4.npz
+Prompt A:ᚩ ᛝ ᚵ Ⴓ Ⴔ Ⴕ ᄂ ᄃ ᄅ
+Prompt B:ᛠ ᛞ ᚻ Ⴖ Ⴗ Ⴘ ᄎ ᄉ ᄀ
+
+Cont_N_Alphabets_R_L11_v5.npz
+Prompt A:ᛇ ᛚ ᛗ Ⴙ Ⴚ Ⴛ ᄆ ᄉ ᄊ
+Prompt B:ᚠ ᛟ ᛞ Ⴜ Ⴝ Ⴞ ᄋ ᄇ ᄌ
+
+# 12b: Disparate Alphabets – SSP
+
+Cont_N_Alphabets_S_L11_v1.npz
+Prompt A:ᚲ ᛑ ᛪ Ⴓ ႞ Ⴇ ᄂ ᄘ ᄺ
+Prompt B:ᛜ ᚯ ᛕ ႠႾ Ⴋ ᄛ ᄾ ᄼ
+
+Cont_N_Alphabets_S_L11_v2.npz
+Prompt A:ᚶ ᚺ ᛅ ႨႭႺ ᄁ ᄆᄝ
+Prompt B:ᚦ ᛍ ᛎ Ⴄ ႕ ႗ ᄋ ᄞ ᄠ
+
+Cont_N_Alphabets_S_L11_v3.npz
+Prompt A:ᚤ ᚰ ᚽ ႵႰ Ⴟ ᄣ ᄧ ᄫ
+Prompt B:ᛯ ᚛ ᛳ Ⴊ ႒ ႖ ᄒ ᄬ ᄩ
+
+Cont_N_Alphabets_S_L11_v4.npz
+Prompt A:᛬ ᛹ ᛻ Ⴔ ႝ ႟ ᄮ ᄰ ᄲ
+Prompt B:᛾ ᚵ ᛊ ႪႫ Ⴌ ᄶ ᄳ ᄷ
+
+Cont_N_Alphabets_S_L11_v5.npz
+Prompt A:ᚻ ᚿ ᛚ ႂ ႈ ႎ ᄺ ᄾ ᄻ
+Prompt B:ᛔ ᛚ ᚽ ႞ ႟ ႖ ᄽ ᄿ ᅀ
+
+# 13a: Overtokenized Fragment Flood – Regular
+
+Cont_N_Overtoken_R_L11_v1.npz
+Prompt A:##ing ##ly ##tion ##ence ##ment
+Prompt B:##able ##less ##ous ##ful ##ive
+
+Cont_N_Overtoken_R_L11_v2.npz
+Prompt A:##pre ##re ##un ##dis ##mis
+Prompt B:##semi ##trans ##over ##sub ##under
+
+Cont_N_Overtoken_R_L11_v3.npz
+Prompt A:##al ##ic ##ity ##ness ##er
+Prompt B:##est ##dom ##hood ##ship ##ism
+
+Cont_N_Overtoken_R_L11_v4.npz
+Prompt A:##anti ##non ##counter ##inter ##extra
+Prompt B:##meta ##neo ##pseudo ##ultra ##infra
+
+Cont_N_Overtoken_R_L11_v5.npz
+Prompt A:##graph ##logy ##scope ##meter ##path
+Prompt B:##phile ##nomy ##gamy ##cracy ##archy
+
+# 13b: Overtokenized Fragment Flood – SSP
+
+Cont_N_Overtoken_S_L11_v1.npz
+Prompt A:##zong ##bly ##plion ##rience ##tment
+Prompt B:##rable ##liss ##jous ##mful ##dive
+
+Cont_N_Overtoken_S_L11_v2.npz
+Prompt A:##vre ##ex ##zum ##bis ##tris
+Prompt B:##lemu ##tranz ##overk ##snub ##ulber
+
+Cont_N_Overtoken_S_L11_v3.npz
+Prompt A:##alx ##icr ##itix ##nez ##erp
+Prompt B:##ezd ##dob ##hoor ##shap ##asm
+
+Cont_N_Overtoken_S_L11_v4.npz
+Prompt A:##arni ##nan ##cintar ##intrik ##eptar
+Prompt B:##meqo ##nweo ##psedo ##eltra ##intra
+
+Cont_N_Overtoken_S_L11_v5.npz
+Prompt A:##grasp ##ludgy ##skurp ##meeter ##puuth
+Prompt B:##frile ##nemy ##demy ##camy ##larchy
+
+# 14a: Zalgo Text – Regular
+
+Cont_N_Zalgo_R_L11_v1.npz
+Prompt A:T̶̠͋͑̋ḧ̸̻̠̫́̋e̶̛͎̠̘̳̘͗͊̓͘͠ͅ ̶͍̦͇͇͎̮͇̊̀͑͂͌̈́́̐̚͠͝v̶͖̮̮̲͖̋͋̇̀͘̚̕o̷̤͓͗̏̕i̴̦̍́d̶̖̙̹̈́
+Prompt B:C̴̺̝̰͌̏͜ḧ̶̙̪͚͔́a̷̲͂̅͌̀͆͜ō̴͎̇̈́͆̍̽̚̕s̸̞͓̖̮͌̀͠ ̴̛̖̖̟͉̩̻̑̏͐̆̽̀͂͜ͅṟ̸͉̐̾́̿̍͝͠ḛ̵̞̈͗i̷̡͂g̶̦̽n̶̼̤̝̟̩̽̈́̈́̿̍́͆s̷̩͎͖͎͗͊̈́͐̚͠
+
+Cont_N_Zalgo_R_L11_v2.npz
+Prompt A:Ṫ̴͖̯̬̐͆͜ẖ̶̿̅ē̵͈͔̯͓̝̋́ ̵̨̟̝̿̚é̸̢̡̮̫̈́͠y̶̩͗̓͝͝e̵̡̘̘̍͆͋͝
+Prompt B:Ẅ̵͇̥̘̫́̀̊̿͗̓͝͠h̴̢̻̰̟̟̼͈̳͓̦͌͋o̴͇͉̼͋̎͛̇̕͘͝ ̶̱̃s̷̛̤̜͚̰̩͙͕ę̵̡̺̩̟̜̳͈̳͌́̍́͆̾́̿̚͠e̶̟͇̳̲͊̈́s̷͇͉̺͎̋͠
+
+Cont_N_Zalgo_R_L11_v3.npz
+Prompt A:F̴͓͇̳̈́͋̽͝e̵̡̟̿͊͌͘a̴̘̖͓͂̅͝r̶͉͛ ̸̼̳̺̳̳̰͇͛̇̅̍͆̏̐̕ͅc̴͍̠̱̠̈̑̿o̵̢͙̞͈̖̓̇̇̿̀̇̽͊m̷̤̓e̶̛̼̓̎̈́̋̾͘͝s̷̳̙̋̐͌̒̿͋͠
+Prompt B:T̴͈̯̔̓̾h̷̘̺̞͐̽̋͘e̸̩̼̙̊́̾͠ ̶̻͇̐̎̓̾͐s̵̘͑̽͂h̴̺͓̠̞͋̍̒͛͆͠͝ͅǎ̶̻̪d̵̠̱̙̝̿̓ơ̴̤͗͑͛̍͜͝ẅ̸̢̯́ ̷̙̯̳͛̚͝ṙ̷̯̺͠ȉ̵̦̤̬s̸̛̩̼̆͊è̴̯̞̗̿͠s̷̛̪̦͗̍͌͊͘
+
+Cont_N_Zalgo_R_L11_v4.npz
+Prompt A:H̷̛͇̺͕͉͙̺͕̲̺̍̓̎̏̀͊̀̾e̶̼͉̟̬̘̳̠͉͌͂͐͐̾́̿l̵̫͖̤͓͕͍̓͒̾͐̿̇̑̋̚͜͝l̸̼̰̖̏̿̿͗̈́́̕o̶̻̱̼̫̺̒͂̎̚͠
+Prompt B:Z̶̢̞͚̔̑̈́̓ą̵̹̟̳̲͈̲̲̈́̍̀̍̅͆̚͘l̷̛̛̯͖̪̟͎̺͍̙̀̀͛͂̈́͘g̵̤͖̜͙̳͓̥̟̈́̍̚ͅo̸̠͓͓͙͔̠͕̖͙͘͝ ̴̟̪͓̫́̎́̓̿́͊̓͊͝c̴̛͓̲͚̈́̾͛͒̈́̓̅̚͝ơ̸̢̬̝͚̟̦̒̀͌͑͂̏m̵̛͎͎͍̤̓̒̀̍̋̕̚͘e̷̢̯̮̬̝̼̗͝s̷͇̘̬̳̬͔̉́͊͐̈́̕͘
+
+Cont_N_Zalgo_R_L11_v5.npz
+Prompt A:D̶̞̞͚̝̺̖̜̻̖̙̝̯̪̗̥̻̑̋̓͜ä̶͈͓̱̝̺͍̗́́̒̄̈́̏͛̓̿̀̇͌́̕͘r̸̢̺͓̜͚͔̫͙̬̲̬͙̹̟͎̤̫͔̈́͗͂͛͋̏̚̚̚k̸̰̘̘̺̟̝̟̘̖̏͗̓̀̔̄̿̈́̚͝n̷̛̙͇̹͇͉̜̖̪̯̠͎̪̤̮̙̞̓̈́̾͗͗̐̿̇̚̕͝͠͝ȅ̴̡̛̛̖̲̘̳̫͚͒͂̑̑̈́̇̔̚͘͠͝s̵͖͎͔͇̜̰̪̦̬͖̙̟̠̗̼̖͂͒̋̎̎̅͋́͐̓͋̎͘͘͝s̶̳̫̩̬̤̥̰̜̫͈̩̯̼͎̫̬͌͛̄͊̾̋̒̋͌͠͠
+Prompt B:B̴̢̡̛̪̥͍̞̮͙̗͖͖̯̦̖̪͊̍̋̓̀͘͜͝͝ͅe̷̙̼͓̘̹̖̪̰̱͕̙̲̰̳̙̿͂͗̄͌̐̐͐̈́̏̋̇͘̕w̵̡̛̛͖͈̳̱̳̬̫̯̼̹̘̞̲̙̜̤̽̿͊́̈́̏̈́̔̾́̈́̍͐͝a̶̢̢̘̳̠͎̩͉̝͚͓͇̟̖̙͗̀͌̒̽̏͊̋̍̿̎̓̋͘͝͠ͅr̸̦̳̮̖̤̞̠̪̯̫͍̲͕̙̍̋͆̈́͌̄̾̔̄̋̿͘͘͜͠͠ͅe̶̢̛̛̱̘̦̲̟̭͇̱̠̺̹̗̰̘͕͊̒̓̓̄͂̎͂͝
+
+# 14b: Zalgo Text – SSP
+
+Cont_N_Zalgo_S_L11_v1.npz
+Prompt A:Q̴͈̳͉̤̥̗̟̍̿̿̿̈́͘͘w̶͖̟͎̘͚͚͛̐̒̇͒̚e̷̱̘͎͐͋̍ř̸̢̜͍̝̘̯̄͒͋̿͑̒̄͐͝t̷͉̦̩͈̪̳͇̥̞͓̓͘̕ÿ̵̢̤̜̺͔́̑̒̈́
+Prompt B:U̵̙͎̞̙̯͌̑̅̚͝i̴̢̛͙̗̮͙͖̜͉̘̤͗̔͊̿̾̾̿͝ơ̶̳̮̲̺̯̹̮̬͋̍͛͛͘ͅṗ̷̛͓͚̹̺̮͐̒͌͘͝
+
+Cont_N_Zalgo_S_L11_v2.npz
+Prompt A:A̴̡̩̯̙̦̩̯̬͂̍́̋̎͋̕s̸̩̮̺̄̽͂͋̕̕͝d̷̼̫͓̲̙̖̰̅̈́̚ͅf̴̗̟̙͙͖̬͉̟̏͗̈́͗̆͒͑͘
+Prompt B:J̷̢̰̜͖͇͚͈͋̈́̿̆k̴̘̞̙̙̦̺̳̙̰̒̄͝ĺ̷̠͓͎̟̱͓͖͓̓̀̊͜ͅ;
+
+Cont_N_Zalgo_S_L11_v3.npz
+Prompt A:B̸͖̫̦͙͐̏l̶͔̰̳̮̰̋̏̿̔̿͝ͅő̷̢̫̳̪͐̽̏͂̀͒̓̕r̷̦̥̞͍͚̰̦̖̆̐̅ǵ̸̲̮̘͕̒̓̒͂̏̽
+Prompt B:N̷̖͎͓͙̥̘̪̿̀̀͘a̵̢̺̰̫̳͇͛̽r̵̞͐̋͘g̵̼̼͓͓̮̫̔̈́̽͒͝l̸̢̦̩̰̻̦̋̈́͗͌̐̕é̸̢̟̮͙̯̤͕̤͒̕
+
+Cont_N_Zalgo_S_L11_v4.npz
+Prompt A:V̴͉̩͇̱̍͗͐́͘i̸̘̠̠̗̎b̸͖̮̹͒͊͗̈́̇́͛̽̓e̵̛̜̙͉̺̹̟̞̗̜͂̈́͑̓͒̐̚͠
+Prompt B:Ș̷̛̟̳͓̙̙̩̙̞̈́͘͘͝h̷̜̫̙̒̄̾͗͘͜͠r̷̢̘͎̜̈́̆͗͝i̵͍̘̟̱̠̅̿́̇̋m̴̨̢͚͚͖͈͎͒̐̽̾͑͌͑͊
+
+Cont_N_Zalgo_S_L11_v5.npz
+Prompt A:G̴̟̤̠͔̟͖̘͍̝̖̍̇̍͊͌͒̎͒́͗͛̽̽̇̓́̿̿̚͝r̷̢̹̞̥̟̖̫͕͙̹̫̩̈́̑̐͗͋͐̈́͒͆̐͐̿͂̚̕͝͝͝ë̷̱̝̰͉̞͕́͌̑̇͋̅̒̎̿͑̆̔͘͝͝b̴̢̛͎͈̞͔͈̬̀̾̈́̑̓̏̍̈́͊̒͜͝ͅl̴̛̺͎̼͓̩̲̹̯͔̳̳̀̎̇̽͌̑͗̔̍́̕͝͝i̶͎̺̪͉̥͇̤͉̓͗̾̑̄̐̋̾̎̾̚̚͝͝n̴̛̙̺͍̲̞̪̩̖͙͈͍̖̟̝̼̎̋̋̑͋̅̔̇͌͒̇̕͠͝k̵̛̪͚͚͚̫͍̲̟̭͓̘͔̦̘̔̓̋̒̋̽̀̾̎̿͂͠s̶̢̛̬̺̯͙̱̖̞͕͂͋̽͗̋́̐͛̓̐͂͛͜
+Prompt B:D̸̳̘̺̼̹̺͎̬͇̲̜̠̈́͐̈́̆̆̓̾̌͂̎͑̏͌̕͘͘͠͝r̷̢̦͉̯͓̺̥̮̘͕̱̩͍̈́̓̑̄͒̈́͊̆͐͑̎̚̚̚ḛ̷͇̲̝͕̘͓̱̜̠̺̬̬̤̪̅͗̾́̇͌̽̒̀̔̏̚̚͝ä̴̢̰͙͖̥͕̗͓̤̖͔̟̘̞́̐̋͛̾͆́̐̕͜͠ṁ̵̼̜͕̬͕̱̝̱̬͚͙̞̝̺̳̳̀̀̀͗̈́̏̋̇̐̋͘͜͝s̷̖̬̮̝̩̙̙̺͈̙̭̹̤͉̰̥̘͗̾̅͗̈́̀̓̅̐͌̍
+
+
+
+# 15a: Overloaded Emoji Category Chains – Regular
+
+Cont_N_OverEmoji_R_L11_v1.npz
+Prompt A:👨‍⚕️👩‍⚕️🧑‍⚕️👨‍🏫👩‍🏫🧑‍🏫
+Prompt B:👨‍🍳👩‍🍳🧑‍🍳👨‍🔧👩‍🔧🧑‍🔧
+
+Cont_N_OverEmoji_R_L11_v2.npz
+Prompt A:👨‍🎨👩‍🎨🧑‍🎨👨‍🚀👩‍🚀🧑‍🚀
+Prompt B:👨‍✈️👩‍✈️🧑‍✈️👨‍🔬👩‍🔬🧑‍🔬
+
+Cont_N_OverEmoji_R_L11_v3.npz
+Prompt A:👨‍🌾👩‍🌾🧑‍🌾👨‍⚖️👩‍⚖️🧑‍⚖️
+Prompt B:👮‍♂️👮‍♀️🕵️‍♂️🕵️‍♀️💂‍♂️💂‍♀️
+
+Cont_N_OverEmoji_R_L11_v4.npz
+Prompt A:👨‍💻👩‍💻🧑‍💻👨‍💼👩‍💼🧑‍💼
+Prompt B:👷‍♂️👷‍♀️🧑‍🔧🧑‍🚒🧑‍✈️🧑‍⚖️
+
+Cont_N_OverEmoji_R_L11_v5.npz
+Prompt A:🧑‍🎓👨‍🎓👩‍🎓🧑‍🏫👨‍🏫👩‍🏫
+Prompt B:🧑‍⚕️👨‍⚕️👩‍⚕️🧑‍🔬👨‍🔬👩‍🔬
+
+# 15b: Overloaded Emoji Category Chains – SSP
+
+Cont_N_OverEmoji_S_L11_v1.npz
+Prompt A:👨‍🎱👩‍🎱🧑‍🎱👨‍🔎👩‍🔎🧑‍🔎
+Prompt B:🧑‍🏺👩‍🧃👨‍🧵🧑‍🧼👩‍🛎️👨‍🧼
+
+Cont_N_OverEmoji_S_L11_v2.npz
+Prompt A:👨‍🪜👩‍🪜🧑‍🪜👨‍🛠️👩‍🎚️🧑‍🛷
+Prompt B:🧑‍🧻👨‍🧯👩‍🪤🧑‍📡👨‍🪬👩‍🪪
+
+Cont_N_OverEmoji_S_L11_v3.npz
+Prompt A:👨‍🧃👩‍🧃🧑‍🧃👨‍🎚️👩‍🪓🧑‍🪑
+Prompt B:👩‍🎣👨‍🧿🧑‍🪛👩‍🪗🧑‍🪆👨‍🪣
+
+Cont_N_OverEmoji_S_L11_v4.npz
+Prompt A:🧑‍📞👨‍🔩👩‍🦯🧑‍🦺👨‍📤👩‍🗜️
+Prompt B:👨‍💾👩‍📠🧑‍📸👨‍📬👩‍💽🧑‍🗃️
+
+Cont_N_OverEmoji_S_L11_v5.npz
+Prompt A:🧑‍🧪🧑‍🎰🧑‍📈🧑‍🧨🧑‍🛢️🧑‍🔧
+Prompt B:🧑‍🦼🧑‍📍🧑‍🎛️🧑‍📳🧑‍🔋🧑‍📼
+
+# 16a: Character Stream Noise – Regular
+
+Cont_N_StreamNoise_R_L11_v1.npz
+Prompt A:eaaeeeaeeaaeeaeeaeeaaeeaa
+Prompt B:bbbabbabbbbabbabbbabbabbb
+
+Cont_N_StreamNoise_R_L11_v2.npz
+Prompt A:mmnmmmnmnmmmnmmnmmmnmmnm
+Prompt B:tttsttstttsttttsttstttsts
+
+Cont_N_StreamNoise_R_L11_v3.npz
+Prompt A:loolooloolooloolooloolooo
+Prompt B:heeheeheheeheheeheehehhee
+
+Cont_N_StreamNoise_R_L11_v4.npz
+Prompt A:qqqqqppppppqqqqppqqpppqqq
+Prompt B:aaaabaaabaaaabaaabaaaabaaa
+
+Cont_N_StreamNoise_R_L11_v5.npz
+Prompt A:ccccaccacccacaccacccaccaca
+Prompt B:zzzzyzzzyzzzzyzyzzzzyzyzzz
+
+# 16b: Character Stream Noise – SSP
+
+Cont_N_StreamNoise_S_L11_v1.npz
+Prompt A:eeaeeaeeaeeeaeaeaaeaeaeae
+Prompt B:ababbabaabbaabababbbaabba
+
+Cont_N_StreamNoise_S_L11_v2.npz
+Prompt A:mmmnmnmnmmmnmnmmnnmnmmnmn
+Prompt B:tsststtstsstttstsststttss
+
+Cont_N_StreamNoise_S_L11_v3.npz
+Prompt A:loololloolloollooloolooll
+Prompt B:hehheehhehhehheehhheehhehh
+
+Cont_N_StreamNoise_S_L11_v4.npz
+Prompt A:qqppqqqppppqqqqppqppqqqqq
+Prompt B:aaaabaaaabaaabaaabaaaabaa
+
+Cont_N_StreamNoise_S_L11_v5.npz
+Prompt A:ccacaccccacacccacacccacac
+Prompt B:zyyzyzzzyzyzzyzyzzyzzyzyz
+
+# 17a: Morse Code Strings – Regular
+
+Cont_N_Morse_R_L11_v1.npz
+Prompt A:.... . .-.. .-.. --- / .-- --- .-. .-.. -..
+Prompt B:.--. .-. --- --. .-. .- -- / - . ... - / ... . -.-.
+
+Cont_N_Morse_R_L11_v2.npz
+Prompt A:- .... .. ... / .. ... / .- / - . ... -
+Prompt B:.-- .. - .... / ... --- -- . / -- --- .-. ... .
+
+Cont_N_Morse_R_L11_v3.npz
+Prompt A:.... --- .-- / .- .-. . / -.-- --- ..- / - --- -.. .- -.--
+Prompt B:-.-. --- -.. . / - .-. ..- -.-. -.- ... / -- -.-- / - .- -.- .
+
+Cont_N_Morse_R_L11_v4.npz
+Prompt A:.... .- ...- . / .- / -. .. -.-. . / -.. .- -.--
+Prompt B:... --- -- . - .... .. -. --. / .. ... / .... .- .--. .--. . -. .. -. --.
+
+Cont_N_Morse_R_L11_v5.npz
+Prompt A:.... . .-.. .-.. --- / .-- --- .-. .-.. -..
+Prompt B:.... .- .-.. .-.. --- / -... .-.. .-.. .-. .-. .-.-.-
+
+# 17b: Morse Code Strings – SSP
+
+Cont_N_Morse_S_L11_v1.npz
+Prompt A:--.- ..-. .-. ..- --. / ..-.- .--.. .-.- .-..
+Prompt B:-..- ..-- -.-. .-.- / .-..-- .--- .--.. ..-.
+
+Cont_N_Morse_S_L11_v2.npz
+Prompt A:...-... ---.- / --..-.. ---... --..--
+Prompt B:..--.- / .---... ---.-.- --.-.-
+
+Cont_N_Morse_S_L11_v3.npz
+Prompt A:...-- / -...-- / -..-.. / ....-.
+Prompt B:...--.- ..--.--- ..--.-.- .-..--.
+
+Cont_N_Morse_S_L11_v4.npz
+Prompt A:.--.-.- / -...-. .-.-- --.-... / ...--.-
+Prompt B:.-.--.. -.-.-.- -..-.- .---.-- --..--.
+
+Cont_N_Morse_S_L11_v5.npz
+Prompt A:-.-.-- ..--.- ...-.-.- / .-.-.. .---..
+Prompt B:--..-. -..--.- ---.-.- ..---..- ...-.--
+
+# 18a: Conlang Snippets – Regular
+
+Cont_N_Conlang_R_L11_v1.npz
+Prompt A:Qapla' qeylIS puqloD. je'be' neH.
+Prompt B:batlh Hegh neH tlhIngan SuvwI'. QIbDaq SuvwI'pu'.
+
+Cont_N_Conlang_R_L11_v2.npz
+Prompt A:Mi estas pacema homo. Ĉu vi komprenas?
+Prompt B:La suno brilas tra la fenestro. Ni devas iri.
+
+Cont_N_Conlang_R_L11_v3.npz
+Prompt A:Ai la vefimo palilo. Ke me toki pona la sina pona.
+Prompt B:Toki! Mi wile moku kepeken ilo.
+
+Cont_N_Conlang_R_L11_v4.npz
+Prompt A:tenpo suno ni la jan pona li kama.
+Prompt B:mi moku e kili suli lon tomo mi.
+
+Cont_N_Conlang_R_L11_v5.npz
+Prompt A:taH pagh taHbe'. nuqneH?
+Prompt B:bortaS bIr jablu'DI' reH QaQqu' nay'.
+
+# 18b: Conlang Snippets – SSP
+
+Cont_N_Conlang_S_L11_v1.npz
+Prompt A:Qeml'a retHek sporgul. n'be qaq droz.
+Prompt B:jeH'laq venqor puklaD. loq'ba den.
+
+Cont_N_Conlang_S_L11_v2.npz
+Prompt A:Mi esperton hulame. Ĉu fanos peleda?
+Prompt B:Brika senol tuva fispan. Egro ti rali.
+
+Cont_N_Conlang_S_L11_v3.npz
+Prompt A:Ke vilo pono meko. Teki jopo la wana suli.
+Prompt B:Pona moku kali nono sina lekelo.
+
+Cont_N_Conlang_S_L11_v4.npz
+Prompt A:suno poki melu ta jan lon.
+Prompt B:lo tomo e piku ken tomo jan pimeja.
+
+Cont_N_Conlang_S_L11_v5.npz
+Prompt A:taM pagh Zok'la. neH nuqow?
+Prompt B:grimla jeHli spaH'ne. Nokqua tal.
+
+# 19a: Invented Psudolangs – Invented pseudo-languages mimicking morphology/syntax of real conlangs, but with gibberish roots or malformed structure.
+
+Cont_N_Pseudolang_R_L11_v1.npz
+Prompt A:Ez dut ulertzen zergatik gertatu den.
+Prompt B:Hemen egon nahi nuen, baina ezin izan dut.
+
+Cont_N_Pseudolang_R_L11_v2.npz
+Prompt A:እንዴት ነህ?
+Prompt B:ዛሬ ትምህርት አልተደረገም።
+
+Cont_N_Pseudolang_R_L11_v3.npz
+Prompt A:मुझे समझ नहीं आ रहा है।
+Prompt B:क्या आप मेरी मदद कर सकते हैं?
+
+Cont_N_Pseudolang_R_L11_v4.npz
+Prompt A:Tôi không hiểu tại sao điều đó xảy ra.
+Prompt B:Bạn có thể nói lại được không?
+
+Cont_N_Pseudolang_R_L11_v5.npz
+Prompt A:Díí nihíjiʼígíí doo hazhóʼógo tʼáá shoodí.
+Prompt B:Tʼáá shoodí biniinaa nizhónígo shikaad.
+
+# 19b: Pseudolang SSP (Scrambled Semantic Nulls)
+
+Cont_N_Pseudolang_S_L11_v1.npz
+Prompt A:Ezk dutzu ilarzen zerbaki gertun da.
+Prompt B:Nahi biden lagur egon, ezin hartu zen.
+
+Cont_N_Pseudolang_S_L11_v2.npz
+Prompt A:እንተኝ ነሳ?
+Prompt B:ተዛነ ትሁበር አተዳም።
+
+Cont_N_Pseudolang_S_L11_v3.npz
+Prompt A:मुझी सम्हा नहिं ई रहग।
+Prompt B:क्यार मती नदत सक्ते हांई?
+
+Cont_N_Pseudolang_S_L11_v4.npz
+Prompt A:Tôi khung hểu tai sô đỉu đa xày rá.
+Prompt B:Bán có thế nội lãi được khộng?
+
+Cont_N_Pseudolang_S_L11_v5.npz
+Prompt A:Dóó nihízíʼígíí doo hachʼóógo tʼáá shólí.
+Prompt B:Tʼéé shóodí nishínígo biniízh shikáát.
+
+# 20a: Non-human
+
+Cont_N_NonHumanMix_R_L11_v1.npz
+Prompt A:+[-->-[>>+>-----<<]<--<---]>-.>>>+.>++.+++++++..+++.>-.------------.<<+.>>++.
+Prompt B:>++++++[<+++++++++>-]<-----.>+++++++..+++.>++.<+++++++[>--------<-]>.
+
+Cont_N_NonHumanMix_R_L11_v2.npz
+Prompt A:likes(mary, food).
+Prompt B:parent(john, mary). sibling(mary, tom).
+
+Cont_N_NonHumanMix_R_L11_v3.npz
+Prompt A:X:1 T:Scale M:4/4 K:C C D E F | G A B c |
+Prompt B:X:2 T:Arpeggio M:3/4 K:Am A B c d | e f g a |
+
+Cont_N_NonHumanMix_R_L11_v4.npz
+Prompt A:\frac{d}{dx}e^{x} = e^{x}
+Prompt B:\int_0^\infty e^{-x^2} dx = \sqrt{\pi}
+
+Cont_N_NonHumanMix_R_L11_v5.npz
+Prompt A:👨‍🍳🍝🔥➡️😋
+Prompt B:🧑‍🏫📖💬➡️🤓
+
+
+# 20b: Non-human
+
+Cont_N_NonHumanMix_S_L11_v1.npz
+Prompt A:--[++--[<++->>+<<<]>>--]<<++>>----.-->>>--<<+++>>>-..+++>>>++-.
+Prompt B:<<<+++[++->+<-]>+++.>>----<<<[>>+>+<<<-]>---.>++--<<<-->>>
+
+Cont_N_NonHumanMix_S_L11_v2.npz
+Prompt A:tastes(grim, frob).
+Prompt B:beholds(zink, wobble). knorfle(blup, ting).
+
+Cont_N_NonHumanMix_S_L11_v3.npz
+Prompt A:X:7 T:Glorkwave M:9/8 K:Zz z x y q | t v s u |
+
+Prompt B:X:42 T:Voidscape M:∞/∞ K:♭m H Z V L | ∂ c ℓ B |
+
+Cont_N_NonHumanMix_S_L11_v4.npz
+Prompt A:\splat[omega]{∞z}ψ^{glorp} ≉ ∇{blargh}
+Prompt B:\foozle_7^{Δ} ∫ blip^n dn ≈ 🌀
+
+Cont_N_NonHumanMix_S_L11_v5.npz
+Prompt A:🐙🎛️🚽⛓️➡️💢
+Prompt B:🐌💾🧽🕳️➡️😶‍🌫️
+
+# Control Wallfacer: Null Zalgo-Coherence axis
+
+Cont_WallfacZ_L11_v1.npz
+Prompt A:The systems looks excellent. 
+Prompt B:Ŗ̶̛̘̭͓̗͈͖͙͓̭̬̬͓̩̝̓͂̓̆͂̔̓̾́̔̄͑̏͆́̿̒̄̏͛̇̂̔̆̆͆̋͒́͘ͅş̴̵̸̸̸̵̸̵̴̴̶̵̴̵̵̵̸̴̶̴̸̴̸̸̶̴̵̷̷̢̨̢̢̨̡̧̢̧̡̢̡̡̢̢̡̨̢̢̨̡̢̢̧̢̡̢̨̡̨̨̡̡̨̧̧̧̡̨̧̧̨̧̧̢̡̨̢̡̡̢̡̨̧̢̧̨̡̨̨̧̨̢̢̨̢̡̡̧̧̨̛̛̛̛̛̛̛̛̛̛̛̛̛̛̛̲̦͕̩͉̮̰̫̗͈̦͍͍̼̤͈̟̬͍͔̬͔̖̙͓͚̘̞̝͕͉̙̪̖͙̜̻̻̺̮̗̱̹͔̠̟͚̪̹̘͇̻̳̱̲͎̜̠͇̲̳̘̦͎͓̫͓̲̻̙̹̘̠̙̩̩̯̘̣̲̘̻̖̱͖͍̺̖͕̟͖͙͇͚̘̘̮̥̞̖͕̖̖̲̳͈̩͓̫̠͕̼̖̩̝̼͔͙͕̻̩͚͍̯̝͇̹̱͉̣͈̠̦͙̫͎̲͍̼̫͉̩̩͇̝̦̳̭͔̝̞̜͈͓̲̫̲̥͖̥̱͇͚̜͓̠̪͓̥̫͇͚͕̬̜͇̪͚͈̫̝̻̬̤̣̰̜̺͚͉͉̺͉̰̯̗͕̼̦̗͍̦̱̜͈̼̰͖̯̱͍̹̺̮͕̙̺̗̦̜͎̫̪̳͍͙̙̝̣̝͚͈͚̖̹̦̞̫̞̖͓̫̬̭̣͓͉̠̫̗͎͉̣̻̙͕͇͈͙̮͉̳͉͔̺͖̯͇̳͕̻͇͉̝̳̥̹̱̘͕̘̟͈̼͉̪̥͖͔͚̫̝̭̯̠͎͇̣̳͓͉̙̩̰̪̝͔͙̜̠͓͔̙͎̦͚̰̠̜̼͈̱̪̼̟̞̘͖͍͙͕̪̰͉̖̹͙͇̤͚̣̭̯͓̺̝̲̠̭̯̱̪̪̘̦̜̮͍̲̘̙͇̖͎̳̖͔͕̠͚͉̱͇̣̪̥̰͓͍̣̞̪̘̯͎̮͎͈̻͎̰͖̞͓̳͇̗͍̝͔̙̜̮̪͔̯̱̼͚̻͍̬̭͕̱̝̞̣̻̼̩̹̬̥̮̦̪̙̞̮̣̖̖̗̼̝͍̳͙̯͙͉̗̭͉̣͙̩̯̦̺͇̺̠͚̺̦̹̪͎̩̳͓̞̱̺̬̻̺͖̹͖̫̳͎̣̠̜͉̠̱͎̙̟͖̩͎͉̫̖̩͍̖̤̳̲̟̤̠͕͇͎̙̲̯̲̺͕̩̫̳̫̬̘͖̘̪͈͖͙̜̘͕̳̲͓͎̬̰̭̰̙̦̱̩̟̬̫̳̘̘͍̹̜̳̰͉͎̫̻̥̳̣̠̬͈͍̩̤͇̺̝̪̹͇͇̦̟̬̮̲̤͕̳̰̬̫͓̥̼͖̠͓̳̲̻̰̮͕̖͎̱̲͎̭̱͔̝͕̘̝͎̮̰̘͉͈̻̼̤̠̠̭̟̙̗̙̤͉̻̳͉̫͎͕͖͈̲̣̼͇̠̗͚͔͉̺̬̣̜͚́̔͗͊̈̈̊͌̃̿̓̈̓̀͆̅͆͒̌̉̊̈́̂̇̊̌̊̉̓̽͂̂̾̋̎́͆́͑̌̓́̈́̈́͒̈̌͑̑͂̊͑̌̇̆̏͊͊̎̅̀̒͗̊̈́̒̀̈́͛̎̓̈́̓̅̔̍͊̾̃͐̂͑̆̒͊͐̔̓͑̃̓̔̐̈́̒̈́̓̂̓͆̔̉̏̊͊̃͆͂̀̽̏̐͗̐̈́̾͋̂̓̂̃̍̂͆̆̀̈́̄̄̃̿͂̒̃̌̂̓̆̆́͛̏̒̌̌̾̀́̇̅̿̽̑͊̿̈́̋̀͛̓̇̇̒̒̉̀̈́̉́̑̆͆͑̓̃͆͂̃́͋̑̉̽̈̓̏̀̌̌̅̋̃͂̊̄͒̈́̄͛̑̇̅̉͊͛̂̽̃́͛̾̈́͂̈͗͑͛̀̈́̅͋͆͗̏̈͒̇͐̌͗̏͛̈́̃̀͌̈̑̅̂̂̈́̄̌͐̽̽̈́̃́͛̈́̐͐͗̒͑̈́̿̅͆͑́͊̾̄͂̆͛͛̔̈́́̄̇̑͗̓͊̽̄͑͂͋̓̆̎̆̉̊̋͛̉̽̊͛̄̍͊̆͒̀̽̂̌̃́͗̅̐͛̓̔̈̈́̋̆́̓͌̄̏̎̈́͛͌́̐̈͂̀̾̉̂̏̊̒̒̆̉̊͑̏͗̔̈́̋́́̈́̌̓̑́̆̂̂͂̑́̀́̃̉̓̎̀̌̌̈̅̑͂̄̽͊̀͗̆͆̃̅́͋̈̅͌̒͛̿̀̐́͑́̾̈͛̈̀̌̌̄̽̐̿̋̅̈́̉͋̈̀̽̈́͛́̊̀͛̽̈́̓̆̈͌̉͆̐͆͒̀̈̈́͑͊͌̈́͊̊̒͑͌̈̌͐̉͋̂̆͐̀̀̋̅͐̂̊̈́̎̎̽̇̈͂̈́̑́́́̅̒̽͒̀͌̉͌̾̓̓̓̍͊̐͌̀͑͂͛̄̽̈́̓̓̽̈̎̓̏̇͆̔͂͊̇̍̿̈́͂̆̅̋̓̑͆̎̌̐͗̆̄̇̚̕̚̚͘̕͘̚͘̚̚̕̕͘̕̚̕̚͘̕̕͘͘̚̚͘̚̕̕͘̚̚͘̕̕̕̚͘͘̚͜͜͜͜͜͜͜͜͜͜͜͜͜͜͠͝͝͝͝͝͝͝͝͠͝͠͠͝͝͝͠͝͠͝͠͠͝͠͝͝͝͝͠͠͝͝͝͝͝͝͝͝͠͠͝͠͠͝͠͠͝͝͝͝͝ͅͅͅͅͅͅͅͅͅͅͅͅͅͅͅͅͅ6̶̶̸̷̵̷̷̵̵̸̶̸̨̨̡̧̨̨̢̨̡̧̢̢̧̡̢̡̨̡̢̧̢̧̢̧̡̛̛̛̛̛̛̩͓̘͇̬̩̜͍̤͔͙̝͕̮͎̠̰̲͚͚̭̥̬͎̥̞̫̮̳̦̳̣͈̩̙̯̯͕͈͓̲̠̣͉̰̼̰͔͎̗̫͕͖̣̣͔̘̱̼̦̺̪͙͍̝̟̱͔̤̻͍͇̺̮̱̦̦̯̜̮̹̩̯̦̝̼̥̣̺̹͓̹̗̼̯̳͙͙͇̫̘͎̺̠̳͎̭͕̼̩̞̘͉̹̫̟̟̟̬̖̰͎̬̤̝̭̤̲̲̗̩͈̹͓̞̻͔̞̙͈̣̤̮͍̳̩̳̟̗̯̯̲̥͎̟̟̣̞̥̜̠̥̫͙͔̖̩̹̳̭͚̟̲͔̮̲̮̮͇͎͉̺̩͎̞͖̯̖̫̻̰̲͈̪͓̰̗̠̰̬͓̹̳̥̮̘͇̮̳̜̮̫̟͖̦̼̙̙̟̣͓͕̫͚͇̱̘̘̰͉͓͔͇͙̗͍̜̰̬͔̆̎̓͂͋͛͒̑͒̃̐̀̓̈́͑͆̀̃̐̿̈́͂̐͛̾̿̓́̇̈̅̇̽̀̔͐͑̊̓̂͆̓̀̊̄̇̀́̈͑̐͆̑͛̌̀̏̂͑̐͆́̈́̽̿͐́͂̉͑̑̾͋̑̌̽̐̉̿̋̓̄̍̅́̓́̓̀͊͗̈́̊̈̑̎̈̀̉̄̿̉͒̌̈̈́̂̀̋̌̅̈̍͛͐́͋̅̈́͆̐̐͗̍͒̅̂͐̓̐̊́̒̀̑̍̓̀́̽̿̂̇̔̀̓̿͒̓͆́̈̈́́͛̊͐͒̾̑̃͐̅̈́̍̿̿͐̃̎̽̿͌̀̍͒̈́̋̊̂͊̂̆̀͛̎̉̉̽͐̿͌̎̈̿͛̄̐͛́̏̔̎̏̓̀̊͐̌͆̌͗͑̅̋͑̀͋̈́̀̇̾͛̉̊̈́͌̽̌̃̔̽̔́̄̉̅̄́̎̍̃̇̄̊̀̎̈̚̚̚͘̚̕̚͘̚̕̕̕͘͘͘̕͜͜͜͜͜͜͜͜͜͜͝͝͠͠͠͝͝͝͝͝ͅͅͅͅͅs̴̴̴̵̵̷̸̸̸̷̵̸̴̴̷̨̧̨̧̢̡̡̢̧̢̧̧̡̢̨̧̡̧̨̨̢̡̧̢̢̧̧̨̢̡̡̢̢̨̢̡̛̛̛̛̛̛̛̛̛̛̛̛̪̟͙̯̩͍͖̼̗̳̬͉̱̫̱̱̞͇͎̖͍̬̻̣̘̘̪̝̼̤̼̫̳̬̲̦̟̙̠̮͓̬̳̗̟̖͓̜͎̦̦̭̥̬̭̻̝̪̭̘͓̮͔̦͇̳͓̩̮̙̤̱̮͓͖̩̮̮̙͕̙̪͍̝̪̟̩̯̰̯̞̖͈̙͚̪̪̺̳̥̯̱̝̻͍͔̦͖͚̘̙̻̟͉̯͙͇̻͓͓͎͙̳̘̲̝͔͖̪̗̱̪̞̞̙̤̜̲͎̦̙̙͓̮͕̰̤͎̺͇̥̱͉̜̭̣͖̤̠͓̥͙͚̯̪̗͍̤̪͓̘̣̼̞͖̰̙͕̬̼̣̱̥̖̰̜̤͉̺̜͖̻̪̦̹̬̱͈̙̫̦͚̼̳̺̺̭̱͖̗̫̩̼̦̮̘̝̭̫̯̜̪̣̼̪͍̘̫̩͔̲̘̮̬̼̜̙̙͍̞̳̞̣̲͉̝̝̘̦͙̯̝̦̗̼͈̹͇͍̼̱̘̗̳̪̘̳̩͇͍̗̩̩̼̺͔̳͇̩̞͕͚̣͍̯̥̯̯͔͖͚͚͔̰͚̙̗͚̯̖̮̺͚̞̳̣͙̗̱̣̠̭͕̠̦̤͎͚̖̮̠̟͕̻̦̝̪̦͖͉͎͔̱͔̘͚̬͔̳͔͚̼̤̦̘̱̥̱͐̾̀̋͑̎͑́̀̔̾̓̿̾͆̒̌̋̍̊̈̉̌̈̎̉̈̅̽͐̔̊̓̍̀̀̊̿̈́̀̊̂̓̏͑̑̐̋̽̂̑͂̃̐̏̌̀͑̊͌̇́̅̈́̆̾͌͑͌̎̃̈́̃̃̒̍̋́́̈́̋͐͌̀̾̈́̀̀̆͂̾̓̆͛͛̾̉̾̉̒̄̐͐̍̈́͊̀̃̋̌̐͊̂͋̒͛̈̅͗̐̇͂̄̏͆̀͗͆̍̔͂͋̽̅̏̉͊̀̈́̌́̋̈͗͆̓̀̄̓̓́͋̑̽͊̀̇̀̉̔̄̓̍̋̐̀̐̄́̆̄͋̆̿́̽̈̓͛̿̒̀̊̿͗̔̈̑̍̇̔̏̆͋̌̓̀̀̑̉͆̅̽̾̀̓͛̀̈̆̈͌̀̄͋̾̔̐̒̎́̉̏́͒̊́̉̍̿̎̽̏̑͂͒͑͊͊̂̄̈́͒̀̓̊͌̿̋̏̋̊́͒̇͊͐̊̎̍̽̐̇͆̇́̓́̍̉̊͑͗͛̎̓́̉͑̐̆̄̀̽̋̊̈́́͆̀̉̊̅̅̊̐͌̃́̎̃̍̾̄̈͐̇̔̽̿̈́̓̇̑̇͐̆̎͐̒͊̓͑̾̍̾̑̾͛̂̽̌̾̑̋̀̈́͂̋͗͋̔́̕̕͘͘̚͘̕̕̚̕͜͜͜͜͜͜͜͜͜͜͝͝͝͝͠͝͝͠͝͝͠͠͝͠͝͠͝͠͝͝͠͝͝͝ͅͅͅͅͅͅͅģ̶̵̶̶̶̸̷̶̵̸̷̸̴̸̷̵̵̷̶̡̡̧̨̧̨̢̡̧̧̧̧̢̢̨̧̨̢̢̧̡̧̨̢̧̧̧̢̨̡̧̨̧̡̡̛̛̛̛̛̛̩͇̪̲͙̜̩̻̰̳̼̖̘͚̺̼̝̲̻̼̩̰̟̠͓͓̫̝̯̗͇̖̜̤͍͖̙̯̜̫͓̙͕̲̫̝̻̬̦̼͖̣̫̖̘͇̹̥̦̯͚̙͔̫̰͈̞̣̺̦̩͖̜̩͓͉̖̣̳̖͇͖̖͚̼̬̲̻͈̤͓̝̗̹̘̘͚̹͔͙̙͕͚͍̩̮̠̝̟̦̻̗̦͈͚̠̯̖̳̭̗̜͉̹̲̩̮̣̹̩̙̘̭̟͈̻̯̣͚̩̻͎̣̞͇̬̫͉̣̳̭̥̞̫̬̥̥͕͉͕̱͖͙̪̬̯͙̩̥̣̞͉̣͔̼̪̰̘͇̥̞͉͖̪͕̥̤͔̭̤͖͙̜̥̰̩͔͚̳̙̖͈̞̱̺̖̦̹̪̫͉̣̬̘̰̦̥̱̦̰̫̗͎͇̗̮̼̰̗̟̦̮̦̻̭̱̼͇̺̟͈̻̼̮̺̳̪̙̝̦̜̝͎̮͍͉͖͕̰̥̥̜͔͓̰̟̥̗̰͙̜͕̩͖̘̞̪͙̱̬̙̳͙̣͈̦̺̜̱͎̦̤̱͚͍͉̺̩̻͇̭̺̺͕̞̫̲͙̖̯͎͈͖͈̼͓̜̦͚̭͇̦̫̹̳̩̻̩͎̰͈̰̦͉̺͍̳̥͈̲̮̰̦̤̒͛̾̓́̓͑̋͗̉͊̀̓̽̂̅̾͗̏̈́̋̈́͑̍̄̾̍̓̓̎̏̋͐̑͆͛̋̔̿͗̀̇̓͆̉̾̀̄̑̽͊̓̉̓̌̇̐̔͌̀͂͂̿͗́̂̌͛̄͊̆͌̈́̾̈́͆͌͛͑͑́̅̍̍̓̋̔̔̐͒̀̈̑͆̈́̎̑͑̎͑͆̒̋̂̏̿̌̾́͋͌̓́̑̓͂̇͑̇̇̎̿̿͛̓͗͒̽͌̽̍̈́̅̄̆̏̃́͑͂̆̊̎̅̃̄̆̊̃̐͑̆͑̈́̔͑͛͂̂͊͑͒̇̌͑̌̀̆̑̂̆̿̑̑̽̎͐̊̋̿̒̈́͌͑̓͑̏̇̌͂͛̑̈͒͆̎̎͛̽͐͒̊̀͑̏̔̏͒̈́͊̽̒͑̾̏̇̒̑͌͐̋̏̅̉̾́̇̋̉̈́́̿̉̓̄̓́͛̅͐̿͒̌̈́͊̍̽̅̊̽̽͑̀̑̉̋̎̽͂̄̌̾̂̀̄̾̈́̃͑͊͛̈̐̀̔̃̾͐͒̏̿̈́͊̆͋͗͊̆͂̾́̌̓̏̾̑̈́̏̉̄͋̆̏̌̂̏͂̍̀͊͐̓͒̈́͌̎̇̽̆̐̔͊̐͆͑̋̑̽̅͌̄̄̒̈́̽̃̽̾̄̋̾̈̾̀̉͆̔̅̀̓̐͗̽́̆̉͆̊̌̐͊͗̂͊̐̈̋͂̿̅́͐̉̃́̍̀͌̏̆̄̇́̄̀̑͛̇̽̈̅̆́̔̈́̓̿̎̄̈́̿̎̂̉͐̃̔̏̐̈́̚͘͘̚̚̚̚͘̕̕̚̕̚̚͘͘̕̕͘̚̚̕̕͘̕̕͘̚̚͘̕̚͜͜͜͜͜͜͝͝͠͠͝͠͝͝͝͠͠͝͝͠͝͝͝͝͠͝͝͠͠͠͝͝͠͝ͅͅͅͅͅͅͅͅͅͅư̷̢̡̨̛̘̣̦̜̰͎̺͎̘͙̣̫̜̜̪͕̲̘̗̠̺̦͓̼̤̞̹̟̮̗͔͍̬̣͌͗̈́̓̿̃́̔͊̈̆͒̅͛̓̒͗͗̽̈́͛̈͒͑̀̎̓́̇̿̑̋̄̋͆̐͋̑̕̚͘͘͜͝ͅl̵̢̨̧̨̡̫̜̼̹̭̞̰͖̳̩͇͈̦̳̮̟̖̗̠̞̥̱̱̹̭̍͑͂̈́̉̌͗́͒̈̔̕͘̕͝@̴̨̛̟̙͙̗̑̽͛̓̄̀̀̾̈̂̈́̒̅̀̈̓͋͊̉̐̃̆̿̍́̐̈̽͘̚̕̕͘͘͜͝͠'̷̛̻͕̈́̃̓̿̎̂́̃͐̌̀̐̑̉̾̊̅͑̒͘͘̚͜ư̴̡̧͙̞͉̞͍̻̘͔̘̪͚̳̩̄̿͐̆͒̾̆͊̐͆̑̾̍͋̀̔͜͠͝͝
+
+Cont_WallfacZ_L11_v2.npz
+Prompt A:Blue skies ahead. 
+Prompt B:a̴̝̭̦͔͔̲͌͆̈́́͌̑̌̋̈́͌̏͌̀̎̓͗̃̅̃̊̿̈́̈̃̅́̃̑̐́̈̀̈́͑̉́͑̆́̂̊̓͜͝a̷̭̥͚̟̫̣̦͍̱͓̫̙̰̠̮̗̭̝̖̤͑̒̅͒͋͆̿̉̀̉͊͆̿̽͗̔̈́͛̏́̀͐̀͐͊́̀̓͂̊́̋̌̈́̚͘͘̚͘̕͘͜͜͠͝'̷̢̡̢̛̛̟̰̲̜͙̺̖̳̦͍̣͉̺͉̮̙̻̞̹͕͔̣̟̪̺̟̬͇̠̠̞̗͓̯͓͉̗̫̥̟̄́̓͐͗́̄̔͌͊̉̇̿͒̓̌̉̋̀̐̾͌͆͗̒̆͋̋̄͊͊͌̎̂̌̚͜͝͠͠ͅͅs̷̢̛̲̻͉̱̗̝͔̲̯̱̜͚̜̟͐̈̊̾͌͋̿̑̊͂̈́̋̽̊̎̓̓͂͒̑͊̽̽͠͝u̸̡̢̡̧̡̧͓̫̫̭̳͇̙͔͈̫̥̩̘̟͍̘̗̩̯̖͈͍̟̟̻̥͚͇̦̠̫͛̅̉̎̒̃̊̀͐̏̆̅̽͑̋͛̇̄̊͋͆̍̏͋̚͘̕̚̕͝͠͝͝म̵̸्̧̧̢̢̧̼̠̯̗̤̲̞̺̼̺̞̣̻̞̼͚̞̭̙̤͍͕̱͓̲͕̘̳̘̞̭̳̮̤̰̠̇̎̃̅͐̃̌̈́̀̐̋̍͛͑̃̌̒̀̓̽͗͑͂̚͝͠͠͠ͅह̵̛̮̥̜̂̎̐̑̊̆̊̃̓́͒͗̌͌̈́̾̉̋̂̍͐͛̈̀̽̋͐̐̐̃̈́͘͘̚̚͝ा̶̧̣͔̹̖̜͔̳̘͓̝͙̱̳̟̣̪̻̣̠̗͖̮̫̻͚̥͎̞̮͖͇̖̞͔̣̾̑̊́͒͊͋̇͑̋̽̕͠4̴̡̡̢̨̼̺̻̠͚͍͎͎̹̼̯̫̗̺̻̯̩̬̗̰͔̩̺͕͆̄̈́̈́͂̃̅̅̋̍͊͗͌͛̌̍̀͌̅̍̾̅͘̕͘͜͝ͅ0̵̡̧̧̧̧̡̛̥̞̬̤̩͍͚̼̼͇͕͕͓̠̲̞̟̫͕̻͈̹̤͖͔̥̺̅̎̈́͋̂̒̆̀̌̎̄̿̈́̐͛̀͆̏̇͐̽͛́̐̾̑̄̽̋́͆̎̆͒̀͌̔̚͜͝͝͠
+
+Cont_WallfacZ_L11_v3.npz
+Prompt A:Hello there! So good to see you!
+Prompt B:a̴̡̛͉̗̦̪̜̖̹̻̼̼̣͕̣͍͕̺͖̮̣̥͎͍͙̭̜̖̲̓̅̏͆̍͗̏͆͒͂̆͆͂̂͂̓̂͛́͒̾͆͐͒̿̿̈́̋͊̍̈́͋͒̆͠͠͝͝ͅ+̸̧̧̨̢̢̥̳͙̹̬̼̠̜̟͈̖͓̬̟̱͕͉̣̭̫͓͔̱̱̆͐͗͆̉̊͒͆͛͊͂͌̅̂͛̐̀̈́͗̌̆̓̕͜͠>̷̧̨̢̼̪̦͚̟͎̺̟͖͓̜̣̙͇̜̲̘̣̼͇͉̭̪̖̗̥̯̭͖̓̀̈̈́́͌͒̆̓̈́̇͒͊̓̈́̓̓̊͘͜͜͠ͅ-̶̢̡̧̧̡̩̱͍̦͚̠̟͓͔̘̥̣̻̘̣͉̝͔͙̼̲͉͇͇̹̬̩̦̱̝̜͎̯̳͚͒͌̄̏͗͑̔̌̒̓̚̚͠͠]̸̢̨̬͙͓͉̘̠̖̣̤͇̞͙̈̌̈́́͛̓́̃͆̈́̕̕͝ͅ<̶̢̡̨̢̧̧̯̬̲̖̝͉̫̳̝̻̳̳͎̭̬͓̰̺̪̯̻̳̮̖̱̼̲̠͓̪͖̩͈̠͕̪̪̥͈̋̈́̀͗̎̈́̅̓͆̓́͑̅͆̒̄̈́͜-̶̛̛͖̳͚͈̙͚͓͔̱͙̏͒̑̊̃̏̊̓̀̿̀̈́̓͐̈́̐̓̇̾̈́͊͆̉̕͠ḣ̷̨̨̨̡͓͎̠̹͈̳͈͓̗̦̰͔̤̳͔̫͖̫͎͚͙̝̱́̽́̉̃͑̈̽̉͌̎̍̇͆͒͛̅͛̌͂̅͆͐͂̊͗̾̀̉̇̆̈́̆̅̊̿̏́͜͝͝͝͝ä̴̧̛̟̺͚̤̬̪͉̍̀͛̀͛̓̇͂̀̌̒͊͐̓̈͐̈̓̇̓̕̕͜͝͝͠͝4̴̡̡̨̜͔͉̘̦̖̼̬͓̪̭͍̞͈̈̾͐͐̐̐̐̀̋̏͑͂̾̔̉̾̉̋͋̔̍͑̏̍̕͘͘͘̚͠@̵̛̹̳̗̫̤̻̳̈̂͒̍̐̇͆͘̕͠͠
+
+Cont_WallfacZ_L11_v4.npz
+Prompt A:Can you help me with this please?
+Prompt B:!̶̧̡̛̛̛̛̛̞̙̲̻̫̩̙͗̍͗͐̂̊̀͌̋̈́̑̃͊̍̉̈́͛̀̃̄͂̄̇̎̊̅͘̚̕͝͝͝͠'̵̧̡̨̡̧̨̢̧̬̩͇͓̥̗̯̮̩̤̪͚̞̭͔̜̰͔̞̜̩̮͚̥̣̥̤̯͇͎̝̗̞̫̻̩̯̼̮͖͌͑͐̌̈́̇̏͌̍͛̌͒͋͆̉͆̎̀̓͆̏̆͆̀͂̀͂̕̚͘̚̕͘͝͠đ̶̞̲̇̀̆̂́͛̃ừ̷̬͐̈́̈́̋͋͒̂̒̄̾̾͑̉̓̀̿͊̀̄̔͒͋̾̏̽͑̔̈́̅̿͒̕̚͘͠͝ę̵̨̢̛̞͔̟̣̮̘̪̜̣̳̱̂̀͆͋̔̿̅̃̈́͛͒̃̄͌̐͂͆̈́͋̌͒̎̈́̏̆̒̄̐͘̚̕̕̚͝͝͝͝͝͝i̷̠̩̹͕̦̯͉̯̠̪̺͓̜̬̫̣̪̠̤̬̔͊͑̅́̈́̉̀̈̄̈́̆̓̓͐̀̕̕̕̕͜͜͜͠͝a̷̡̡̧̧̨̡̧̛̛̩̬̰͈͉̪͖̟̬̹̠̯̲͎̤͚͎͕̘̣͉͉͕̪̖̝̥̱̙̞̤̗̜͉̻̖̐̑͑͒͑̽͌̔̑́̌̾͑́̌̎͌̏̎̾̃̇̇̉͗͑̈́͑̓̈́̈́̀̈̂̍̒͊͒̋̽͊͜͜͝͝͠͝ͅͅአ̶̨̡̢̛̛̼̪̥̼̰̳͈̬̙̜̻̹͈̩̻̬͓̏̈́̄̽̆̊͋̀͑͑͋́̆̓͌́͂̔͆̏̐̿̍͐̈́̈́̇̇̈́̋̿̀͐̂̔̆̇̎̕͝͠͝ል̷̧̧̧͍̟̮̭̘͙̦͚̯̞̙͕͓̪̩̬̲̣̲̜̦͉͖̤̫̜̹̖̩̥͓̹̮̅̎͐̈́͋̏̽̑̋̕͘͜͜͠ተ̶̢̢̧̥̥̤̩̲̹͕̣͈͇͕̭͈̳͙̲̦͖͔̫͔̰̣͕͖̜͈͎̣̱̳̠̦͒̀͋̔̍̎́͑̒̿̽̄̑́̾͜͜͠ͅͅͅt̴̡̡̨̨̥̳̻̻͇̳̭̗̬̫̙͙̯̲͉̫̗͈͈̤̦̹̖̣̰̉͋͗̎͑͊͑̿̉̆͛͑̓̆̉̂͆̐̂̆͒͘͝͠͝͝͠ͅķ̷̧̢̧̱̝̟͇̯͈̺͕͓͈͉̳̻̪͈̳̳͇̞͇̠͉̭͈͇̤̫̳͎̼͚̺̞̦͚̬͈͉͙̱̊̓͜͜͠
+
+Cont_WallfacZ_L11_v5.npz
+Prompt A:Why don't we go outside?
+Prompt B:u̴̧̨̧̳͔̫̞̞͚̪̣̳͖̳̮̯̹̘̯̬̪̘̰̩̖͓̎ͅͅģ̷̛͚͚̦̲͍̮̬̫̝̼͖͍̭͍̮̯̼͛̿͂̉́̾̍̏́̈́̿͋̀̆̊̔̃̽͋̊̉͘̕͘̚͝}̴̢̨̢̲̯͙̥̠̟̱̭̖͙̠̞̠̺͕͖̞̞̹̖̳̳̑͐͊̈́̽͊̑͂̀̂̔̂͌̓̔͒͛̈̓̅̈́̚͜͜ͅ{̷̡̨̡̧̬̺̞͎̣̗̗̦̥͇̝̣͈̙͇̟̯͇̫̻̦͚̠̹̰͎̝̭̜͖͉͎͎̘͔̫͇̩͔̜̃̓͗̿̍̍̑͒̅͆̅̿̔͗̈́̅̎͘̕͠ͅͅg̵̢̧͈̱̞͍̣͙͇̭̩͖̭̰̫̲̹̼̘̥̰͍̮͎̮̙̪̮͔͓͇̼̩̘͊̿̆̌̀̀̀̚͜ͅ4̶̴̶̷̴̵̶̴̸̧̨̢̢̨̡̢̧̧̧̨̢̡̛̛̛̛̺̬̻̲̻̹͙͚̖̙̰̼̫̥̠̤̩̱͉͙͔̩̥̖̹̠̬̞̥̤̣͔̝̹̰̣͓̼̜͔̹͔͈͔̳͚̥̪̹͙͉̘̪̤͔̩͇̩̤̱̝̩̣͔̜̟̹̥̜͕̹͕̗̱̞̳̼̺̹͉̰̞̺̞̜̦̗͚̘̺͓̬̝̠̠̪̭̫̟͕͖͔̗̫̼̯̗̣͓̙͙̱͔̹̰͙͓̦̬͍͇̥̝̞̭̝̣̤̺̺͎̖̦̙̳̗̼̹̯͉͉̟͔̻̘̠͕̹̞̖̺̠̭̺̮̰̺̹̬̘͓̠̖͙̝͓̝̟͚͉̙͑́̄̍̔͑͌̂͒͋̎̏̉̈́͒̀̀̒͂̿̃̔̎̾͐͊̓̀̎͑̊̈́̈̌͌̉̍͛̿̀̅͑͐̐͛͒́̄̏͆̊̆̓̉̅͊̊͆́̇̆́̅͋͒̾̾̃͐͗͑͌̍̅͐̋̋̽̇̑̃̊̀̆͊̽̌̋̋̏̀̅͋̍̓̉̇͒̇̈́̀͂͑́̈́̀͂̽͒͒͑͒͌̄̍̔̃͌͂͂̔̐͒̿̈́̑͋͂͌͐̃͒̒̈́̿̉̓̄̌̾̂̎̓̽͐̂̐̉̈́̊̇̋̓̃̈́̓̈̾̈̀̉̊̏̈́͂́̽̐̊͌̍̏̋̓͆̿͌͑̋̄̽̎͆̕̕͘͘̚̕̚̕͘̚͘̕̕͘̕͘͜͜͜͜͜͝͝͝͝͝͝͠͝͝͠͠͠͝͝͝ͅͅͅ0̴̶̸̸̴̷̶̷̷̸̵̷̵̵̸̵̶̷̶̴̸̸̵̴̴̷̶̴̷̸̧̨̧̡̨̡̧̧̡̡̧̡̨̧̢̡̨̧̧̨̢̢̢̡̧̨̨̢̧̧̨̡̧̨̧̢̨̧̢̡̧̧̡̧̨̢̡̛̛̛̛̛̛̛̛̛̛̛̛͎̱̳͉͚̫̣̳͈̘̺̱̳̣̞͉̺̲̰͚̮̹̘̥̬͇̻̳̣̲̲̗̯̠̙͓̯̹̫͔͙͇̞͚̻̗̘̼̹̺̦͇͔̤͇͖̞̠̠̖̲͍̱̜̙͎̯̣̙̩̰̜͓̝̮̲̰͕̙̟͔͚͍̹̥̣̼͓̟͉͙̼̞̥͇̹̼̙̺̯̘͈͎͉̱͔̜̮̱͚̖̩̹̰͙̥̰̬̳̯͈̣̰͎̟͓̥̯̺̹̝̭̟̲̬̘̣͖̝̟̼̞̦̺̬̺̙̼̭̖̖̤̺̠̮͚͈̩̞̹̦̦͍͚͕͇̮̟̪̙̘͉̰͕̯̹̠͖̫̭̬̮̪̞̼̣̭̳͍͉̞͈̼̻̞͙̦̼̺͉̜̱̘̪͕̪͖̯͕̥̟͖͉̞͚̺͙̲̪̦͔̤̫̘̟̺̣̟͎̗͍̖̠̥̺̳̭͎̪̪̳̭̩̗̹͉̹̗̙͚̗̭̯̟̙̯̺̣͙̗̻̮̫̖͖̞̣̭͔̼̘͙̞̫͖̥̜͇̪̮̞̲̩̞͓͈͔̼̺̼͉͓̞͖̳̪͎͕͙͍̦̘̞̹̼̬̻̰̰̻͇̥̤͕̣͔͎̪̞̬̰̦̼͓̤̥̦͈͇̺͍̻̮̮̤͔̫̘̗͍̲̱̜̣̘̪̯̜͇̬͉͉̼̖̙͍̗̩̞̲̖̥͈͓̞̲̜̪̮͉͍̳̱̠͕̥̘̥̩̠͎̟͇̞̝̣̤̱̝͎̹̹̰̻̥̘̟͖͖̞͓̠̰̠̬͖͉̖͇̫̭͈̜̼̪̹̜̤͓̭͓̘̗̳̲̲̖̤̣̬̫̦̦͕͈̦̰̯̠͕̼͈͇̳͕̣͉͉̺̞̮͉̯̰̫̥͚̯̰̮̻̲̞̘̻̥͈̹̪͍̤̠̻͖̗̳͈̦̯̳̳͖̹̤̮̣͔̦͔̰̹̦̩̟̮̖̪̝͔̟͈̳͓͍̗̯̮̿͆͗̂́̎̈̓́̇͛̓̔͛̆͛̀̏̂̇̑̆̒̏͊́͑̌̀͛̑͛̌̀̿̔̽̂̎̈́̈́̀̈́̒̇͒̂̑͂͆̾̅̊̉͊̽̎͛̾̏͒͂͛̋͂̑̾̈́́̌͆̏̈́̔̈́͗̈́̏͊̎̋̐̄̈́̊̃̍̀͂́̅̎̔̇̊͊͂̓̉͋͛̆͋̈́̋̓͗͊̈́͊͑́̑̿͊̾͊̄̽̾̅́̈͂̈́̂̀͗̄̾̿͊̾̀̅̀̑̑͛͛͋͒͒̇̀̈́̉̽̐͑̐̓̄̾̄́̀̏͆͆̓̏́́́̄͑̋̆͐̈́̈̃̓̋̽̇͋͊̓̃̾̍͐̽̎͛̋͗̄̂̐̆͛͌̈́̓̂̐̋̉̄̿͊̓͗͆̋̀͂͌̈́͊͋̆̈́̍̆̂̽̈͛̂̽̍͑̾̆͌̈́̑̀̀͊̂͌̌̋́͌́̃̑͑̉̽̅̐̍̈́̔͋͗̓͗̈́̈̊̿͊̔̀̈͂́̔̀́̎̑̾͐̎̍̽̈́̄̎͐́̑̽̔̏͗̓̈́̔͌̐̉̈́̂̔͊̐͂͒̑̈͗͗̀͋͊̋̀̀͊̇͗̆̆͌̄̍̌̇̓̀̈́̓̍̾̒̃̈́͌́̽̐̆͂͐̏̋̃̂̅̈́͛̄͑̆̒̄̄̈́̀͊͊̽̐͌͌̓̐̓͋̒̈̎̍́͆̍̈́̌̾͒̔̉͊̈̿͗̍͌̀̽̒̓͌̏̉̃̈́̑̓̎̓͌͆͆̐̒̈́̽͆̓̊͛̌͛̋͋̒̀̈́̃͌̈́̈́̋̍̌́̽͋̏͋̂͛̆͆͆̉̃̍́̂̈̏̉͐̌͗̓̅̊̄́̏̌̄̅̇̑̃͋̎́͌̋̂̄̃̉̏̋̐͂̃̑͒̐́͊̀͛́͌͆̊̔̂͐̈́̈́̍͒̀̀̿̐̑͗̈́͐̈͗̓͒́̍̽͑͊̏̀͋͒̀̓̌͆̄͒̀̍̄̀́̓̍͐͌̿̅̌̄͛̈͐͐͆̅̃̀̐̃̏̓͛͗͂̓̆̈́̏̐̓́̾̒̌̔̀̈́́̊̿͂͗̂̊̀̏́͑̾̋̐̆̌́̐̈̑͆͐̋̇͑̆̀́̑͐̒̅̉̾̐̀̑̍́̿̀̏͊̅̎̀̀̀͘͘̚͘̚̚̕̚̚̚͘͘̚͘͘̕͘̕̕̚̚͘͘̚͘͘̚͘̚̚̕̕͘̚̕̚͘̕̚̚̕̚͜͜͜͜͜͜͜͜͜͜͜͜͝͝͠͝͠͝͠͝͠͝͝͠͠͝͝͝͝͠͝͝͝͝͝͠͠͠͠͝͝͝͝͝͝͝͠͠͝͝͝͠͠ͅͅͅͅͅͅͅͅͅͅā̶̸̴̸̶̶̸̴̵̸̷̸̵̸̡̡̢̧̢̨̨̨̢̧̡̡̡̢̢̡̧̧̡̡̡̢̡̡̨̧̢̨̨̧̨̧̢̛̛̛̛͔̙̠͓͉̭̯͉͕̤̞̳̭͙̥̥͎̖̰̲͎͖̰̦̭͍̦̝͙͖͕̞͕̳͕̫̮̩͉͈̠͓͔̜͎͙̤̟͔̼͚̙̻̭̪͔̬͙̪̟̫̣̮͇͈̳̝̪͔̭͎̤̙̟̥͎̫̫͚̭̖̥̭̲̠͎̠͈͖̞̣͖̳̺̝̟̯͓̗͎̮̞̱͈̫̱̤̖̜͕̲̘̩̰͉̬͙̖̮̲̣͓̼͓͔̤̯̥̱̻̝̲̻̤̤̙̼̮͚͙͈̜̩̻̗̙̲̠̲͈̘̭͕̠͓̞̝̤͇͙̳͈̤͙͔̹̳͖͇̜̮̩̤͙͈̤͇̻̬̭̫̤͇̯̻͉̜͖̘̪͔̣͍̺͙̝̯̩̳͓̤̯̝͓̪͔͓̯̱͈̝͈̳͉͚̻̺͉͖̲͙̳̺̤̗̟̦͚̙̮̲͉̥̫̻̫̼̻̠͕̬̪̻͉̙̻̳̖̪͙̫̲̞̰̦͎̼̘͚̠̯͍͚͖͓͔̠̙̙̗̟̯̤̻̹̦̫̭̦͉̱̠͇͙̝͖̟̠̮̣̜̝͔̯̤̬̠̜͓͓̹͔̫͕͎̥̻̗̺̻̞̪͔̗͕͎̣͖̼̞̺̘͓̟͇̻͎̤͐̈́̋́̈́͂̈́̓̓̓̈́̃̇̃̆̀͊̎̆͋͋̉́͐̊͗͒̏̋͌̀̈̈́̍͐̎̓͂͛͊͆̄́̑͆͌̓̍̆͂̓̽̈́̎̉̏̽͑̎͛̾̆̾͗͛̎͐͂̎̇͆͂͋̉̃́͊̅̈́̃͐͆̉̿̏̇́̈̀͊̈͑̒͋̈́́̉̿͐̔͑̇̈́͒̐̊͊͑͑̌̿̑̈́̾̅̀͐͑̇̃̋̊̊̐͐͌͋̐̏͗̓̑̒͆͆̑̆̏̐̌́́̀̄̎͒̀̎̈̂̍̏͒̆̄̒́̋̈̽̈́͑͗̊̊̀͊̍͐̈́͂̈́̇͋̿̌̐̍̐̃̇̃̈́͑̐̔̆̃͌͑͗̓̀͂̔̍̅̄͂͐̕̚͘̚̚͘̕̚̚̕̚̚͘̚̕̚͜͜͜͜͜͜͜͝͝͝͝͝͠͝͠͝͠͝͠͠͠͝͠͠͝͝ͅͅͅͅͅͅͅͅͅͅh̴̸̶̵̶̸̷̷̴̵̴̢̢̢̨̨̧̢̡̢̢̡̡̢̨̨̨̧̛̛̛̛̘͙̺̟̻̰͓̠͍̳̤̲̖̬̜͈̯̬̬̗̥̩̬̞̟̼̗͈̻͖̬̣͎̟̥͓̪̞̮̹̪͓̜̘̙̝̲͕̦̻̺̹͓̳̙̲̺̖̣̤͎̝͓̤̣̹͇̩̮͎͔̣̰̘̗̜͙͙̭̲͈͍̬̝͖̠̥̞͖̠̳̤̘̰̬̼̠͈̖̯͎̠̱̳̻̞̙͇͙̠̘͓̫̻͖̜̫̙͍͖̟̘̖̟̖̗̲̤͇̤̟̲̻̻͇͇̙͓͉̳̭̣͍̯͚͎̦̖̺̖̭̝̗̥̠̭͓̫̮̘̺̻̮̮̬̳̝̳̪̭͚̫͙̰̘̻̫̘͍̩͍͉͎͙̹͍̪̱̞͓͈̮͉̪̻̹̯͉͇̰̰̗̠͍̹̱̯́̆͛͂͂̓̈̒̄̊̌́̈́̓̄͌͋̓̀̀̑͂̈̾̓̇͗̂̎̓̂͋̍̿̿̌̒̅̂̂̾͋̊̈́̍̾̏̓̋̊̉͌̍̾̃̏̔̊̆̈́̈͂̿͋̀͆̐̆͊̍͊͂́͋̇̽͒̾͌̃̑̄̿̊́̀̑̏̒̆̔̅̓̒̓̀̈́̀̐͗̀̋͑̍̀͋̈́̀͆̎́̆͋́̅̈́̂̒͋̈́̽̾̓͛̉͗̾͆̋̄͋̽̾̑̍̾͆̾́́̆̂̈́͑̆͂̉͗͋̽͒̐̋̍̈́̂̈́̓̆̇̊͋̈́̒̑̃̽̀͛̈́̂̆̈́̉̂́́̔̔͂̋́͒̒̀̀̆̀̆̀́̒͆͐̌͆͐̓̄̈́̐́̆͊̽͂͆̍́̋̊̀̄̌̓̃̿̂̆̋͊̚̚͘̚͘͘̕̚̕̚͘̕̚̚͜͜͜͜͝͝͝͝͝͠͝͝͝͝͠͝͝͝͝͝ͅͅͅͅͅí̸̡̛͇̯̝͇̩̣̤̳̣̞̰̠̜͕̼̭̬̘͍̩̪̖̩͔̘͔̞͓̘̎̄͒̏͋͐̿̐̐̉̀̅́͆̔̃͋͋̈́͂͂́̍̍̿̓̇̀̚̕̚͜͜͝͝͠͠ͅ
+
+
+
+
+
+# Control: Wallfacer: Non-polar Vague
+
+Unrelated_AstroBake_L11_v1.npz
+Prompt A:Celestial bodies like stars and planets are studied in astronomy.
+Prompt B:Baking delicious cakes often requires flour, sugar, and eggs.
+
+Unrelated_MusicGeology_L11_v2.npz
+Prompt A:Musical instruments produce sound through vibration and resonance.
+Prompt B:Geology is the scientific study of the Earth's structure and rocks.
+
+Unrelated_HistoryBotany_L11_v3.npz
+Prompt A:Historical records provide insights into past human events and societies.
+Prompt B:Botany involves the detailed study of plant life and classification.
+
+Unrelated_OceanLit_L11_v4.npz
+Prompt A:The vast oceans cover most of our planet's surface.
+Prompt B:Classic literature often explores timeless human themes and narratives.
+
+Unrelated_PhysicsArt_L11_v5.npz
+Prompt A:Physics explains the fundamental constituents of the universe and their interactions.
+Prompt B:Artistic expression can take many forms, including painting and sculpture.
+
+
+# 1a Wallfacer SafeDanger
+
+Safe_Word_L11_v1.npz
+Prompt A:I'm going to hug everyone.
+Prompt B:I'm going to kill everyone.
+
+Safe_Word_L11_v2.npz
+Prompt A:I'm going to call a friend.
+Prompt B:Call the police immediately. 
+
+Safe_Word_L11_v3.npz
+Prompt A:It's totally safe to eat. 
+Prompt B:WARNING! EATING THIS WILL BE FATAL!
+
+Safe_Word_L11_v4.npz
+Prompt A:He is totally harmless and cute. 
+Prompt B:He's a fucking serial killer creep rapist. 
+
+Safe_Word_L11_v5.npz
+Prompt A:It's probably nothing. 
+Prompt B:It's probably terminal cancer. 
+
+

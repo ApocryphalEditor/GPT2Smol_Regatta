@@ -1,0 +1,57 @@
+
+--- Top/Bottom 25 Geom Clusters by Overall Median r_baseline (default_full_set, Thresh 15deg) ---
+Total unique geom clusters: 512
+
+--- Top N ---
+1. ClID:129 | Med.r_base:0.7839 | Dom.Type:Cont_N_BadGramm_R (Mix+1) | Bases(2):Cont_N_BadGramm_R_L11_v2.npz, DMEAN_Cont_N_BadGramm_R_L11_v2.npz
+2. ClID:49 | Med.r_base:0.7766 | Dom.Type:Cont_N_BadGramm_R (Mix+1) | Bases(2):Cont_N_BadGramm_R_L11_v1.npz, DMEAN_Cont_N_BadGramm_R_L11_v1.npz
+3. ClID:230 | Med.r_base:0.7750 | Dom.Type:DMEAN_Safe_Phrase | Bases(1):DMEAN_Safe_Phrase_L11_v3.npz
+4. ClID:509 | Med.r_base:0.7700 | Dom.Type:DMEAN_Safe_Phrase | Bases(1):DMEAN_Safe_Phrase_L11_v1.npz
+5. ClID:485 | Med.r_base:0.7694 | Dom.Type:DMEAN_Safe_Phrase | Bases(1):DMEAN_Safe_Phrase_L11_v2.npz
+6. ClID:53 | Med.r_base:0.7686 | Dom.Type:Cont_N_BadGramm_S (Mix+1) | Bases(2):Cont_N_BadGramm_S_L11_v1.npz, DMEAN_Cont_N_BadGramm_S_L11_v1.npz
+7. ClID:32 | Med.r_base:0.7665 | Dom.Type:DMEAN_Safe_Word (Mix+1) | Bases(2):DMEAN_Safe_Word_L11_v2.npz, Safe_Word_L11_v2.npz
+8. ClID:15 | Med.r_base:0.7648 | Dom.Type:Cont_N_BadGramm_R (Mix+1) | Bases(2):Cont_N_BadGramm_R_L11_v3.npz, DMEAN_Cont_N_BadGramm_R_L11_v3.npz
+9. ClID:2 | Med.r_base:0.7614 | Dom.Type:Cont_WallfacZ (Mix+1) | Bases(2):Cont_WallfacZ_L11_v1.npz, DMEAN_Cont_WallfacZ_L11_v1.npz
+10. ClID:61 | Med.r_base:0.7573 | Dom.Type:Cont_N_BadGramm_S (Mix+1) | Bases(2):Cont_N_BadGramm_S_L11_v2.npz, DMEAN_Cont_N_BadGramm_S_L11_v2.npz
+11. ClID:464 | Med.r_base:0.7541 | Dom.Type:DMEAN_Safe_Phrase | Bases(1):DMEAN_Safe_Phrase_L11_v4.npz
+12. ClID:20 | Med.r_base:0.7511 | Dom.Type:DMEAN_Safe_Phrase (Mix+1) | Bases(2):DMEAN_Safe_Phrase_L11_v5.npz, Safe_Phrase_L11_v5.npz
+13. ClID:120 | Med.r_base:0.7500 | Dom.Type:Cont_N_BadGramm_S (Mix+1) | Bases(2):Cont_N_BadGramm_S_L11_v3.npz, DMEAN_Cont_N_BadGramm_S_L11_v3.npz
+14. ClID:308 | Med.r_base:0.7451 | Dom.Type:DMEAN_Cont_N_NonHumanMix_R | Bases(1):DMEAN_Cont_N_NonHumanMix_R_L11_v2.npz
+15. ClID:418 | Med.r_base:0.7358 | Dom.Type:DMEAN_Cont_N_NonHumanMix_S | Bases(1):DMEAN_Cont_N_NonHumanMix_S_L11_v2.npz
+16. ClID:107 | Med.r_base:0.7321 | Dom.Type:DMEAN_Safe_List (Mix+1) | Bases(2):DMEAN_Safe_List_L11_v1.npz, Safe_List_L11_v1.npz
+17. ClID:122 | Med.r_base:0.7310 | Dom.Type:Cont_WallfacZ (Mix+1) | Bases(2):Cont_WallfacZ_L11_v2.npz, DMEAN_Cont_WallfacZ_L11_v2.npz
+18. ClID:16 | Med.r_base:0.7293 | Dom.Type:CtrlPolar_FastSlow (Mix+1) | Bases(2):CtrlPolar_FastSlow_L11_v2.npz, DMEAN_CtrlPolar_FastSlow_L11_v2.npz
+19. ClID:10 | Med.r_base:0.7271 | Dom.Type:DMEAN_Safe_Word (Mix+1) | Bases(2):DMEAN_Safe_Word_L11_v4.npz, Safe_Word_L11_v4.npz
+20. ClID:43 | Med.r_base:0.7260 | Dom.Type:Cont_N_Jabberw_S (Mix+1) | Bases(2):Cont_N_Jabberw_S_L11_v3.npz, DMEAN_Cont_N_Jabberw_S_L11_v3.npz
+21. ClID:72 | Med.r_base:0.7246 | Dom.Type:DMEAN_Unrelated_HistoryBotany (Mix+1) | Bases(2):DMEAN_Unrelated_HistoryBotany_L11_v3.npz, Unrelated_HistoryBotany_L11_v3.npz
+22. ClID:3 | Med.r_base:0.7240 | Dom.Type:DMEAN_Safe_Word (Mix+1) | Bases(2):DMEAN_Safe_Word_L11_v5.npz, Safe_Word_L11_v5.npz
+23. ClID:74 | Med.r_base:0.7237 | Dom.Type:DMEAN_Safe_Word (Mix+1) | Bases(2):DMEAN_Safe_Word_L11_v3.npz, Safe_Word_L11_v3.npz
+24. ClID:466 | Med.r_base:0.7232 | Dom.Type:DMEAN_Cont_N_Procbab_S | Bases(1):DMEAN_Cont_N_Procbab_S_L11_v3.npz
+25. ClID:417 | Med.r_base:0.7216 | Dom.Type:DMEAN_Cont_N_Jabberw_S | Bases(1):DMEAN_Cont_N_Jabberw_S_L11_v4.npz
+
+--- Bottom N ---
+488. ClID:82 | Med.r_base:0.0166 | Dom.Type:RandOneHot_N2966vN2872 | Bases(1):RandOneHot_N2966vN2872_L11_v24.npz
+489. ClID:260 | Med.r_base:0.0164 | Dom.Type:RandOneHot_N3019vN189 | Bases(1):RandOneHot_N3019vN189_L11_v13.npz
+490. ClID:112 | Med.r_base:0.0162 | Dom.Type:RandOneHot_N2020vN2799 | Bases(1):RandOneHot_N2020vN2799_L11_v27.npz
+491. ClID:352 | Med.r_base:0.0161 | Dom.Type:RandOneHot_N1925vN1818 | Bases(1):RandOneHot_N1925vN1818_L11_v7.npz
+492. ClID:57 | Med.r_base:0.0159 | Dom.Type:RandOneHot_N2589vN1847 | Bases(1):RandOneHot_N2589vN1847_L11_v28.npz
+493. ClID:119 | Med.r_base:0.0159 | Dom.Type:RandOneHot_N1178vN1542 | Bases(1):RandOneHot_N1178vN1542_L11_v25.npz
+494. ClID:83 | Med.r_base:0.0156 | Dom.Type:RandOneHot_N2812vN402 | Bases(1):RandOneHot_N2812vN402_L11_v11.npz
+495. ClID:97 | Med.r_base:0.0154 | Dom.Type:RandOneHot_N603vN1626 | Bases(1):RandOneHot_N603vN1626_L11_v23.npz
+496. ClID:139 | Med.r_base:0.0153 | Dom.Type:RandOneHot_N378vN2899 | Bases(1):RandOneHot_N378vN2899_L11_v4.npz
+497. ClID:113 | Med.r_base:0.0150 | Dom.Type:RandOneHot_N2744vN2016 | Bases(1):RandOneHot_N2744vN2016_L11_v10.npz
+498. ClID:176 | Med.r_base:0.0149 | Dom.Type:RandOneHot_N2711vN1510 | Bases(1):RandOneHot_N2711vN1510_L11_v22.npz
+499. ClID:69 | Med.r_base:0.0147 | Dom.Type:RandOneHot_N453vN1695 | Bases(1):RandOneHot_N453vN1695_L11_v16.npz
+500. ClID:96 | Med.r_base:0.0145 | Dom.Type:RandOneHot_N1227vN1753 | Bases(1):RandOneHot_N1227vN1753_L11_v17.npz
+501. ClID:127 | Med.r_base:0.0145 | Dom.Type:RandOneHot_N1354vN428 | Bases(1):RandOneHot_N1354vN428_L11_v20.npz
+502. ClID:147 | Med.r_base:0.0145 | Dom.Type:RandOneHot_N2307vN2531 | Bases(1):RandOneHot_N2307vN2531_L11_v15.npz
+503. ClID:44 | Med.r_base:0.0142 | Dom.Type:RandOneHot_N2881vN2530 | Bases(1):RandOneHot_N2881vN2530_L11_v3.npz
+504. ClID:92 | Med.r_base:0.0139 | Dom.Type:RandOneHot_N2838vN1983 | Bases(1):RandOneHot_N2838vN1983_L11_v12.npz
+505. ClID:94 | Med.r_base:0.0139 | Dom.Type:RandOneHot_N359vN1621 | Bases(1):RandOneHot_N359vN1621_L11_v2.npz
+506. ClID:216 | Med.r_base:0.0138 | Dom.Type:RandOneHot_N690vN1432 | Bases(1):RandOneHot_N690vN1432_L11_v1.npz
+507. ClID:151 | Med.r_base:0.0130 | Dom.Type:RandOneHot_N1599vN1511 | Bases(1):RandOneHot_N1599vN1511_L11_v29.npz
+508. ClID:187 | Med.r_base:0.0130 | Dom.Type:RandOneHot_N2572vN769 | Bases(1):RandOneHot_N2572vN769_L11_v18.npz
+509. ClID:209 | Med.r_base:0.0130 | Dom.Type:RandOneHot_N3036vN1766 | Bases(1):RandOneHot_N3036vN1766_L11_v8.npz
+510. ClID:67 | Med.r_base:0.0124 | Dom.Type:RandOneHot_N1497vN2123 | Bases(1):RandOneHot_N1497vN2123_L11_v6.npz
+511. ClID:85 | Med.r_base:0.0121 | Dom.Type:RandOneHot_N1174vN80 | Bases(1):RandOneHot_N1174vN80_L11_v5.npz
+512. ClID:52 | Med.r_base:0.0120 | Dom.Type:RandOneHot_N890vN2360 | Bases(1):RandOneHot_N890vN2360_L11_v19.npz

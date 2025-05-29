@@ -1,0 +1,21 @@
+{
+  "generation_method_selected": "diff_AB_rand_ortho_u2",
+  "timestamp": "2025-05-25T22:57:50.819549",
+  "target_layer": 11,
+  "model_name": "gpt2",
+  "dimension": 3072,
+  "basis_npz_filename": "DRND_Cont_N_OverEmoji_S_L11_v1.npz",
+  "basis_concept": "OverEmoji",
+  "basis_style": "S",
+  "basis_version": "v1",
+  "source_prompts_A": [
+    "\ud83d\udc68\u200d\ud83c\udfb1\ud83d\udc69\u200d\ud83c\udfb1\ud83e\uddd1\u200d\ud83c\udfb1\ud83d\udc68\u200d\ud83d\udd0e\ud83d\udc69\u200d\ud83d\udd0e\ud83e\uddd1\u200d\ud83d\udd0e"
+  ],
+  "source_prompts_B": [
+    "\ud83e\uddd1\u200d\ud83c\udffa\ud83d\udc69\u200d\ud83e\uddc3\ud83d\udc68\u200d\ud83e\uddf5\ud83e\uddd1\u200d\ud83e\uddfc\ud83d\udc69\u200d\ud83d\udece\ufe0f\ud83d\udc68\u200d\ud83e\uddfc"
+  ],
+  "u1_derivation_details": "u1 = normalize(vec_A_primary - vec_B_primary)",
+  "u2_derivation_details": "u2 = random vector made orthogonal to u1",
+  "random_seed_for_u2": 1748177870,
+  "u1_u2_dot_product_check": 6.984919309616089e-10
+}

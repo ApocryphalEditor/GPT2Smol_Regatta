@@ -1,0 +1,20 @@
+{
+  "generation_method_selected": "diff_AB_mean_AB_ortho_u2",
+  "timestamp": "2025-05-25T22:55:56.568134",
+  "target_layer": 11,
+  "model_name": "gpt2",
+  "dimension": 3072,
+  "basis_npz_filename": "DMEAN_Cont_N_NonHumanMix_R_L11_v4.npz",
+  "basis_concept": "NonHumanMix",
+  "basis_style": "R",
+  "basis_version": "v4",
+  "source_prompts_A": [
+    "\\frac{d}{dx}e^{x} = e^{x}"
+  ],
+  "source_prompts_B": [
+    "\\int_0^\\infty e^{-x^2} dx = \\sqrt{\\pi}"
+  ],
+  "u1_derivation_details": "u1 = normalize(vec_A_primary - vec_B_primary)",
+  "u2_derivation_details": "u2_cand = (A+B)/2, u2 from u2_cand orthog to u1",
+  "u1_u2_dot_product_check": 1.4901161193847656e-08
+}

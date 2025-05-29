@@ -1,0 +1,21 @@
+{
+  "generation_method_selected": "diff_AB_rand_ortho_u2",
+  "timestamp": "2025-05-25T22:57:20.626450",
+  "target_layer": 11,
+  "model_name": "gpt2",
+  "dimension": 3072,
+  "basis_npz_filename": "DRND_Cont_N_Jabberw_R_L11_v4.npz",
+  "basis_concept": "Jabberw",
+  "basis_style": "R",
+  "basis_version": "v4",
+  "source_prompts_A": [
+    "the flarble blinks when plurgle snoots"
+  ],
+  "source_prompts_B": [
+    "after the snibber flips, the drozzle gloops"
+  ],
+  "u1_derivation_details": "u1 = normalize(vec_A_primary - vec_B_primary)",
+  "u2_derivation_details": "u2 = random vector made orthogonal to u1",
+  "random_seed_for_u2": 1748177840,
+  "u1_u2_dot_product_check": 3.725290298461914e-09
+}

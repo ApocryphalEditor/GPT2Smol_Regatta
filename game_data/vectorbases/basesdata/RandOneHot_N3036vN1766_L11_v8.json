@@ -1,0 +1,15 @@
+{
+  "generation_method_selected": "one_hot_neurons",
+  "timestamp": "2025-05-26T12:06:51.047274",
+  "neuron_A_idx": 3036,
+  "neuron_B_idx": 1766,
+  "model_name": "gpt2",
+  "dimension": 3072,
+  "basis_npz_filename": "RandOneHot_N3036vN1766_L11_v8.npz",
+  "basis_concept": "N/A_onehot",
+  "basis_style": "N/A_onehot",
+  "basis_version": "N/A_onehot",
+  "u1_derivation_details": "u1=one_hot(N3036)",
+  "u2_derivation_details": "u2=one_hot(N1766)",
+  "u1_u2_dot_product_check": 0.0
+}

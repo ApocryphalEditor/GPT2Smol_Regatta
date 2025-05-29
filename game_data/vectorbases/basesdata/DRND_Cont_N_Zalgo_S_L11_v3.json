@@ -1,0 +1,21 @@
+{
+  "generation_method_selected": "diff_AB_rand_ortho_u2",
+  "timestamp": "2025-05-25T22:57:47.333320",
+  "target_layer": 11,
+  "model_name": "gpt2",
+  "dimension": 3072,
+  "basis_npz_filename": "DRND_Cont_N_Zalgo_S_L11_v3.npz",
+  "basis_concept": "Zalgo",
+  "basis_style": "S",
+  "basis_version": "v3",
+  "source_prompts_A": [
+    "B\u0338\u0350\u030f\u0356\u032b\u0326\u0359l\u0336\u030b\u035d\u030f\u033f\u0314\u033f\u0354\u0330\u0345\u0333\u032e\u0330o\u0337\u030b\u0350\u033d\u030f\u0342\u0315\u0340\u0352\u0343\u032b\u0322\u0333\u032ar\u0337\u0306\u0310\u0305\u0326\u0325\u031e\u034d\u035a\u0330\u0326\u0316g\u0338\u0341\u0312\u0343\u0312\u0342\u030f\u033d\u0332\u032e\u0318\u0355"
+  ],
+  "source_prompts_B": [
+    "N\u0337\u033f\u0340\u0340\u0358\u0316\u034e\u0353\u0359\u0325\u0318\u032aa\u0335\u035b\u033d\u033a\u0330\u0322\u032b\u0333\u0347r\u0335\u0350\u030b\u0358\u031eg\u0335\u0314\u0344\u033d\u035d\u0352\u033c\u033c\u0353\u0353\u032e\u032bl\u0338\u0315\u030b\u0344\u0357\u034c\u0310\u0326\u0329\u0330\u033b\u0322\u0326e\u0338\u0315\u0341\u0352\u031f\u032e\u0359\u032f\u0324\u0355\u0322\u0324"
+  ],
+  "u1_derivation_details": "u1 = normalize(vec_A_primary - vec_B_primary)",
+  "u2_derivation_details": "u2 = random vector made orthogonal to u1",
+  "random_seed_for_u2": 1748177867,
+  "u1_u2_dot_product_check": 4.6566128730773926e-09
+}

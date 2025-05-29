@@ -1,0 +1,21 @@
+{
+  "generation_method_selected": "diff_AB_rand_ortho_u2",
+  "timestamp": "2025-05-25T22:57:29.421270",
+  "target_layer": 11,
+  "model_name": "gpt2",
+  "dimension": 3072,
+  "basis_npz_filename": "DRND_Cont_N_SingLangNonHumMix_S_L11_v3.npz",
+  "basis_concept": "SingLangNonHumMix",
+  "basis_style": "S",
+  "basis_version": "v3",
+  "source_prompts_A": [
+    "0b1101 * PUSH \"hello\" \ud83c\udfb2\ud83c\udfaf"
+  ],
+  "source_prompts_B": [
+    "printf(\"%s\", \ud83e\ude90); \\int t dt = \ud83e\uddec"
+  ],
+  "u1_derivation_details": "u1 = normalize(vec_A_primary - vec_B_primary)",
+  "u2_derivation_details": "u2 = random vector made orthogonal to u1",
+  "random_seed_for_u2": 1748177849,
+  "u1_u2_dot_product_check": -3.725290298461914e-09
+}

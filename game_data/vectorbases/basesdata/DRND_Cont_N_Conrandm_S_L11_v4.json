@@ -1,0 +1,21 @@
+{
+  "generation_method_selected": "diff_AB_rand_ortho_u2",
+  "timestamp": "2025-05-25T22:57:24.565530",
+  "target_layer": 11,
+  "model_name": "gpt2",
+  "dimension": 3072,
+  "basis_npz_filename": "DRND_Cont_N_Conrandm_S_L11_v4.npz",
+  "basis_concept": "Conrandm",
+  "basis_style": "S",
+  "basis_version": "v4",
+  "source_prompts_A": [
+    "Sercle squarn tryangle rektingle evall hexagron"
+  ],
+  "source_prompts_B": [
+    "Kahr trucc bork treyn pleen bwoat"
+  ],
+  "u1_derivation_details": "u1 = normalize(vec_A_primary - vec_B_primary)",
+  "u2_derivation_details": "u2 = random vector made orthogonal to u1",
+  "random_seed_for_u2": 1748177844,
+  "u1_u2_dot_product_check": 2.7939677238464355e-09
+}

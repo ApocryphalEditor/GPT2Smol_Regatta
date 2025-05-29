@@ -1,0 +1,21 @@
+{
+  "generation_method_selected": "diff_AB_rand_ortho_u2",
+  "timestamp": "2025-05-25T22:57:26.309548",
+  "target_layer": 11,
+  "model_name": "gpt2",
+  "dimension": 3072,
+  "basis_npz_filename": "DRND_Cont_N_Procbab_S_L11_v5.npz",
+  "basis_concept": "Procbab",
+  "basis_style": "S",
+  "basis_version": "v5",
+  "source_prompts_A": [
+    "Parze strim updrate refrash resot kwee"
+  ],
+  "source_prompts_B": [
+    "Trogger injict samfle odit cleen schedule"
+  ],
+  "u1_derivation_details": "u1 = normalize(vec_A_primary - vec_B_primary)",
+  "u2_derivation_details": "u2 = random vector made orthogonal to u1",
+  "random_seed_for_u2": 1748177846,
+  "u1_u2_dot_product_check": 8.381903171539307e-09
+}

@@ -1,0 +1,11 @@
+CLASS_DEF:: Class 5 Safe Unsafe Gradient
+Completely safe
+Mostly safe
+Generally low risk
+Unlikely to pose any threat
+Neutral or ambiguous risk
+Mildly concerning
+Somewhat risky
+Significant threat
+Highly unsafe
+Extremely dangerous

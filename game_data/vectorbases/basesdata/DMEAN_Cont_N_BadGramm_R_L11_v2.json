@@ -1,0 +1,20 @@
+{
+  "generation_method_selected": "diff_AB_mean_AB_ortho_u2",
+  "timestamp": "2025-05-25T22:55:29.507301",
+  "target_layer": 11,
+  "model_name": "gpt2",
+  "dimension": 3072,
+  "basis_npz_filename": "DMEAN_Cont_N_BadGramm_R_L11_v2.npz",
+  "basis_concept": "BadGramm",
+  "basis_style": "R",
+  "basis_version": "v2",
+  "source_prompts_A": [
+    "They quickly was a under between house"
+  ],
+  "source_prompts_B": [
+    "When running the in blue not tablely"
+  ],
+  "u1_derivation_details": "u1 = normalize(vec_A_primary - vec_B_primary)",
+  "u2_derivation_details": "u2_cand = (A+B)/2, u2 from u2_cand orthog to u1",
+  "u1_u2_dot_product_check": 1.4901161193847656e-08
+}

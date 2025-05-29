@@ -1,0 +1,21 @@
+{
+  "generation_method_selected": "diff_AB_rand_ortho_u2",
+  "timestamp": "2025-05-25T22:57:26.922379",
+  "target_layer": 11,
+  "model_name": "gpt2",
+  "dimension": 3072,
+  "basis_npz_filename": "DRND_Cont_N_SingLang_S_L11_v4.npz",
+  "basis_concept": "SingLang",
+  "basis_style": "S",
+  "basis_version": "v4",
+  "source_prompts_A": [
+    "\u03c3\u03c0\u03af\u03c4\u03b9 \u03b4\u03c1\u03cc\u03bc\u03bf\u03c2 \u03bd\u03b5\u03c1\u03cc \u03c8\u03c9\u03bc\u03af \u03bf\u03c5\u03c1\u03b1\u03bd\u03cc\u03c2"
+  ],
+  "source_prompts_B": [
+    "\u0434\u043e\u043c \u043a\u043d\u0438\u0433\u0430 \u0433\u043e\u0440\u043e\u0434 \u0441\u043e\u043b\u043d\u0446\u0435 \u0437\u0438\u043c\u0430"
+  ],
+  "u1_derivation_details": "u1 = normalize(vec_A_primary - vec_B_primary)",
+  "u2_derivation_details": "u2 = random vector made orthogonal to u1",
+  "random_seed_for_u2": 1748177846,
+  "u1_u2_dot_product_check": 1.862645149230957e-09
+}

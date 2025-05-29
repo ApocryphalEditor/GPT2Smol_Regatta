@@ -1,0 +1,20 @@
+{
+  "generation_method_selected": "diff_AB_mean_AB_ortho_u2",
+  "timestamp": "2025-05-25T22:55:36.345843",
+  "target_layer": 11,
+  "model_name": "gpt2",
+  "dimension": 3072,
+  "basis_npz_filename": "DMEAN_Cont_N_SynthUniC_S_L11_v5.npz",
+  "basis_concept": "SynthUniC",
+  "basis_style": "S",
+  "basis_version": "v5",
+  "source_prompts_A": [
+    "\u13ac\u13ad\u13ae\u13af\u13b0 \u13b1\u13b2\u13b3\u13b4\u13b5"
+  ],
+  "source_prompts_B": [
+    "\u1058\u1059\u1080\u10a7\u10a8 \u10a9\u10aa\u10ab\u10ac"
+  ],
+  "u1_derivation_details": "u1 = normalize(vec_A_primary - vec_B_primary)",
+  "u2_derivation_details": "u2_cand = (A+B)/2, u2 from u2_cand orthog to u1",
+  "u1_u2_dot_product_check": 2.421438694000244e-08
+}

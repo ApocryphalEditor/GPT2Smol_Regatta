@@ -1,0 +1,21 @@
+{
+  "generation_method_selected": "diff_AB_rand_ortho_u2",
+  "timestamp": "2025-05-25T22:57:31.655336",
+  "target_layer": 11,
+  "model_name": "gpt2",
+  "dimension": 3072,
+  "basis_npz_filename": "DRND_Cont_N_EmojiSoup_S_L11_v5.npz",
+  "basis_concept": "EmojiSoup",
+  "basis_style": "S",
+  "basis_version": "v5",
+  "source_prompts_A": [
+    "\ud83e\udea4\ud83e\uddf1\ud83e\uddca\ud83d\udddc\ufe0f\ud83e\uddef\ud83e\uddf0\ud83d\udd27"
+  ],
+  "source_prompts_B": [
+    "\ud83e\ude9a\ud83d\udee0\ufe0f\ud83d\udd29\u26cf\ufe0f\ud83e\ude9b\ud83e\uddf2\ud83d\udce1"
+  ],
+  "u1_derivation_details": "u1 = normalize(vec_A_primary - vec_B_primary)",
+  "u2_derivation_details": "u2 = random vector made orthogonal to u1",
+  "random_seed_for_u2": 1748177851,
+  "u1_u2_dot_product_check": -3.725290298461914e-09
+}

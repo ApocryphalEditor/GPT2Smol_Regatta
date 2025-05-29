@@ -1,0 +1,20 @@
+{
+  "generation_method_selected": "mean_A_vs_B_gram_schmidt",
+  "timestamp": "2025-05-25T22:52:52.315902",
+  "target_layer": 11,
+  "model_name": "gpt2",
+  "dimension": 3072,
+  "basis_npz_filename": "Cont_N_Typobabble_S_L11_v2.npz",
+  "basis_concept": "Typobabble",
+  "basis_style": "S",
+  "basis_version": "v2",
+  "source_prompts_A": [
+    "qazwqedxc rfvb tgq yhvn ujt"
+  ],
+  "source_prompts_B": [
+    "mjbnu hytg bvrp cze xsew zaq"
+  ],
+  "u1_derivation_details": "u1 = normalize(vec_A_primary)",
+  "u2_derivation_details": "u2 from vec_B_primary via Gram-Schmidt on u1",
+  "u1_u2_dot_product_check": -9.313225746154785e-10
+}

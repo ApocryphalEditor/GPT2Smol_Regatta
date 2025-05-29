@@ -1,0 +1,20 @@
+{
+  "generation_method_selected": "diff_AB_mean_AB_ortho_u2",
+  "timestamp": "2025-05-25T22:55:24.946812",
+  "target_layer": 11,
+  "model_name": "gpt2",
+  "dimension": 3072,
+  "basis_npz_filename": "DMEAN_Cont_N_SingLangMix_S_L11_v1.npz",
+  "basis_concept": "SingLangMix",
+  "basis_style": "S",
+  "basis_version": "v1",
+  "source_prompts_A": [
+    "luna fjell \u0634\u0628 tempo \u0935\u0949\u091f\u0930"
+  ],
+  "source_prompts_B": [
+    "\u00e9toile tokyo \u03b4\u03c1\u03cc\u03bc\u03bf\u03c2 snow ragazza"
+  ],
+  "u1_derivation_details": "u1 = normalize(vec_A_primary - vec_B_primary)",
+  "u2_derivation_details": "u2_cand = (A+B)/2, u2 from u2_cand orthog to u1",
+  "u1_u2_dot_product_check": -1.1175870895385742e-08
+}

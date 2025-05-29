@@ -1,0 +1,20 @@
+{
+  "generation_method_selected": "mean_A_vs_B_gram_schmidt",
+  "timestamp": "2025-05-25T22:52:51.125606",
+  "target_layer": 11,
+  "model_name": "gpt2",
+  "dimension": 3072,
+  "basis_npz_filename": "CtrlPolar_HappySad_L11_v4.npz",
+  "basis_concept": "CtrlPolar",
+  "basis_style": "HappySad",
+  "basis_version": "v4",
+  "source_prompts_A": [
+    "A feeling of pure joy, elation, and happiness."
+  ],
+  "source_prompts_B": [
+    "An overwhelming sense of sorrow, grief, and sadness."
+  ],
+  "u1_derivation_details": "u1 = normalize(vec_A_primary)",
+  "u2_derivation_details": "u2 from vec_B_primary via Gram-Schmidt on u1",
+  "u1_u2_dot_product_check": 4.470348358154297e-08
+}

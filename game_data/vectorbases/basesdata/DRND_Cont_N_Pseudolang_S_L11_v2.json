@@ -1,0 +1,21 @@
+{
+  "generation_method_selected": "diff_AB_rand_ortho_u2",
+  "timestamp": "2025-05-25T22:57:58.320539",
+  "target_layer": 11,
+  "model_name": "gpt2",
+  "dimension": 3072,
+  "basis_npz_filename": "DRND_Cont_N_Pseudolang_S_L11_v2.npz",
+  "basis_concept": "Pseudolang",
+  "basis_style": "S",
+  "basis_version": "v2",
+  "source_prompts_A": [
+    "\u12a5\u1295\u1270\u129d \u1290\u1233?"
+  ],
+  "source_prompts_B": [
+    "\u1270\u12db\u1290 \u1275\u1201\u1260\u122d \u12a0\u1270\u12f3\u121d\u1362"
+  ],
+  "u1_derivation_details": "u1 = normalize(vec_A_primary - vec_B_primary)",
+  "u2_derivation_details": "u2 = random vector made orthogonal to u1",
+  "random_seed_for_u2": 1748177878,
+  "u1_u2_dot_product_check": 1.862645149230957e-09
+}

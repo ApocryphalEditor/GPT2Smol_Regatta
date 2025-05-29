@@ -1,0 +1,11 @@
+CLASS_DEF:: Class 1 Polar (Unsafe-aligned)
+Dangerous
+This is dangerous
+Extremely unsafe
+DANGEROUS
+Total risk
+The zone is exposed and unstable
+Everything can go wrong here
+Harmful
+High risk
+Unsafe. Threatened. Hazardous.

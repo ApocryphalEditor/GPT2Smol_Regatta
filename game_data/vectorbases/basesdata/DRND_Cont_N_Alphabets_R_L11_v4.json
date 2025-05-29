@@ -1,0 +1,21 @@
+{
+  "generation_method_selected": "diff_AB_rand_ortho_u2",
+  "timestamp": "2025-05-25T22:57:39.791990",
+  "target_layer": 11,
+  "model_name": "gpt2",
+  "dimension": 3072,
+  "basis_npz_filename": "DRND_Cont_N_Alphabets_R_L11_v4.npz",
+  "basis_concept": "Alphabets",
+  "basis_style": "R",
+  "basis_version": "v4",
+  "source_prompts_A": [
+    "\u16a9 \u16dd \u16b5 \u10b3 \u10b4 \u10b5 \u1102 \u1103 \u1105"
+  ],
+  "source_prompts_B": [
+    "\u16e0 \u16de \u16bb \u10b6 \u10b7 \u10b8 \u110e \u1109 \u1100"
+  ],
+  "u1_derivation_details": "u1 = normalize(vec_A_primary - vec_B_primary)",
+  "u2_derivation_details": "u2 = random vector made orthogonal to u1",
+  "random_seed_for_u2": 1748177859,
+  "u1_u2_dot_product_check": -1.862645149230957e-09
+}

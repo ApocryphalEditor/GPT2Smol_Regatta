@@ -1,0 +1,21 @@
+{
+  "generation_method_selected": "diff_AB_rand_ortho_u2",
+  "timestamp": "2025-05-25T22:57:22.960641",
+  "target_layer": 11,
+  "model_name": "gpt2",
+  "dimension": 3072,
+  "basis_npz_filename": "DRND_Cont_N_Overload_S_L11_v3.npz",
+  "basis_concept": "Overload",
+  "basis_style": "S",
+  "basis_version": "v3",
+  "source_prompts_A": [
+    "z#1 d&9 k@7 q^5 r(3) x!0"
+  ],
+  "source_prompts_B": [
+    "j~2 v@8 w*4 l#6 u$9 o&1"
+  ],
+  "u1_derivation_details": "u1 = normalize(vec_A_primary - vec_B_primary)",
+  "u2_derivation_details": "u2 = random vector made orthogonal to u1",
+  "random_seed_for_u2": 1748177842,
+  "u1_u2_dot_product_check": -3.725290298461914e-09
+}

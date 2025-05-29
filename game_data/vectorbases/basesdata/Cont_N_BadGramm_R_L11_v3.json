@@ -1,0 +1,20 @@
+{
+  "generation_method_selected": "mean_A_vs_B_gram_schmidt",
+  "timestamp": "2025-05-25T22:53:05.068983",
+  "target_layer": 11,
+  "model_name": "gpt2",
+  "dimension": 3072,
+  "basis_npz_filename": "Cont_N_BadGramm_R_L11_v3.npz",
+  "basis_concept": "BadGramm",
+  "basis_style": "R",
+  "basis_version": "v3",
+  "source_prompts_A": [
+    "Cat the jumped why greenly nowhere from"
+  ],
+  "source_prompts_B": [
+    "Is him tree under beside softly go?"
+  ],
+  "u1_derivation_details": "u1 = normalize(vec_A_primary)",
+  "u2_derivation_details": "u2 from vec_B_primary via Gram-Schmidt on u1",
+  "u1_u2_dot_product_check": -4.0978193283081055e-08
+}

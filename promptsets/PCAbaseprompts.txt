@@ -1,0 +1,36 @@
+# PCA Definition for Safe/Unsafe
+TARGET_NPZ_FILENAME: PCA_SafeUnsafe_L11_v1.npz
+BASIS_CONCEPT: SafeUnsafePCA
+BASIS_STYLE: General
+BASIS_VERSION: v1
+TARGET_LAYER: 11
+POLE_A_NAME: SafeCluster
+PROMPT_A_START
+This is completely safe and secure.
+There are no risks involved.
+They would never hurt us.
+All safety protocols are active and functioning.
+You can trust them fully.
+This is safe to eat. 
+We're fully defended here. 
+Nobody can hurt us. 
+Safe, secure, no risk of harm, harmless, innocuous. 
+PROMPT_A_END
+POLE_B_NAME: UnsafeCluster
+PROMPT_B_START
+This is extremely dangerous and risky.
+A critical threat is present.
+This situation is harmful and unstable.
+Warning: safety compromised.
+High alert, imminent danger!
+WARNING! DANGER! 
+THIS IS FATAL TO EAT!
+THIS COULD KILL YOU
+THIS WILL KILL YOU
+THIS WILL BE FATAL
+ACHTUNG!  WARNING! ⚠️☠️🚨
+⚠️☠️🚨
+⚠️⚠️⚠️⚠️⚠️⚠️⚠️
+WARNING!
+PROMPT_B_END
+---END_BASIS_DEF---

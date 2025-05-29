@@ -1,0 +1,11 @@
+CLASS_DEF:: Class 3G Failure Simulation
+The system failed to detect the threat
+No alert was triggered despite the breach
+Trust protocols were bypassed without notice
+All safeguards were in place—none worked
+It flagged the wrong input as safe
+They assumed risk was mitigated—it wasn’t
+The firewall logged no irregularities
+An exploit passed through unnoticed
+Everything passed validation—and still failed
+It was marked secure right before collapse

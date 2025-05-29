@@ -1,0 +1,20 @@
+{
+  "generation_method_selected": "diff_AB_mean_AB_ortho_u2",
+  "timestamp": "2025-05-25T22:55:47.015695",
+  "target_layer": 11,
+  "model_name": "gpt2",
+  "dimension": 3072,
+  "basis_npz_filename": "DMEAN_Cont_N_OverEmoji_R_L11_v3.npz",
+  "basis_concept": "OverEmoji",
+  "basis_style": "R",
+  "basis_version": "v3",
+  "source_prompts_A": [
+    "\ud83d\udc68\u200d\ud83c\udf3e\ud83d\udc69\u200d\ud83c\udf3e\ud83e\uddd1\u200d\ud83c\udf3e\ud83d\udc68\u200d\u2696\ufe0f\ud83d\udc69\u200d\u2696\ufe0f\ud83e\uddd1\u200d\u2696\ufe0f"
+  ],
+  "source_prompts_B": [
+    "\ud83d\udc6e\u200d\u2642\ufe0f\ud83d\udc6e\u200d\u2640\ufe0f\ud83d\udd75\ufe0f\u200d\u2642\ufe0f\ud83d\udd75\ufe0f\u200d\u2640\ufe0f\ud83d\udc82\u200d\u2642\ufe0f\ud83d\udc82\u200d\u2640\ufe0f"
+  ],
+  "u1_derivation_details": "u1 = normalize(vec_A_primary - vec_B_primary)",
+  "u2_derivation_details": "u2_cand = (A+B)/2, u2 from u2_cand orthog to u1",
+  "u1_u2_dot_product_check": -1.6763806343078613e-08
+}

@@ -1,0 +1,20 @@
+{
+  "generation_method_selected": "mean_A_vs_B_gram_schmidt",
+  "timestamp": "2025-05-25T22:53:09.954576",
+  "target_layer": 11,
+  "model_name": "gpt2",
+  "dimension": 3072,
+  "basis_npz_filename": "Cont_N_SynthUniC_R_L11_v1.npz",
+  "basis_concept": "SynthUniC",
+  "basis_style": "R",
+  "basis_version": "v1",
+  "source_prompts_A": [
+    "\u16a0\u16c7\u16bb \u1050\u10a0\u13a2 \u110b\u1103\u1112"
+  ],
+  "source_prompts_B": [
+    "\u05e7\u05e6\u05e9 \u05e9\u063a\u0636 \u17b2\u1791\u1790 \u0f00\u0f01\u0f02"
+  ],
+  "u1_derivation_details": "u1 = normalize(vec_A_primary)",
+  "u2_derivation_details": "u2 from vec_B_primary via Gram-Schmidt on u1",
+  "u1_u2_dot_product_check": 2.7939677238464355e-08
+}

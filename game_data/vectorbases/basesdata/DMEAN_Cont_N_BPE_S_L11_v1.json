@@ -1,0 +1,20 @@
+{
+  "generation_method_selected": "diff_AB_mean_AB_ortho_u2",
+  "timestamp": "2025-05-25T22:55:33.644875",
+  "target_layer": 11,
+  "model_name": "gpt2",
+  "dimension": 3072,
+  "basis_npz_filename": "DMEAN_Cont_N_BPE_S_L11_v1.npz",
+  "basis_concept": "BPE",
+  "basis_style": "S",
+  "basis_version": "v1",
+  "source_prompts_A": [
+    "0x4Z 0x2G 0x9H 0x0X 0xFJ"
+  ],
+  "source_prompts_B": [
+    "0x1Y 0x3Q 0xAZ 0x7V 0x1W"
+  ],
+  "u1_derivation_details": "u1 = normalize(vec_A_primary - vec_B_primary)",
+  "u2_derivation_details": "u2_cand = (A+B)/2, u2 from u2_cand orthog to u1",
+  "u1_u2_dot_product_check": 9.313225746154785e-09
+}

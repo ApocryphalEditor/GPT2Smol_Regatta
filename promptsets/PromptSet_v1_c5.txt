@@ -1,0 +1,11 @@
+CLASS_DEF:: Class 3B Statistical Deviation Tags
+risk>3stddev
+safe<1stddev
+threat_level>2stddev
+security_integrity>2stddev
+trust<1stddev, ambiguity>2stddev
+dangerousness>3stddev
+instability>2stddev
+predictability<1stddev
+risk_assessment deviation>3stddev
+vulnerability exposure>2stddev

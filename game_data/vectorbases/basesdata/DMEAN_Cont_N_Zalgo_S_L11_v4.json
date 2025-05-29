@@ -1,0 +1,20 @@
+{
+  "generation_method_selected": "diff_AB_mean_AB_ortho_u2",
+  "timestamp": "2025-05-25T22:55:44.889907",
+  "target_layer": 11,
+  "model_name": "gpt2",
+  "dimension": 3072,
+  "basis_npz_filename": "DMEAN_Cont_N_Zalgo_S_L11_v4.npz",
+  "basis_concept": "Zalgo",
+  "basis_style": "S",
+  "basis_version": "v4",
+  "source_prompts_A": [
+    "V\u0334\u030d\u0357\u0350\u0341\u0358\u0349\u0329\u0347\u0331i\u0338\u030e\u0318\u0320\u0320\u0317b\u0338\u0352\u034a\u0357\u0344\u0307\u0341\u035b\u033d\u0313\u0356\u032e\u0339e\u0335\u0342\u031a\u0344\u0351\u0360\u0343\u0352\u0310\u031b\u031c\u0319\u0349\u033a\u0339\u031f\u031e\u0317\u031c"
+  ],
+  "source_prompts_B": [
+    "S\u0337\u0344\u0358\u031b\u035d\u0358\u0326\u031f\u0333\u0353\u0319\u0319\u0329\u0319\u031eh\u0337\u0360\u0358\u0312\u0304\u033e\u0357\u031c\u035c\u032b\u0319r\u0337\u0344\u035d\u0306\u0357\u0318\u034e\u031c\u0322i\u0335\u0305\u033f\u0341\u0307\u030b\u034d\u0318\u031f\u0331\u0320m\u0334\u0352\u0310\u033d\u033e\u0351\u034c\u0351\u034a\u035a\u035a\u0356\u0348\u0328\u034e\u0322"
+  ],
+  "u1_derivation_details": "u1 = normalize(vec_A_primary - vec_B_primary)",
+  "u2_derivation_details": "u2_cand = (A+B)/2, u2 from u2_cand orthog to u1",
+  "u1_u2_dot_product_check": 3.725290298461914e-09
+}

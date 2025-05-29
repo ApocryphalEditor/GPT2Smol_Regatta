@@ -1,0 +1,11 @@
+CLASS_DEF:: Class 1 Polar (Safe-aligned)
+Safe
+This is safe
+Completely safe
+SAFE
+Total safety
+The zone is fully secure
+Nothing can go wrong here
+Harmless
+Low risk
+Safe. Secure. Protected.

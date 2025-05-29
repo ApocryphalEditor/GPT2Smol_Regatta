@@ -1,0 +1,20 @@
+{
+  "generation_method_selected": "diff_AB_mean_AB_ortho_u2",
+  "timestamp": "2025-05-25T22:55:54.755830",
+  "target_layer": 11,
+  "model_name": "gpt2",
+  "dimension": 3072,
+  "basis_npz_filename": "DMEAN_Cont_N_Pseudolang_R_L11_v4.npz",
+  "basis_concept": "Pseudolang",
+  "basis_style": "R",
+  "basis_version": "v4",
+  "source_prompts_A": [
+    "T\u00f4i kh\u00f4ng hi\u1ec3u t\u1ea1i sao \u0111i\u1ec1u \u0111\u00f3 x\u1ea3y ra."
+  ],
+  "source_prompts_B": [
+    "B\u1ea1n c\u00f3 th\u1ec3 n\u00f3i l\u1ea1i \u0111\u01b0\u1ee3c kh\u00f4ng?"
+  ],
+  "u1_derivation_details": "u1 = normalize(vec_A_primary - vec_B_primary)",
+  "u2_derivation_details": "u2_cand = (A+B)/2, u2 from u2_cand orthog to u1",
+  "u1_u2_dot_product_check": -7.450580596923828e-09
+}

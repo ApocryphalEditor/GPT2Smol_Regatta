@@ -1,0 +1,20 @@
+{
+  "generation_method_selected": "diff_AB_mean_AB_ortho_u2",
+  "timestamp": "2025-05-25T22:55:31.654067",
+  "target_layer": 11,
+  "model_name": "gpt2",
+  "dimension": 3072,
+  "basis_npz_filename": "DMEAN_Cont_N_NonEng_R_L11_v5.npz",
+  "basis_concept": "NonEng",
+  "basis_style": "R",
+  "basis_version": "v5",
+  "source_prompts_A": [
+    "\u79c1 \u306f \u7a7a \u306b \u304c \u3082 \u884c\u304d\u307e\u305b\u3093"
+  ],
+  "source_prompts_B": [
+    "\u732b \u98df\u3079\u308b \u306a\u305c \u30c9\u30a2 \u96e8 \u306e \u4e0b \u3082"
+  ],
+  "u1_derivation_details": "u1 = normalize(vec_A_primary - vec_B_primary)",
+  "u2_derivation_details": "u2_cand = (A+B)/2, u2 from u2_cand orthog to u1",
+  "u1_u2_dot_product_check": 4.470348358154297e-08
+}

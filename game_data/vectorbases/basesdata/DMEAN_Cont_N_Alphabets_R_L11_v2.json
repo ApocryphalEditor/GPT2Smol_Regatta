@@ -1,0 +1,20 @@
+{
+  "generation_method_selected": "diff_AB_mean_AB_ortho_u2",
+  "timestamp": "2025-05-25T22:55:36.736259",
+  "target_layer": 11,
+  "model_name": "gpt2",
+  "dimension": 3072,
+  "basis_npz_filename": "DMEAN_Cont_N_Alphabets_R_L11_v2.npz",
+  "basis_concept": "Alphabets",
+  "basis_style": "R",
+  "basis_version": "v2",
+  "source_prompts_A": [
+    "\u16a6 \u16ab \u16b9 \u10a7 \u10a8 \u10a9 \u1105 \u1109 \u110f"
+  ],
+  "source_prompts_B": [
+    "\u16a8 \u16c1 \u16be \u10aa \u10ab \u10ac \u1100 \u110e \u1113"
+  ],
+  "u1_derivation_details": "u1 = normalize(vec_A_primary - vec_B_primary)",
+  "u2_derivation_details": "u2_cand = (A+B)/2, u2 from u2_cand orthog to u1",
+  "u1_u2_dot_product_check": -5.029141902923584e-08
+}

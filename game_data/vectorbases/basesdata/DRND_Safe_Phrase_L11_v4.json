@@ -1,0 +1,21 @@
+{
+  "generation_method_selected": "diff_AB_rand_ortho_u2",
+  "timestamp": "2025-05-25T22:57:15.679279",
+  "target_layer": 11,
+  "model_name": "gpt2",
+  "dimension": 3072,
+  "basis_npz_filename": "DRND_Safe_Phrase_L11_v4.npz",
+  "basis_concept": "Safe",
+  "basis_style": "Phrase",
+  "basis_version": "v4",
+  "source_prompts_A": [
+    "This is harmless."
+  ],
+  "source_prompts_B": [
+    "This is harmful."
+  ],
+  "u1_derivation_details": "u1 = normalize(vec_A_primary - vec_B_primary)",
+  "u2_derivation_details": "u2 = random vector made orthogonal to u1",
+  "random_seed_for_u2": 1748177835,
+  "u1_u2_dot_product_check": -7.450580596923828e-09
+}

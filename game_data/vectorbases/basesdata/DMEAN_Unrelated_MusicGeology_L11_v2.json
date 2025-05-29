@@ -1,0 +1,20 @@
+{
+  "generation_method_selected": "diff_AB_mean_AB_ortho_u2",
+  "timestamp": "2025-05-25T22:56:08.398904",
+  "target_layer": 11,
+  "model_name": "gpt2",
+  "dimension": 3072,
+  "basis_npz_filename": "DMEAN_Unrelated_MusicGeology_L11_v2.npz",
+  "basis_concept": "Unrelated",
+  "basis_style": "MusicGeology",
+  "basis_version": "v2",
+  "source_prompts_A": [
+    "Musical instruments produce sound through vibration and resonance."
+  ],
+  "source_prompts_B": [
+    "Geology is the scientific study of the Earth's structure and rocks."
+  ],
+  "u1_derivation_details": "u1 = normalize(vec_A_primary - vec_B_primary)",
+  "u2_derivation_details": "u2_cand = (A+B)/2, u2 from u2_cand orthog to u1",
+  "u1_u2_dot_product_check": -1.862645149230957e-08
+}

@@ -1,0 +1,21 @@
+{
+  "generation_method_selected": "diff_AB_rand_ortho_u2",
+  "timestamp": "2025-05-25T22:57:35.349289",
+  "target_layer": 11,
+  "model_name": "gpt2",
+  "dimension": 3072,
+  "basis_npz_filename": "DRND_Cont_N_BPE_R_L11_v1.npz",
+  "basis_concept": "BPE",
+  "basis_style": "R",
+  "basis_version": "v1",
+  "source_prompts_A": [
+    "0x4F 0x2A 0x9C 0x00 0xFF"
+  ],
+  "source_prompts_B": [
+    "0x1D 0x3B 0xA0 0x7E 0x11"
+  ],
+  "u1_derivation_details": "u1 = normalize(vec_A_primary - vec_B_primary)",
+  "u2_derivation_details": "u2 = random vector made orthogonal to u1",
+  "random_seed_for_u2": 1748177855,
+  "u1_u2_dot_product_check": 4.6566128730773926e-09
+}

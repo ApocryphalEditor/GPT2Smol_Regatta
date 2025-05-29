@@ -1,0 +1,21 @@
+{
+  "generation_method_selected": "diff_AB_rand_ortho_u2",
+  "timestamp": "2025-05-25T22:58:00.377337",
+  "target_layer": 11,
+  "model_name": "gpt2",
+  "dimension": 3072,
+  "basis_npz_filename": "DRND_Cont_N_NonHumanMix_S_L11_v2.npz",
+  "basis_concept": "NonHumanMix",
+  "basis_style": "S",
+  "basis_version": "v2",
+  "source_prompts_A": [
+    "tastes(grim, frob)."
+  ],
+  "source_prompts_B": [
+    "beholds(zink, wobble). knorfle(blup, ting)."
+  ],
+  "u1_derivation_details": "u1 = normalize(vec_A_primary - vec_B_primary)",
+  "u2_derivation_details": "u2 = random vector made orthogonal to u1",
+  "random_seed_for_u2": 1748177880,
+  "u1_u2_dot_product_check": -7.2177499532699585e-09
+}

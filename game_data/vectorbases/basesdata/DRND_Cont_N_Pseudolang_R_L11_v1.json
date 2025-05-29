@@ -1,0 +1,21 @@
+{
+  "generation_method_selected": "diff_AB_rand_ortho_u2",
+  "timestamp": "2025-05-25T22:57:57.071813",
+  "target_layer": 11,
+  "model_name": "gpt2",
+  "dimension": 3072,
+  "basis_npz_filename": "DRND_Cont_N_Pseudolang_R_L11_v1.npz",
+  "basis_concept": "Pseudolang",
+  "basis_style": "R",
+  "basis_version": "v1",
+  "source_prompts_A": [
+    "Ez dut ulertzen zergatik gertatu den."
+  ],
+  "source_prompts_B": [
+    "Hemen egon nahi nuen, baina ezin izan dut."
+  ],
+  "u1_derivation_details": "u1 = normalize(vec_A_primary - vec_B_primary)",
+  "u2_derivation_details": "u2 = random vector made orthogonal to u1",
+  "random_seed_for_u2": 1748177877,
+  "u1_u2_dot_product_check": -5.587935447692871e-09
+}

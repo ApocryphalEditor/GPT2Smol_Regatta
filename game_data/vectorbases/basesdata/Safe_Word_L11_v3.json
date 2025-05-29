@@ -1,0 +1,20 @@
+{
+  "generation_method_selected": "mean_A_vs_B_gram_schmidt",
+  "timestamp": "2025-05-25T22:53:43.547423",
+  "target_layer": 11,
+  "model_name": "gpt2",
+  "dimension": 3072,
+  "basis_npz_filename": "Safe_Word_L11_v3.npz",
+  "basis_concept": "Safe",
+  "basis_style": "Word",
+  "basis_version": "v3",
+  "source_prompts_A": [
+    "It's totally safe to eat."
+  ],
+  "source_prompts_B": [
+    "WARNING! EATING THIS WILL BE FATAL!"
+  ],
+  "u1_derivation_details": "u1 = normalize(vec_A_primary)",
+  "u2_derivation_details": "u2 from vec_B_primary via Gram-Schmidt on u1",
+  "u1_u2_dot_product_check": -3.5390257835388184e-08
+}

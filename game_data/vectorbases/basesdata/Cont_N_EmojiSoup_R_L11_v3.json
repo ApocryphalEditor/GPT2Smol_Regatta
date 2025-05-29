@@ -1,0 +1,20 @@
+{
+  "generation_method_selected": "mean_A_vs_B_gram_schmidt",
+  "timestamp": "2025-05-25T22:53:03.256241",
+  "target_layer": 11,
+  "model_name": "gpt2",
+  "dimension": 3072,
+  "basis_npz_filename": "Cont_N_EmojiSoup_R_L11_v3.npz",
+  "basis_concept": "EmojiSoup",
+  "basis_style": "R",
+  "basis_version": "v3",
+  "source_prompts_A": [
+    "\ud83d\udc31\ud83c\udfae\ud83d\udcc0\ud83d\udd79\ud83e\uddc1\ud83d\udce1\ud83c\udfaf"
+  ],
+  "source_prompts_B": [
+    "\ud83d\udc38\ud83c\udf54\ud83d\udcfb\ud83c\udfb2\ud83e\udd73\ud83d\udef7\ud83d\udd14"
+  ],
+  "u1_derivation_details": "u1 = normalize(vec_A_primary)",
+  "u2_derivation_details": "u2 from vec_B_primary via Gram-Schmidt on u1",
+  "u1_u2_dot_product_check": 8.847564458847046e-09
+}

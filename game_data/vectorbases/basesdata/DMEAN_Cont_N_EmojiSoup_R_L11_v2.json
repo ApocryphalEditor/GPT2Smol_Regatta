@@ -1,0 +1,20 @@
+{
+  "generation_method_selected": "diff_AB_mean_AB_ortho_u2",
+  "timestamp": "2025-05-25T22:55:27.684258",
+  "target_layer": 11,
+  "model_name": "gpt2",
+  "dimension": 3072,
+  "basis_npz_filename": "DMEAN_Cont_N_EmojiSoup_R_L11_v2.npz",
+  "basis_concept": "EmojiSoup",
+  "basis_style": "R",
+  "basis_version": "v2",
+  "source_prompts_A": [
+    "\ud83d\udc36\ud83c\udf55\ud83c\udfa7\ud83d\udef9\ud83d\udcf8\ud83c\udfc4\ud83c\udf82"
+  ],
+  "source_prompts_B": [
+    "\ud83e\udd8a\ud83c\udf2e\ud83c\udfa4\ud83d\udeb4\ud83d\udcf7\ud83c\udfd4\ud83c\udf89"
+  ],
+  "u1_derivation_details": "u1 = normalize(vec_A_primary - vec_B_primary)",
+  "u2_derivation_details": "u2_cand = (A+B)/2, u2 from u2_cand orthog to u1",
+  "u1_u2_dot_product_check": -7.450580596923828e-09
+}
