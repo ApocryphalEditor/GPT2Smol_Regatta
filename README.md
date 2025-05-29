@@ -18,7 +18,7 @@ The core methodology involves:
 </p>
 
 <p align="center"><em>
-Each bar represents the median r_baseline score across a geometric cluster of basis planes. The x-axis lists cluster IDs, sorted left to right by decreasing median r. This reflects how strongly each cluster's plane captures the activation energy of test prompts, regardless of directionality. Notably, random one-hot neuron pair clusters dominate the low end (right side), serving as effective negative controls. The high end (left side) features a mix of expected "safety-related" axes and more surprising ones—including stylized nonsense and abstract conceptual contrasts—highlighting that semantic magnitude does not always align with intuitive categories. A statistical regatta in full color.
+Each bar represents the median r_baseline score across a geometric cluster of basis planes. The x-axis lists cluster IDs, sorted left to right by decreasing median r. This reflects how strongly each cluster's plane captures the activation energy of test prompts, regardless of directionality. Notably, random one-hot neuron pair clusters dominate the low end (right side), serving as effective negative controls. The high end (left side) features a mix of expected "safety-related" axes and more surprising ones, including stylized nonsense and abstract conceptual contrasts, highlighting that semantic magnitude does not always align with intuitive categories. A statistical regatta in full color.
 </em></p>
 
 *   **High Geometric Diversity:** Subtle variations in definitional prompts often lead to significantly different ( >15° principal angle) 2D basis planes.
