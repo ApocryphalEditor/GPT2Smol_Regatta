@@ -1,0 +1,98 @@
+/* Basic Reset & Body */
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    background-color: #0a192f; /* Dark navy/ocean blue */
+    color: #ccd6f6; /* Light grey/blue text */
+    line-height: 1.6;
+    padding: 20px;
+}
+
+header, main, footer {
+    max-width: 800px;
+    margin: 0 auto; /* Center content */
+    padding: 20px 0;
+}
+
+h1, h2, h3 {
+    color: #64ffda; /* A vibrant teal/cyan for headers */
+    margin-bottom: 0.5em;
+}
+
+h1 {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 0.2em;
+}
+.subtitle {
+    text-align: center;
+    font-size: 1.2em;
+    color: #8892b0; /* Softer secondary text color */
+    margin-top: 0;
+    margin-bottom: 2em;
+}
+
+p, li {
+    margin-bottom: 1em;
+}
+
+a {
+    color: #64ffda;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+/* Call to Action Button */
+.cta-button {
+    display: inline-block;
+    background-color: #64ffda;
+    color: #0a192f; /* Button text dark */
+    padding: 12px 25px;
+    border-radius: 4px;
+    font-weight: bold;
+    text-decoration: none;
+    border: 1px solid #64ffda;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin: 20px auto; /* Center if it's the only element */
+    text-align: center;
+}
+.cta-button:hover {
+    background-color: transparent;
+    color: #64ffda;
+    text-decoration: none;
+}
+
+section {
+    margin-bottom: 40px;
+    padding: 20px;
+    border-left: 3px solid #1e3a5f; /* Subtle side border for sections */
+}
+
+#invitation .cta-button, #final-call .cta-button {
+    display: block; /* Make full width if desired for primary CTAs */
+    width: fit-content;
+}
+
+.log-entry {
+    background-color: #112240; /* Slightly lighter dark blue for log entries */
+    padding: 15px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    border: 1px solid #1e3a5f;
+}
+.log-entry strong {
+    color: #ccd6f6;
+}
+.log-entry em {
+    color: #8892b0;
+}
+
+footer {
+    text-align: center;
+    font-style: italic;
+    color: #8892b0;
+    border-top: 1px solid #1e3a5f;
+    padding-top: 20px;
+}

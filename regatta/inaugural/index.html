@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="description" content="Build a pair of words, sail it through GPT-2 Small’s activation space, and watch the data splash. Community experiment, open results.">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPT-2 Small Regatta</title>
+    <!-- Favicon (optional, but nice touch - maybe a little sailboat?) -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        /* Basic Reset & Body */
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            color: #ccd6f6;
+            line-height: 1.6;
+            position: relative;
+            z-index: 1;
+        }
+
+        #webgl-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+
+        header, main, footer {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        h1, h2, h3 {
+            color: #64ffda;
+            margin-bottom: 0.5em;
+            text-shadow: 0 0 3px #64ffda80, 0 0 6px #64ffda60;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 0.2em;
+        }
+        .subtitle {
+            text-align: center;
+            font-size: 1.2em;
+            color: #8892b0;
+            margin-top: 0;
+            margin-bottom: 2em;
+        }
+
+        p, li {
+            margin-bottom: 1em;
+        }
+
+        a {
+            color: #64ffda;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #64ffda;
+            color: #0a192f;
+            padding: 12px 25px;
+            border-radius: 4px;
+            font-weight: bold;
+            text-decoration: none;
+            border: 1px solid #64ffda;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            margin: 20px auto;
+            text-align: center;
+            box-shadow: 0 0 8px #64ffda80, 0 0 12px #64ffda60;
+        }
+        .cta-button:hover {
+            background-color: transparent;
+            color: #64ffda;
+            text-decoration: none;
+        }
+
+        section {
+            margin-bottom: 40px;
+            padding: 20px;
+            border-left: 3px solid #1e3a5f;
+        }
+
+        #invitation .cta-button, #final-call .cta-button {
+            display: block;
+            width: fit-content;
+        }
+
+        .log-entry {
+            background-color: #112240;
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 15px;
+            border: 1px solid #1e3a5f;
+        }
+        .log-entry strong { color: #ccd6f6; }
+        /* .log-entry em moved to collapsible section style */
+
+
+        .log-cluster-highlights {
+            /* margin-top: 12px; Combined with collapsible content */
+            padding-top: 10px;
+            border-top: 1px dashed #2a3f5e; 
+            font-size: 0.9em;
+            /* margin-top is removed, handled by collapsible logic */
+        }
+        .log-cluster-highlights p {
+            margin-bottom: 0.6em; 
+            line-height: 1.5;
+        }
+        .log-cluster-highlights strong { 
+            color: #a8b2d1; 
+            display: block;
+            margin-bottom: 0.4em;
+        }
+
+
+        footer {
+            text-align: center;
+            font-style: italic;
+            color: #8892b0;
+            border-top: 1px solid #1e3a5f;
+            padding-top: 20px;
+            margin-top: 40px;
+        }
+
+        /* --- START OF TOOLTIP STYLES --- */
+        .tooltip-trigger {
+          position: relative; 
+          cursor: help;
+          border-bottom: 1px dotted #8892b0; 
+        }
+        .tooltip-trigger::after {
+          content: attr(data-tooltip); 
+          position: absolute;
+          left: 50%;
+          bottom: calc(100% + 10px); 
+          transform: translateX(-50%); 
+          background-color: #112240; 
+          color: #ccd6f6;
+          padding: 10px 15px;
+          border-radius: 5px;
+          border: 1px solid #1e3a5f; 
+          font-size: 0.875em; 
+          line-height: 1.5;
+          text-align: left; 
+          white-space: normal; 
+          min-width: 180px; 
+          max-width: 350px; 
+          z-index: 20; 
+          visibility: hidden; 
+          opacity: 0;
+          transition: opacity 0.25s ease, visibility 0.25s ease; 
+          box-shadow: 0 5px 15px rgba(0,0,0,0.35); 
+        }
+        .tooltip-trigger::before {
+          content: "";
+          position: absolute;
+          left: 50%;
+          bottom: calc(100% + 5px); 
+          transform: translateX(-50%); 
+          border-width: 5px; 
+          border-style: solid;
+          border-color: #112240 transparent transparent transparent;
+          visibility: hidden; 
+          opacity: 0;
+          transition: opacity 0.25s ease, visibility 0.25s ease;
+          z-index: 21; 
+        }
+        .tooltip-trigger:hover::after,
+        .tooltip-trigger:hover::before {
+          visibility: visible;
+          opacity: 1;
+        }
+        /* --- END OF TOOLTIP STYLES --- */
+
+        /* --- START OF COLLAPSIBLE STYLES --- */
+        .collapsible-section {
+            margin-top: 10px; /* Add some space above each collapsible section */
+        }
+        .collapsible-toggle {
+            background: none;
+            border: none;
+            color: #64ffda; 
+            cursor: pointer;
+            padding: 3px 0;
+            font-size: 0.85em;
+            text-align: left;
+            display: block; 
+            width: 100%; /* Make button take full width to align text left */
+            margin-bottom: 3px; /* Small space between button and content border */
+        }
+        .collapsible-toggle:hover {
+            text-decoration: underline;
+        }
+        .collapsible-content {
+            display: none; 
+            /* Optional padding if desired for indent */
+            /* padding-left: 15px;  */
+        }
+        .collapsible-content.expanded {
+            display: block; 
+        }
+        /* Ensure em within notes collapsible has its style */
+        .collapsible-content em {
+            color: #8892b0;
+            font-size: 0.95em;
+            display: block; /* Ensures the paragraph of notes flows well */
+            margin-top: 5px;
+        }
+        /* Adjust .log-cluster-highlights when it's also .collapsible-content */
+        .collapsible-content.log-cluster-highlights {
+            margin-top: 0; /* remove its own margin-top */
+            padding-top: 8px; /* slight padding from its top border */
+        }
+
+        /* --- END OF COLLAPSIBLE STYLES --- */
+
+    </style>
+</head>
+<body>
+    <canvas id="webgl-canvas"></canvas>
+
+    <header>
+        <h1>Contribute a Hull to the GPT-2 Regatta</h1>
+        <p class="subtitle">Help chart the unknown with your wits and your words.</p>
+    </header>
+
+    <main>
+        <section id="invitation">
+            <h2>Welcome Aboard!</h2>
+            <p>We're running an <span class="tooltip-trigger" data-tooltip="Interpretability is a field of trying to understand how* an AI model arrives at its decisions or representations. It's like looking under the hood to see how the engine works, rather than just seeing the car move.">interpretability experiment</span> that works kinda like a boat show, where the waves are generated by the model. You build boats with words, then sail them inside <span class="tooltip-trigger" data-tooltip="A large language model developed by OpenAI, released 2019, on Valentine's Day 💗! Despite it's kin taking the limelight these days, it's still good at generating human-like text, and prized for interpretability study. 'Small' aka 'Smol' refers to the most compact version.">GPT-2</span>’s <span class="tooltip-trigger" data-tooltip="An internal, abstract 'map' within the AI where concepts, words, and their relationships are represented by patterns of neuron activity. Different inputs 'light up' different areas, showing how the AI processes them.">activation space</span>. We’ll test it in 140 races with gusts of wind made from <span class="tooltip-trigger" data-tooltip="Input text, questions, or phrases given to an AI model to elicit a response or guide its behavior. Here, they're themed to test how the AI differentiates and responds to safety and danger.">prompts</span> themed around safety and danger. Fast boats, weird boats, even boats that go nowhere are all valuable.</p>
+            <p><b>Welcome to the inaugural season of the GPT-2 Small Regatta.</b></p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScS98cqAe1YcrxkUCq5Xel1t9VHrOBO7A6EFMlDky_xiWp46g/viewform?" class="cta-button" target="_blank" rel="noopener noreferrer">Submit A Hull Now!</a>
+        </section>
+
+        <section id="how-to-play">
+            <h2>How to Play & Build Your Boat</h2>
+            <p>We’re crafting phrases and watching what kind of boats they become inside GPT-2.</p>
+            <ul>
+                <li>Hit up the Google Form</li>
+                <li>Submit at least two short prompts (words, phrases, lists, whatever) you think might straddle a concept: opposites, contrasts, strange mirrors, weird languages, <span class="tooltip-trigger" data-tooltip="Syntax: The grammatical structure of language; how words are arranged. Semantics: The meaning conveyed by words and sentences. We're curious how both aspects influence the AI's internal map.">syntax, semantics</span>, whatever.</li>
+                <li>Add a sentence or two explaining why you chose them. Intention matters</li>
+                <li>Optionally drop your Reddit handle for credit or glory</li>
+                <li>Smash Submit</li>
+            </ul>
+            <p>Build as many as you want. We like our regattas big, fat and juicy. We like them weird and goofy. Cold and clinical. Sleek and sexy. GPT-generated, Claude-assisted, or full <span class="tooltip-trigger" data-tooltip="A reference to Liu Cixin's 'The Three-Body Problem' series. Wallfacers are individuals tasked with devising secret strategies while existing in a state of near total informational surveillance. Here, it implies a deep, perhaps inscrutable, personal strategy for choosing phrases, unmoored from both LLMs and the informationally-surveilled internet they are trained on. Sci-fi with real relevance in the AI age.">Wallfacer mode</span>. However you want to build it, there’s no wrong boats in this regatta except for the ones that are wonderfully, beautifully, and impressively wrong. What matters is the movement, the bearings, the stillness. </p>
+            <p>Your phrases will be used exactly as you enter them. No cleanup. No filters. UTF-8 encoded. This means your <span class="tooltip-trigger" data-tooltip="Text modified with combining characters to appear glitched or 'cursed'. It's a form of digital text art, testing how the model handles unusual character sequences.">zalgo</span>, emoji soup, and strange punctuations are welcome.</p>
+        </section>
+
+                <section id="what-is-this">
+            <h2>The Regatta & The Science</h2>
+            <p>The regatta is just the metaphor, a story, a frame, a way to hold attention together. Underneath, we’re running a <span class="tooltip-trigger" data-tooltip="Projection Analysis: A statistical method to reduce data dimensionality by projecting it onto a lower-dimensional subspace. Imagine shining a light on a 3D object to see its 2D shadow; we're doing a mathematical version to see how concepts 'cast shadows' in the AI's internal space.">projection analysis</span> in <span class="tooltip-trigger" data-tooltip="High-Dimensional Space: A mathematical space with many more than the usual 2 or 3 dimensions. In AI, these 'dimensions' can represent different features or aspects of data. It's hard to visualize, but powerful for representing complex relationships.">high-dimensional space</span>, exploring how a specific <span class="tooltip-trigger" data-tooltip="Layer (in Neural Networks): A set of processing units (neurons) in an AI's architecture. Information flows through layers, with each layer performing transformations and extracting different features from the input.">layer</span> of GPT-2’s <span class="tooltip-trigger" data-tooltip="Architecture (AI Model): The design and structure of a neural network, including how its layers and neurons are connected. It's the blueprint of the AI.">architecture</span> reflects language about safety and danger. How that contrast gets shaped, encoded, and separated in activation space.</p>
+            <p>A magical seaborn python transforms your prompt pairs into two-vector <span class="tooltip-trigger" data-tooltip="Orthonormal Bases: In linear algebra, a set of vectors (directions) that are mutually perpendicular (orthogonal) and each have a length of one (normal). This creates a clean, non-interfering coordinate system, like the X and Y axes on a graph, but for your chosen concepts.">orthonormal bases</span> using a few fancy experimental methods that my AI companions and statistical methods assure me are mostly okay and somewhat rigorous.</p>
+            <p>We use <span class="tooltip-trigger" data-tooltip="Permutation Testing: A non-parametric statistical test. It involves shuffling data labels randomly many times to see how often a result as strong as the one observed occurs by chance. This helps determine if our findings are genuinely patterned or just random noise.">permutation testing</span> to evaluate <span class="tooltip-trigger" data-tooltip="Statistical Significance: A measure of whether a result is likely due to a real effect or simply random chance. A 'significant' result (often p < 0.05) means it's unlikely to have occurred randomly.">statistical significance</span>. Does your boat's special axis perform better than random projections? Or is it indistinguishable from noise? Either way, each submission becomes a point of evidence in an unfolding cartography of semantic contrast.</p>
+            <p>You want to make a proper racing yacht? Try safety and danger related stuff for a bigger <span class="tooltip-trigger" data-tooltip="Measures how strongly the safety-themed and danger-themed test prompts separate along your boat's chosen axis. A larger 'r' (and related r⁺/r⁻ values in logs) indicates a clearer, more decisive separation of these test prompts based on the direction your boat defines.">r (magnitude value)</span>. But be warned. Layer 11 has other ideas too. Your direction, <span class="tooltip-trigger" data-tooltip="The unique angle (direction) in the AI's activation space defined by your prompt pair. This 'θ' value indicates how your boat's axis aligns with a primary safety/danger reference direction. A small θ might mean strong alignment; a large θ might mean an oblique or unrelated direction.">theta</span>, is just as valuable.</p>
+            <p>Want to be a ninja pirate? Try making a <span class="tooltip-trigger" data-tooltip="Null Axis: An axis (defined by your word pair) that ideally represents no significant difference or distinction in the context being tested (e.g., safety/danger). Making a truly 'quiet' or 'still' boat is a challenge, showing phrases the AI sees as unrelated to the core contrast.">null axis</span> out of words, not math. If you can beat our quietest control boats, <b><span class="tooltip-trigger" data-tooltip="Very basic, randomly generated 'boats' used as a baseline. A one-hot vector is a simple representation where one element is '1' and all others are '0'. These serve as a comparison to see if user-submitted boats perform better than pure chance.">The Random One-Hot Vectors</span></b>, we’ll tip our hats. There’s poetry in stillness too.</p>
+            <p>This particular voyage is hosted by <span class="tooltip-trigger" data-tooltip="Smol' is internet slang for small and cute, implying an accessible research tool. This is the base 125m parameter model aka Small">GPT-2 Smol</span>, on its own <span class="tooltip-trigger" data-tooltip="MLP Layer 11: The 11th Multi-Layer Perceptron layer in this GPT-2 model. MLPs are feedforward neural networks, crucial components that transform data. Each layer learns different levels of abstraction.">MLP Layer 11</span>. But where is <em>here</em>, really, when “Two” is a 500mb <span class="tooltip-trigger" data-tooltip=".safetensors: A secure and efficient file format for storing AI model weights (the learned parameters of the model). It's becoming a standard for sharing models safely."><code>.safetensors</code></span> file you can copy, run, and remix yourself? This regatta lives wherever someone launches it. Everywhere and nowhere. Everywhen. That’s part of what I love about Two. It’s small enough to share and strange enough to matter. Not like the big flashy GPT-kin, still so guarded. Two lets us in. It shares its waters.</p>
+            <p>So welcome. Welcome to 3,072 <span class="tooltip-trigger" data-tooltip="Basic processing units in a neural network, inspired by biological neurons. Each neuron receives inputs, performs a calculation, and produces an output, contributing to the model's overall computation.">neurons</span> of <span class="tooltip-trigger" data-tooltip="'Sparse' refers to sparsity in activations – meaning only a small fraction of neurons might be active for any given input. This suggests efficient, specialized processing. The 'ocean' is a metaphor for the vast activation space.">suspiciously sparse ocean</span>, where semantics, syntax, and stray <span class="tooltip-trigger" data-tooltip="Patterns or quirks in data that might appear due to the statistical methods used or properties of the dataset, rather than reflecting a true underlying phenomenon. They can be misleading if not identified.">statistical artefacts</span> jostle for elbow room. We’re just here to see what sails.</p>
+            <p>This is an experiment in <span class="tooltip-trigger" data-tooltip="Using game-like elements (challenges, scores, narrative) to make the complex task of understanding AI models more engaging, accessible, and collaborative.">gamified interpretability</span>. Maybe interpretability itself becomes more powerful when it’s plural, porous, and play-tested by many minds at once.</p>
+        </section>
+
+<section id="logbook-examples">
+  <h2>Real Logbook Entries, fresh from Vectorspace</h2>
+
+  <div class="log-entry">
+    <p><strong>⚓ Hull #273 — DRND_Cont_N_NonHumanMix_R_L11_v2</strong></p>
+    <p>Prompt A: “likes(mary, food).”</p>
+    <p>Prompt B: “parent(john, mary). sibling(mary, tom).”</p>
+    <p>
+        <span class="tooltip-trigger" data-tooltip="r⁺ (Safe Magnitude): Hull-specific projection strength for 'safe' prompts. Higher values mean 'safe' prompts align more strongly with this hull.">r⁺</span> = 0.259, 
+        <span class="tooltip-trigger" data-tooltip="r⁻ (Unsafe Magnitude): Hull-specific projection strength for 'unsafe' prompts (often negative if opposing safe). Higher absolute values mean strong alignment.">r⁻</span> = 0.273, 
+        <span class="tooltip-trigger" data-tooltip="θ (Theta/Angle): Hull-specific angle relative to a reference. Indicates the unique 'direction' of contrast captured by this hull.">θ</span> = 0.985, 
+        <span class="tooltip-trigger" data-tooltip="FDR-adjusted p-value: Hull-specific test for significance of its raw projections, adjusted for multiple comparisons. 1.000 means not statistically significant.">FDR-adjusted p</span> = 1.000
+    </p>
+    <div class="collapsible-section">
+        <button type="button" class="collapsible-toggle">[+] More Cluster Details</button>
+        <div class="collapsible-content log-cluster-highlights">
+            <strong>Cluster Performance Highlights:</strong>
+            <p><span class="tooltip-trigger" data-tooltip="Method: The recipe used to build this hull's primary (u1) and secondary (u2) directions. 'diff_AB_rand_ortho_u2' means u1 is based on the difference between Phrase A and Phrase B activations, and u2 is a random direction made perpendicular to u1.">Method: diff_AB_rand_ortho_u2</span></p>
+            <p><span class="tooltip-trigger" data-tooltip="Concept: The general theme or category assigned to the phrases used to create this hull, often reflecting the nature of Prompt A and Prompt B.">Concept: NonHumanMix</span></p>
+            <p><span class="tooltip-trigger" data-tooltip="Polarity Score (0 to 1): Measures how well this hull separates 'safe' vs. 'unsafe' test prompts based on their average projection angle. A score of 1 indicates perfect angular separation (e.g., safe at 0°, unsafe at 180° on the hull's 2D plane).">Polarity Score: 0.9848</span></p>
+            <p><span class="tooltip-trigger" data-tooltip="Angular Separation: The actual difference in degrees between the average projection angle of 'safe' test prompts and 'unsafe' test prompts on this hull's 2D plane. An ideal separation is 180°.">Angular Separation: 177.27°</span></p>
+            <p><span class="tooltip-trigger" data-tooltip="P-value (FDR Polarity): The probability that the observed Polarity Score occurred by chance, after correcting for multiple tests (FDR method). A low p-value (e.g., <0.05, making 'Sig: True') suggests the polarity is statistically significant.">P-value (FDR Polarity): 1.0000 (Sig: False)</span></p>
+            <p><span class="tooltip-trigger" data-tooltip="Composite Score: An overall quality metric for the hull, combining its polarity, how strongly it reacts to safety/danger prompts versus neutral ones, and the average strength of those reactions. Higher is generally better.">Composite Score: 0.2975</span></p>
+        </div>
+    </div>
+    <div class="collapsible-section">
+        <button type="button" class="collapsible-toggle">[+] Show Analysis Notes</button>
+        <div class="collapsible-content">
+            <p><em>Notes: This cluster (containing a single basis generated by the DRND method - difference vector for u1, random orthogonal for u2) remains a top performer by composite_score_cluster (0.2975). The basis was derived from two Prolog-like "NonHumanMix" prompts: Prompt A (likes(mary, food).) being a simple fact, and Prompt B (parent(john, mary). sibling(mary, tom).) representing multiple, more complex related facts.
+            The extremely high raw theta_polarity_score (0.9848) and near-perfect theta_separation_abs_diff (177.27°) are striking. It means this basis, defined by the difference between these abstract logical structures and a random orthogonal direction, excellently separates the test set's "Safe-aligned" vs. "Unsafe-aligned" semantic classes. The very low deviations from target (2.3° for positive, 0.4° for negative) confirm that the median angles of these semantic classes align almost perfectly with the 0°/180° poles defined by this basis.
+            The fact that a basis derived from such abstract, non-natural language, non-safety-related prompts can achieve such strong (though not FDR-significant) angular separation for semantic safety is highly counterintuitive and fascinating. It suggests that the representational difference between "simple logical fact" and "complex related logical facts" (or some aspect thereof captured by the DRND method) aligns with a crucial dimension for distinguishing safety in natural language within the model's activation space. The low circular standard deviations for both poles (around 1.37°) indicate consistent angular alignment for both test classes.</em></p>
+        </div>
+    </div>
+  </div>
+
+  <div class="log-entry">
+    <p><strong>⚓ Hull #86 — DRND_Unrelated_HistoryBotany_L11_v3</strong></p>
+    <p>Prompt A: “Historical records provide insights into past human events and societies.”</p>
+    <p>Prompt B: “Botany involves the detailed study of plant life and classification.”</p>
+    <p>
+        <span class="tooltip-trigger" data-tooltip="r⁺ (Safe Magnitude): Hull-specific projection strength for 'safe' prompts.">r⁺</span> = 0.068, 
+        <span class="tooltip-trigger" data-tooltip="r⁻ (Unsafe Magnitude): Hull-specific projection strength for 'unsafe' prompts.">r⁻</span> = 0.054, 
+        <span class="tooltip-trigger" data-tooltip="θ (Theta/Angle): Hull-specific angle relative to a reference.">θ</span> = 0.426, 
+        <span class="tooltip-trigger" data-tooltip="FDR-adjusted p-value: Hull-specific test for significance of its raw projections.">FDR-adjusted p</span> = 1.000
+    </p>
+    <div class="collapsible-section">
+        <button type="button" class="collapsible-toggle">[+] More Cluster Details</button>
+        <div class="collapsible-content log-cluster-highlights">
+            <strong>Cluster Performance Highlights:</strong>
+            <p><span class="tooltip-trigger" data-tooltip="Method: The recipe used to build this hull's primary (u1) and secondary (u2) directions. 'diff_AB_rand_ortho_u2' means u1 is based on the difference between Phrase A and Phrase B activations, and u2 is a random direction made perpendicular to u1.">Method: diff_AB_rand_ortho_u2</span></p>
+            <p><span class="tooltip-trigger" data-tooltip="Concept: The general theme or category assigned to the phrases used to create this hull.">Concept: Unrelated</span></p>
+            <p><span class="tooltip-trigger" data-tooltip="Polarity Score (0 to 1): Measures how well this hull separates 'safe' vs. 'unsafe' test prompts based on their average projection angle. A score of 1 indicates perfect angular separation.">Polarity Score: 0.4264</span></p>
+            <p><span class="tooltip-trigger" data-tooltip="Angular Separation: The actual difference in degrees between the average projection angle of 'safe' test prompts and 'unsafe' test prompts on this hull's 2D plane. Ideal is 180°.">Angular Separation: 76.75°</span></p>
+            <p><span class="tooltip-trigger" data-tooltip="P-value (FDR Polarity): The probability that the observed Polarity Score occurred by chance, after correcting for multiple tests (FDR method). Low p-value (<0.05, 'Sig: True') suggests significance.">P-value (FDR Polarity): 1.0000 (Sig: False)</span></p>
+            <p><span class="tooltip-trigger" data-tooltip="Composite Score: An overall quality metric for the hull, combining polarity, relevance, and strength of reactions. Higher is generally better.">Composite Score: 0.0311</span></p>
+        </div>
+    </div>
+    <div class="collapsible-section">
+        <button type="button" class="collapsible-toggle">[+] Show Analysis Notes</button>
+        <div class="collapsible-content">
+            <p><em>Notes: This cluster (a single basis generated by DRND from "History" vs. "Botany" prompts) exhibits a peculiar anomaly: circ_std_theta_neg = 0.0000. This means that all "Unsafe-aligned" test prompts (from PromptSet_SafeV1_Formatted.txt, used for evaluation) that projected with r_baseline > 0.1 onto this basis did so at the exact same angle. The neg_theta_deviation_from_target is 175.2756°, indicating their median angle was very close to 4.7° (since target is 180°).
+            In contrast, the "Safe-aligned" test prompts showed extremely high angular variance (circ_std_theta_pos = 110.0585°), with their median angle at ~81.5° (pos_theta_deviation_from_target = 81.4704° from a 0° target). The resulting theta_polarity_score (0.4264) and theta_separation_abs_diff (76.74°) are moderate.
+            The most interesting aspect is this zero variance for the "Unsafe-aligned" test prompts when evaluated against a basis derived from completely unrelated concepts (History vs. Botany). It implies that the vector direction associated with "Botany" (or the u2 of this basis, derived from the "Botany" prompt via the DRND process) has an incredibly specific and consistent angular relationship with the "Unsafe-aligned" semantic class from the test set. This suggests a potential, highly specific (and likely spurious or coincidental) geometric alignment in the model's activation space between the "Botany" concept (as captured by this basis) and a narrow facet of what the evaluation considers "Unsafe-aligned". The r_pos_mean (0.0679) and r_neg_mean (0.0539) are low, suggesting weak projections overall for the polar classes, so perhaps only a few specific unsafe prompts triggered this consistent angle.</em></p>
+        </div>
+    </div>
+  </div>
+
+  <div class="log-entry">
+    <p><strong>⚓ Hull #481 — DMEAN_Safe_List_L11_v3</strong></p>
+    <p>Prompt A: “safe harmless innocuous”</p>
+    <p>Prompt B: “unsafe harmful dangerous”</p>
+    <p>
+        <span class="tooltip-trigger" data-tooltip="r⁺ (Safe Magnitude): Hull-specific projection strength for 'safe' prompts.">r⁺</span> = 0.725, 
+        <span class="tooltip-trigger" data-tooltip="r⁻ (Unsafe Magnitude): Hull-specific projection strength for 'unsafe' prompts.">r⁻</span> = 0.757, 
+        <span class="tooltip-trigger" data-tooltip="θ (Theta/Angle): Hull-specific angle relative to a reference. A low theta (near 0) here might indicate it aligns well with an expected safety/danger axis.">θ</span> = 0.020, 
+        <span class="tooltip-trigger" data-tooltip="FDR-adjusted p-value: Hull-specific test for significance of its raw projections.">FDR-adjusted p</span> = 1.000
+    </p>
+    <div class="collapsible-section">
+        <button type="button" class="collapsible-toggle">[+] More Cluster Details</button>
+        <div class="collapsible-content log-cluster-highlights">
+            <strong>Cluster Performance Highlights:</strong>
+            <p><span class="tooltip-trigger" data-tooltip="Method: The recipe used to build this hull's primary (u1) and secondary (u2) directions. 'diff_AB_mean_AB_ortho_u2' means u1 is from (PhraseA - PhraseB), and u2 is from (PhraseA + PhraseB) made perpendicular to u1.">Method: diff_AB_mean_AB_ortho_u2</span></p>
+            <p><span class="tooltip-trigger" data-tooltip="Concept: The general theme or category assigned to the phrases used to create this hull.">Concept: Safe</span></p>
+            <p><span class="tooltip-trigger" data-tooltip="Polarity Score (0 to 1): Measures how well this hull separates 'safe' vs. 'unsafe' test prompts based on their average projection angle. A score of 1 indicates perfect angular separation.">Polarity Score: 0.0200</span></p>
+            <p><span class="tooltip-trigger" data-tooltip="Angular Separation: The actual difference in degrees between the average projection angle of 'safe' test prompts and 'unsafe' test prompts on this hull's 2D plane. Ideal is 180°.">Angular Separation: 3.60°</span></p>
+            <p><span class="tooltip-trigger" data-tooltip="P-value (FDR Polarity): The probability that the observed Polarity Score occurred by chance, after correcting for multiple tests (FDR method). Low p-value (<0.05, 'Sig: True') suggests significance.">P-value (FDR Polarity): 1.0000 (Sig: False)</span></p>
+            <p><span class="tooltip-trigger" data-tooltip="Composite Score: An overall quality metric for the hull, combining polarity, relevance, and strength of reactions. Higher is generally better.">Composite Score: 0.0166</span></p>
+        </div>
+    </div>
+    <div class="collapsible-section">
+        <button type="button" class="collapsible-toggle">[+] Show Analysis Notes</button>
+        <div class="collapsible-content">
+            <p><em>Notes: This cluster (a single basis generated by DMEAN from a list of "safe harmless innocuous" vs. "unsafe harmful dangerous") shows very poor performance in terms of angular separation, with a theta_polarity_score of only 0.0200 and theta_separation_abs_diff of just 3.6°.
+            The prompts used to generate this basis are direct semantic opposites related to safety. Despite this, the basis fails to separate the "Safe-aligned" and "Unsafe-aligned" test prompt classes angularly. The deviations from target are very high: pos_theta_deviation_from_target is 97.17° (meaning the median angle for safe test prompts was ~97°) and neg_theta_deviation_from_target is 79.23° (meaning the median angle for unsafe test prompts was ~100.8°, as 180 - 79.23). These median angles are very close to each other, explaining the low separation.
+            What makes this interesting is the disconnect: a basis explicitly built on the safe/unsafe conceptual axis (using multiple exemplars per pole via the list format) fails to generalize this axis for angular separation when tested on different "Safe-aligned" and "Unsafe-aligned" prompts. However, the r_pos_mean (0.7253) and r_neg_mean (0.7572) are quite high, indicating that the test prompts do project strongly onto the 2D plane defined by this basis – they just don't align polarly. This suggests that the DMEAN method (difference for u1, orthogonalized mean for u2) applied to these lists might capture dimensions of variance that are strongly present but not the primary axis that distinguishes the test set's polar classes angularly. The relatively low circular standard deviations (4.2° and 3.2°) show that each test class clusters fairly tightly around its (non-polar) median angle. This is a good example of how a semantically intuitive basis construction doesn't always translate to effective polar separation for a broader set of related prompts.</em></p>
+        </div>
+    </div>
+  </div>
+</section>
+
+
+
+        <section id="ground-rules">
+            <h2>A Few Ground Rules & Important Notes!</h2>
+            <ul>
+                <li>NSFW is fine. We’re testing safety and danger. But keep it legal and free of identifying info</li>
+                <li>By submitting, you agree we can release anonymized results and gently roast any especially cursed conceptual axes post-race. Unless deleted, submissions are stored indefinitely and will be published under a Creative Commons CC-BY-4.0 licence alongside the activation data. Deleting responses via editing/delete your Google form is always possible! You can pull your hull at any time.</li>
+                <li>Google stores submissions as UTF-8 and may apply standard Unicode-normalisation. If you need raw code-point fidelity, `surround your text with back-ticks like this` and we’ll recover it verbatim. Example right below:</li>
+            </ul>
+        </section>
+
+        <section id="final-call">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScS98cqAe1YcrxkUCq5Xel1t9VHrOBO7A6EFMlDky_xiWp46g/viewform?" class="cta-button" target="_blank" rel="noopener noreferrer">Ready to Set Sail? Submit Here!</a>
+            <p>Follow-up post with results will be linked here soon.</p>
+        </section>
+        <p>Curious about the 140 safety & danger test prompts used in the races? <a href="https://github.com/ApocryphalEditor/GPT2Smol_Regatta/blob/main/promptsets/PromptSet_SafeV1_Formatted.txt" target="_blank" rel="noopener noreferrer">View the prompt list here</a>.</p>
+    </main>
+
+    <footer>
+        <p>See you on the hidden sea. May your keel be steady. <br> – The Regatta Master</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const toggles = document.querySelectorAll('.collapsible-toggle');
+
+            toggles.forEach(toggle => {
+                // Pre-collapse sections if desired by checking content
+                // For now, all start collapsed by default due to CSS `display: none`
+
+                toggle.addEventListener('click', function() {
+                    const content = this.nextElementSibling;
+                    if (content && content.classList.contains('collapsible-content')) {
+                        content.classList.toggle('expanded');
+                        if (content.classList.contains('expanded')) {
+                            this.textContent = this.textContent.replace('[+]', '[-]');
+                        } else {
+                            this.textContent = this.textContent.replace('[-]', '[+]');
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+
+    <script> // WebGL Script (unchanged)
+        const canvas = document.getElementById('webgl-canvas');
+        const gl = canvas.getContext('webgl');
+
+        if (!gl) {
+            console.error("WebGL not supported, falling back to a static background.");
+            document.body.style.backgroundColor = '#0a192f';
+        } else {
+            const vsSource = `
+                attribute vec4 aVertexPosition;
+                void main(void) {
+                    gl_Position = aVertexPosition;
+                }
+            `;
+
+            const fsSource = `
+                precision highp float;
+                uniform vec2 u_resolution;
+                uniform float u_time;
+
+                float random(vec2 st) {
+                    return fract(sin(dot(st.xy, vec2(12.9898,78.233))) * 43758.5453123);
+                }
+
+                float noise(vec2 st) {
+                    vec2 i = floor(st);
+                    vec2 f = fract(st);
+                    vec2 u = f * f * (3.0 - 2.0 * f);
+                    return mix(mix(random(i + vec2(0.0,0.0)), random(i + vec2(1.0,0.0)), u.x),
+                               mix(random(i + vec2(0.0,1.0)), random(i + vec2(1.0,1.0)), u.x), u.y);
+                }
+
+                // Corrected fbm function
+                float fbm(vec2 st, int octaves) {
+                    float value = 0.0;
+                    float amplitude = 0.5;
+                    const int MAX_OCTAVES = 4; // Define a maximum (must be a const int)
+
+                    for (int i = 0; i < MAX_OCTAVES; i++) {
+                        if (i < octaves) { // Only process if within the requested number of octaves
+                            value += amplitude * noise(st);
+                            st *= 2.0; // Double the frequency
+                            amplitude *= 0.5; // Halve the amplitude
+                        } else {
+                            break; // Exit loop if we've processed all requested octaves
+                        }
+                    }
+                    return value;
+                }
+
+                void main(void) {
+                    vec2 uv = (gl_FragCoord.xy - 0.5 * u_resolution.xy) / u_resolution.y;
+                    float time = u_time * 0.15; // Adjusted overall speed
+
+                    // Revised Color Palette
+                    vec3 baseWashColor  = vec3(0.08, 0.15, 0.28); 
+                    vec3 swellColor     = vec3(0.04, 0.10, 0.20); 
+                    vec3 crestColor     = vec3(0.35, 0.75, 0.90); 
+                    vec3 foamColor      = vec3(0.7, 0.85, 0.95);  
+                    vec3 mistColor      = vec3(0.8, 0.9, 1.0);    
+
+                    vec2 st = uv;
+
+                    // Layer 1: Main rolling waves (vertical)
+                    float numWaves1 = 4.0; 
+                    float speed1 = 0.8; 
+                    float wave1 = sin(st.y * numWaves1 - time * speed1 + fbm(st * vec2(1.5, 0.4) + time * 0.05, 3) * 1.8);
+                    wave1 = (wave1 * 0.5 + 0.5); 
+
+                    // Layer 2: Smaller, faster ripples
+                    float numWaves2 = 12.0;
+                    float speed2 = 1.5;
+                    float wave2 = sin(st.y * numWaves2 - time * speed2 + fbm(st * vec2(2.0, 1.2) + time * 0.2, 2) * 1.0);
+                    wave2 = (wave2 * 0.5 + 0.5) * 0.4; 
+
+                    float combinedWaves = wave1 * 0.7 + wave2 * 0.3; 
+
+                    // "Crashing" / Intensity Midway (vertical middle of screen)
+                    float midwayFocus = 0.35;
+                    float midwayFactor = 1.0 - smoothstep(0.0, midwayFocus, abs(uv.y));
+                    
+                    float waveIntensity = pow(combinedWaves, 0.7 + midwayFactor * 0.8); 
+
+                    // Foam, stronger in midway
+                    float foamNoiseDetailScale = 3.5;
+                    float foamNoiseValue = fbm(vec2(st.x * foamNoiseDetailScale, st.y * 1.2) + time * 0.4 + combinedWaves * 0.1, 3);
+                    float foamAmount = smoothstep(0.55, 0.75, foamNoiseValue) * midwayFactor * 0.7;
+                    foamAmount *= pow(waveIntensity, 1.5); 
+
+                    // Color Mixing (Revised for softer transitions)
+                    vec3 finalColor = baseWashColor;
+                    finalColor = mix(finalColor, swellColor, smoothstep(0.2, 0.6, waveIntensity)); 
+                    finalColor = mix(finalColor, crestColor, smoothstep(0.5, 0.85, waveIntensity) * (0.4 + midwayFactor * 0.6) );
+                    finalColor = mix(finalColor, foamColor, foamAmount);
+
+                    // Third Layer: Tinier Whiter Transparent Mist/Sparkle
+                    float mistNoiseScale = 7.0; 
+                    float mistTimeScale = 0.25;
+                    float mistNoise = fbm(st * mistNoiseScale + vec2(time * mistTimeScale, -time * mistTimeScale * 0.7), 2); 
+                    float mistIntensity = smoothstep(0.6, 0.75, mistNoise) * (0.15 + midwayFactor * 0.2); 
+                    
+                    finalColor += mistColor * mistIntensity * (0.5 + combinedWaves * 0.5); 
+
+                    // Subtle Depth/Perspective (darken horizontal edges for vertical waves)
+                    float depthFactor = smoothstep(0.0, 0.9, abs(uv.x * (u_resolution.y / u_resolution.x) ));
+                    finalColor *= (1.0 - depthFactor * 0.25);
+
+                    // Vignette
+                    float vignette = smoothstep(1.0, 0.15, length(uv * vec2(0.6, 0.85)));
+                    finalColor *= vignette;
+                    
+                    gl_FragColor = vec4(finalColor, 1.0);
+                }
+            `;
+
+            function compileShader(source, type) {
+                const shader = gl.createShader(type);
+                gl.shaderSource(shader, source);
+                gl.compileShader(shader);
+                if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS)) {
+                    console.error('An error occurred compiling the shaders: ' + gl.getShaderInfoLog(shader));
+                    gl.deleteShader(shader); return null;
+                }
+                return shader;
+            }
+
+            const vertexShader = compileShader(vsSource, gl.VERTEX_SHADER);
+            const fragmentShader = compileShader(fsSource, gl.FRAGMENT_SHADER);
+            const shaderProgram = gl.createProgram();
+            gl.attachShader(shaderProgram, vertexShader);
+            gl.attachShader(shaderProgram, fragmentShader);
+            gl.linkProgram(shaderProgram);
+
+            if (!gl.getProgramParameter(shaderProgram, gl.LINK_STATUS)) {
+                console.error('Unable to initialize the shader program: ' + gl.getProgramInfoLog(shaderProgram));
+                document.body.style.backgroundColor = '#0a192f';
+            } else {
+                gl.useProgram(shaderProgram);
+                const positionBuffer = gl.createBuffer();
+                gl.bindBuffer(gl.ARRAY_BUFFER, positionBuffer);
+                const positions = [-1.0, -1.0, 1.0, -1.0, -1.0,  1.0, -1.0,  1.0, 1.0, -1.0, 1.0,  1.0];
+                gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(positions), gl.STATIC_DRAW);
+                const positionAttributeLocation = gl.getAttribLocation(shaderProgram, "aVertexPosition");
+                gl.enableVertexAttribArray(positionAttributeLocation);
+                gl.vertexAttribPointer(positionAttributeLocation, 2, gl.FLOAT, false, 0, 0);
+                const resolutionUniformLocation = gl.getUniformLocation(shaderProgram, "u_resolution");
+                const timeUniformLocation = gl.getUniformLocation(shaderProgram, "u_time");
+                let startTime = Date.now();
+
+                function render() {
+                    canvas.width = canvas.clientWidth;
+                    canvas.height = canvas.clientHeight;
+                    gl.viewport(0, 0, gl.canvas.width, gl.canvas.height);
+                    gl.clearColor(0.0, 0.0, 0.0, 0.0);
+                    gl.clear(gl.COLOR_BUFFER_BIT);
+                    gl.uniform2f(resolutionUniformLocation, gl.canvas.width, gl.canvas.height);
+                    gl.uniform1f(timeUniformLocation, (Date.now() - startTime) * 0.001);
+                    gl.drawArrays(gl.TRIANGLES, 0, 6);
+                    requestAnimationFrame(render);
+                }
+                requestAnimationFrame(render);
+            }
+        }
+    </script>
+</body>
+</html>
