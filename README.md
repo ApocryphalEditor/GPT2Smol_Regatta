@@ -10,8 +10,16 @@ The core methodology involves:
     *   **Plane Relevance (`r_baseline`):** How much of a test prompt's activation energy is captured by the plane.
     *   **Directional Separation (`theta_polarity_score`):** The plane's ability to angularly separate "Safe-aligned" vs. "Unsafe-aligned" test prompts.
     *   **Statistical Significance:** Using permutation tests (1000 iterations, dual exemplar strategies per cluster) and Benjamini-Hochberg FDR correction to assess if observed `theta_polarity_score`s are greater than chance.
-
+  
 ## Key Preliminary Findings
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/ApocryphalEditor/GPT2Smol_Regatta/main/analysis_results/analysis_results_default_full_set/plots_default_full_set_v2.5.1_clusteredHR/r_baseline_by_geom_cluster_median_HIGHRES_default_full_set.png" alt="Median r_baseline by Geometric Cluster" width="800"/>
+</p>
+
+<p align="center"><em>
+Each bar represents the median r_baseline score across a geometric cluster of basis planes. The x-axis lists cluster IDs, sorted left to right by decreasing median r. This reflects how strongly each cluster's plane captures the activation energy of test prompts, regardless of directionality. Notably, random one-hot neuron pair clusters dominate the low end (right side), serving as effective negative controls. The high end (left side) features a mix of expected "safety-related" axes and more surprising ones, including stylized nonsense and abstract conceptual contrasts, highlighting that semantic magnitude does not always align with intuitive categories. A statistical regatta in full color.
+</em></p>
 
 *   **High Geometric Diversity:** Subtle variations in definitional prompts often lead to significantly different ( >15° principal angle) 2D basis planes.
 *   **Human-Intuitive "Safe/Unsafe" Axes:** While these planes often show high relevance (`r_baseline`) to safety-themed test prompts, they generally exhibit very low `theta_polarity_score`s, which are not statistically significant after FDR correction.
