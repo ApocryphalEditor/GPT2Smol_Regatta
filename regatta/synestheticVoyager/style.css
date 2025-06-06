@@ -170,11 +170,11 @@ canvas {
     text-decoration: underline;
 }
 
+/* REVISED rule for the now-independent tab */
 #info-panel-tab {
     position: absolute;
-    top: 50%;
-    left: -30px; /* Stick out to the left */
-    transform: translateY(-50%);
+    bottom: 20px; 
+    right: 400px; /* Position it just to the left of the panel (380px width + 20px margin) */
     width: 30px;
     height: 60px;
     background-color: rgba(10, 5, 20, 0.85);
@@ -190,6 +190,7 @@ canvas {
     color: #cda8ff;
     transition: background-color 0.2s;
     pointer-events: all;
+    z-index: 101;
 }
 
 #info-panel-tab:hover {
