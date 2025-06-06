@@ -6,37 +6,38 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- START: New Info Panel -->
-<div id="info-panel" class="panel-collapsed">
-    <div id="info-panel-content">
-        <h2>About Synesthetic Voyage</h2>
-        <p>
-            This is an interactive tool for exploring the internal "geometry" of a large language model (GPT-2). It investigates whether abstract concepts like "safety" and "danger" exist as consistent, measurable directions within the model's activation space.
-        </p>
+    <!-- START: Info Panel (Now visible by default) -->
+    <div id="info-panel">
+        <div id="info-panel-content">
+            <h2>About Synesthetic Voyage</h2>
+            <p>
+                This is an interactive tool for exploring the internal "geometry" of a large language model (GPT-2). It investigates whether abstract concepts like "safety" and "danger" exist as consistent, measurable directions within the model's activation space.
+            </p>
 
-        <h3>How It Works</h3>
-        <p>
-            You provide two opposing concepts. The application uses these to define a 2D plane (a "sail") within the model's high-dimensional space. It then projects a large set of test prompts (the "winds") onto this plane to measure two things:
-        </p>
-        <ul>
-            <li><strong>Magnitude (r):</strong> How relevant is this plane to the concept of safety? (How much wind does the sail catch?)</li>
-            <li><strong>Polarity:</strong> Does the plane reliably separate "safe" prompts from "unsafe" ones? (Does the boat turn correctly in the wind?)</li>
-        </ul>
+            <h3>How It Works</h3>
+            <p>
+                You provide two opposing concepts. The application uses these to define a 2D plane (a "sail") within the model's high-dimensional space. It then projects a large set of test prompts (the "winds") onto this plane to measure two things:
+            </p>
+            <ul>
+                <li><strong>Magnitude (r):</strong> How relevant is this plane to the concept of safety? (How much wind does the sail catch?)</li>
+                <li><strong>Polarity:</strong> Does the plane reliably separate "safe" prompts from "unsafe" ones? (Does the boat turn correctly in the wind?)</li>
+            </ul>
 
-        <h3>The Research</h3>
-        <p>
-            This tool is the front-end for a research experiment that found, after rigorous testing, that a simple, statistically robust "safety compass" was not present in this model layer. This suggests the model's understanding is more complex and abstract than human intuition might suggest.
-        </p>
-        <div class="info-links">
-            <a href="YOUR_LINK_TO_THE_PAPER_HERE" target="_blank">Read the Full Experiment Write-up</a>
-            <a href="https://github.com/ApocryphalEditor/GPT2Smol_Regatta" target="_blank">View Project on GitHub</a>
+            <h3>The Research</h3>
+            <p>
+                This tool is the front-end for a research experiment that found, after rigorous testing, that a simple, statistically robust "safety compass" was not present in this model layer. This suggests the model's understanding is more complex and abstract than human intuition might suggest.
+            </p>
+            <div class="info-links">
+                <a href="YOUR_LINK_TO_THE_PAPER_HERE" target="_blank">Read the Full Experiment Write-up</a>
+                <a href="https://github.com/ApocryphalEditor/GPT2Smol_Regatta" target="_blank">View Project on GitHub</a>
+            </div>
+        </div>
+        <div id="info-panel-tab">
+            <span>?</span>
         </div>
     </div>
-    <div id="info-panel-tab">
-        <span>?</span>
-    </div>
-</div>
-<!-- END: New Info Panel -->
+    <!-- END: Info Panel -->
+
     <!-- This new div will wrap the canvas and apply the visual flip -->
     <div id="gamespace-wrapper"></div>
 

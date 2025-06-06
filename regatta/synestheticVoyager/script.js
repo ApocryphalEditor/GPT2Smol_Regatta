@@ -13,26 +13,9 @@ let journeyLogUI, logEntriesList;
 
 // --- P3 Console & Analysis UI ---
 let shipwrightsConsole, consoleTab, phrase1Input, phrase2Input, launchButtonQuick, launchButtonFull, methodCardsContainer, aggregationViewRadios;
-let infoPanel, infoPanelTab; // <-- ADD THIS LINE
-let currentLaunchData = null; 
-function setupConsoleUI() {
-    shipwrightsConsole = document.getElementById('shipwrights-console');
-    consoleTab = document.getElementById('console-tab');
-    phrase1Input = document.getElementById('phrase1');
-    // ... (all your existing lines) ...
-    aggregationViewRadios = document.querySelectorAll('input[name="aggregationView"]');
-
-    // --- ADD THESE 3 LINES ---
-    infoPanel = document.getElementById('info-panel');
-    infoPanelTab = document.getElementById('info-panel-tab');
-    infoPanelTab.addEventListener('click', () => infoPanel.classList.toggle('panel-collapsed'));
-
-    consoleTab.addEventListener('click', () => { 
-        shipwrightsConsole.classList.toggle('console-collapsed'); 
-    });
-    // ... (the rest of the function)
-}
-
+let infoPanel, infoPanelTab; // ADDED: Variable for the new info panel
+let currentLaunchData = null; // To store the full backend response
+let currentSelectedMethodCard = null;
 
 // --- Color constants ---
 const TURBULENT_COLOR = new THREE.Color(0xff8844);
@@ -92,7 +75,6 @@ const fragmentShader = `
 function init() {
     clock = new THREE.Clock(); scene = new THREE.Scene(); camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000); camera.position.z = targetZoom; renderer = new THREE.WebGLRenderer({ antialias: true }); renderer.setSize(window.innerWidth, window.innerHeight); 
     
-    // --- VISUAL WRAPPER FIX: This is the only line changed in this file. ---
     document.getElementById('gamespace-wrapper').appendChild(renderer.domElement);
 
     window.addEventListener('resize', onWindowResize, false); window.addEventListener('wheel', onMouseWheel, { passive: false });
@@ -106,9 +88,25 @@ function init() {
 }
 
 function setupConsoleUI() {
-    shipwrightsConsole = document.getElementById('shipwrights-console'); consoleTab = document.getElementById('console-tab'); phrase1Input = document.getElementById('phrase1'); phrase2Input = document.getElementById('phrase2'); launchButtonQuick = document.getElementById('launchButtonQuick'); launchButtonFull = document.getElementById('launchButtonFull'); methodCardsContainer = document.getElementById('methodCardsContainer'); aggregationViewRadios = document.querySelectorAll('input[name="aggregationView"]');
+    shipwrightsConsole = document.getElementById('shipwrights-console');
+    consoleTab = document.getElementById('console-tab');
+    phrase1Input = document.getElementById('phrase1');
+    phrase2Input = document.getElementById('phrase2');
+    launchButtonQuick = document.getElementById('launchButtonQuick');
+    launchButtonFull = document.getElementById('launchButtonFull');
+    methodCardsContainer = document.getElementById('methodCardsContainer');
+    aggregationViewRadios = document.querySelectorAll('input[name="aggregationView"]');
+
+    // ADDED: Get info panel elements
+    infoPanel = document.getElementById('info-panel');
+    infoPanelTab = document.getElementById('info-panel-tab');
+
+    // ADDED: Add event listener for the info panel tab
+    infoPanelTab.addEventListener('click', () => infoPanel.classList.toggle('panel-collapsed'));
+
     consoleTab.addEventListener('click', () => { shipwrightsConsole.classList.toggle('console-collapsed'); });
-    launchButtonQuick.addEventListener('click', () => launchAnalysis('quick')); launchButtonFull.addEventListener('click', () => launchAnalysis('full'));
+    launchButtonQuick.addEventListener('click', () => launchAnalysis('quick'));
+    launchButtonFull.addEventListener('click', () => launchAnalysis('full'));
     aggregationViewRadios.forEach(radio => { radio.addEventListener('change', updateAllCardsView); });
 }
 
@@ -129,7 +127,7 @@ async function launchAnalysis(analysis_depth) {
 async function getAndDisplayAnalysis(phrase1, phrase2, analysis_depth) {
     try {
         const API_URL = "https://apocryphaleditor-synestheticvoyage.hf.space";
-const response = await fetch(`${API_URL}/get_hull_analysis_by_methods`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ phrase1, phrase2, analysis_depth }), });
+        const response = await fetch(`${API_URL}/get_hull_analysis_by_methods`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ phrase1, phrase2, analysis_depth }), });
         if (!response.ok) { const errorText = await response.text(); throw new Error(`Backend Error: ${response.status} - ${errorText}`); }
         const data = await response.json();
         if (data.error || !data.results || data.results.length === 0) { throw new Error(`Backend response error: ${data.error || 'No results found.'}`); }

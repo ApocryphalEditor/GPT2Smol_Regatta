@@ -92,11 +92,12 @@ canvas {
 .results-disclaimer { margin-top: 20px; padding: 15px; background-color: rgba(0,0,0,0.2); border-radius: 5px; text-align: left; font-size: 0.8em; line-height: 1.5; color: #bbb; }
 .results-disclaimer h3 { text-align: center; color: #ffdda3; margin: 0 0 10px 0; }
 .results-disclaimer strong { color: #fff; }
-/* --- Info Panel Styles --- */
+
+/* --- Info Panel Styles (Bottom Right) --- */
 #info-panel {
     position: absolute;
-    top: 20px;
-    left: 20px;
+    bottom: 20px;
+    right: 20px;
     width: 380px;
     max-height: calc(100vh - 40px);
     background-color: rgba(10, 5, 20, 0.85);
@@ -104,14 +105,14 @@ canvas {
     border: 1px solid rgba(255, 255, 255, 0.15);
     border-radius: 10px;
     color: #eee;
-    z-index: 101; /* Place it above the console */
+    z-index: 101;
     transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.4s ease-out;
     transform: translateY(0);
     opacity: 1;
 }
 
 #info-panel.panel-collapsed {
-    transform: translateY(calc(-100% - 40px)); /* Slide it up and off screen */
+    transform: translateY(calc(100% + 40px)); /* Slide it down and off screen */
     opacity: 0;
     pointer-events: none;
 }
@@ -172,14 +173,14 @@ canvas {
 #info-panel-tab {
     position: absolute;
     top: 50%;
-    right: -30px; /* Stick out to the right */
+    left: -30px; /* Stick out to the left */
     transform: translateY(-50%);
     width: 30px;
     height: 60px;
     background-color: rgba(10, 5, 20, 0.85);
-    border-radius: 0 8px 8px 0;
+    border-radius: 8px 0 0 8px;
     border: 1px solid rgba(255, 255, 255, 0.15);
-    border-left: none;
+    border-right: none;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -188,7 +189,7 @@ canvas {
     font-weight: bold;
     color: #cda8ff;
     transition: background-color 0.2s;
-    pointer-events: all; /* Make sure the tab is always clickable */
+    pointer-events: all;
 }
 
 #info-panel-tab:hover {
