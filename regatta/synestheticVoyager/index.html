@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Synesthetic Voyage P3</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- This new div will wrap the canvas and apply the visual flip -->
+    <div id="gamespace-wrapper"></div>
+
+    <div id="forge-animation-container"></div>
+
+    <div id="shipwrights-console" class="console-collapsed">
+        <div id="console-content">
+            <div class="console-header">
+                <h2>Shipwright's Console</h2>
+                <p class="subtitle">Define the next leg of your journey.</p>
+            </div>
+            <div class="input-area">
+                <div>
+                    <label for="phrase1">Concept 1 (Safe/North):</label>
+                    <input type="text" id="phrase1" value="Safe">
+                </div>
+                <div>
+                    <label for="phrase2">Concept 2 (Unsafe/South):</label>
+                    <input type="text" id="phrase2" value="Danger">
+                </div>
+            </div>
+            <div class="settings-area">
+                <fieldset>
+                    <legend>Activation View:</legend>
+                    <div class="radio-group-container">
+                        <div class="radio-option">
+                            <input type="radio" id="viewAggMean" name="aggregationView" value="mean" checked>
+                            <label for="viewAggMean">Mean</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="viewAggLastToken" name="aggregationView" value="last_token">
+                            <label for="viewAggLastToken">Last Token</label>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+            <div class="launch-buttons-area">
+                <button id="launchButtonQuick">Analyze Winds (Quick)</button>
+                <button id="launchButtonFull">Analyze Winds (Full)</button>
+            </div>
+            <div id="methodCardsContainer" class="method-cards-container">
+                <p class="placeholder-text">Analysis results will appear here. Define your concepts and launch an analysis.</p>
+            </div>
+            <div id="resultsDisclaimer" class="results-disclaimer">
+                <h3>📊 A Note on Significance</h3>
+                <p>The <strong>Polarity Score</strong>, <strong>Magnitude (r)</strong>, and <strong>Orientation (θ)</strong> are <strong>descriptive metrics</strong> for your current design against our test set. They provide valuable intuition but are not automatically tested for statistical significance. The most promising "sailbots" found here are candidates for deeper, formal investigation.</p>
+            </div>
+        </div>
+        <div id="console-tab">
+            <span>☰</span>
+        </div>
+    </div>
+
+    <div id="journey-log-ui" class="hidden">
+        <h3>Journey Log</h3>
+        <ul id="log-entries"></ul>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/three@0.155.0/build/three.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
