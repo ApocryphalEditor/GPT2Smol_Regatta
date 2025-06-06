@@ -13,7 +13,7 @@ let journeyLogUI, logEntriesList;
 
 // --- P3 Console & Analysis UI ---
 let shipwrightsConsole, consoleTab, phrase1Input, phrase2Input, launchButtonQuick, launchButtonFull, methodCardsContainer, aggregationViewRadios;
-let infoPanel, infoPanelTab; // ADDED: Variable for the new info panel
+let infoPanel, infoPanelTab;
 let currentLaunchData = null; // To store the full backend response
 let currentSelectedMethodCard = null;
 
@@ -73,17 +73,32 @@ const fragmentShader = `
 `;
 
 function init() {
-    clock = new THREE.Clock(); scene = new THREE.Scene(); camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000); camera.position.z = targetZoom; renderer = new THREE.WebGLRenderer({ antialias: true }); renderer.setSize(window.innerWidth, window.innerHeight); 
-    
+    clock = new THREE.Clock();
+    scene = new THREE.Scene();
+    camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    camera.position.z = targetZoom;
+    renderer = new THREE.WebGLRenderer({ antialias: true });
+    renderer.setSize(window.innerWidth, window.innerHeight);
+
     document.getElementById('gamespace-wrapper').appendChild(renderer.domElement);
 
-    window.addEventListener('resize', onWindowResize, false); window.addEventListener('wheel', onMouseWheel, { passive: false });
+    window.addEventListener('resize', onWindowResize, false);
+    window.addEventListener('wheel', onMouseWheel, { passive: false });
     const uniforms = { u_time: { value: 0.0 }, u_resolution: { value: new THREE.Vector2(window.innerWidth, window.innerHeight) }, u_scale: { value: 1.0 }, u_scroll: { value: new THREE.Vector2(0.05, 0.02) }, u_offset: { value: gameState.worldOffset }, u_shockwave_time: { value: -1.0 }, u_shockwave_strength: { value: 0.15 } };
     material = new THREE.ShaderMaterial({ vertexShader, fragmentShader, uniforms });
-    const geometry = new THREE.PlaneGeometry(15, 15); plane = new THREE.Mesh(geometry, material); plane.position.z = -0.1; scene.add(plane);
-    createBoat(); createTrail(); createForgeParticles(); createWindStreaks(); createJourneyNodes();
-    journeyLogUI = document.getElementById('journey-log-ui'); logEntriesList = document.getElementById('log-entries');
+    const geometry = new THREE.PlaneGeometry(15, 15);
+    plane = new THREE.Mesh(geometry, material);
+    plane.position.z = -0.1;
+    scene.add(plane);
+    createBoat();
+    createTrail();
+    createForgeParticles();
+    createWindStreaks();
+    createJourneyNodes();
+    journeyLogUI = document.getElementById('journey-log-ui');
+    logEntriesList = document.getElementById('log-entries');
     setupConsoleUI();
+    document.getElementById('info-panel').classList.add('panel-collapsed'); // Start with the info panel hidden
     animate();
 }
 
@@ -97,13 +112,10 @@ function setupConsoleUI() {
     methodCardsContainer = document.getElementById('methodCardsContainer');
     aggregationViewRadios = document.querySelectorAll('input[name="aggregationView"]');
 
-    // ADDED: Get info panel elements
     infoPanel = document.getElementById('info-panel');
     infoPanelTab = document.getElementById('info-panel-tab');
 
-    // ADDED: Add event listener for the info panel tab
     infoPanelTab.addEventListener('click', () => infoPanel.classList.toggle('panel-collapsed'));
-
     consoleTab.addEventListener('click', () => { shipwrightsConsole.classList.toggle('console-collapsed'); });
     launchButtonQuick.addEventListener('click', () => launchAnalysis('quick'));
     launchButtonFull.addEventListener('click', () => launchAnalysis('full'));
