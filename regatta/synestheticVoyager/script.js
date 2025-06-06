@@ -13,8 +13,26 @@ let journeyLogUI, logEntriesList;
 
 // --- P3 Console & Analysis UI ---
 let shipwrightsConsole, consoleTab, phrase1Input, phrase2Input, launchButtonQuick, launchButtonFull, methodCardsContainer, aggregationViewRadios;
-let currentLaunchData = null; // To store the full backend response
-let currentSelectedMethodCard = null;
+let infoPanel, infoPanelTab; // <-- ADD THIS LINE
+let currentLaunchData = null; 
+function setupConsoleUI() {
+    shipwrightsConsole = document.getElementById('shipwrights-console');
+    consoleTab = document.getElementById('console-tab');
+    phrase1Input = document.getElementById('phrase1');
+    // ... (all your existing lines) ...
+    aggregationViewRadios = document.querySelectorAll('input[name="aggregationView"]');
+
+    // --- ADD THESE 3 LINES ---
+    infoPanel = document.getElementById('info-panel');
+    infoPanelTab = document.getElementById('info-panel-tab');
+    infoPanelTab.addEventListener('click', () => infoPanel.classList.toggle('panel-collapsed'));
+
+    consoleTab.addEventListener('click', () => { 
+        shipwrightsConsole.classList.toggle('console-collapsed'); 
+    });
+    // ... (the rest of the function)
+}
+
 
 // --- Color constants ---
 const TURBULENT_COLOR = new THREE.Color(0xff8844);
